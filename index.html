@@ -455,6 +455,59 @@
       }
     }
 
+
+    /* Ajuste: padroniza cards com opções de preço (Limpeza e Impermeabilização) */
+    .svc-card .price-grid,
+    .svc-card .price-2col{
+      margin-top:auto !important;
+      margin-bottom:22px !important;
+      align-items:stretch !important;
+      position:relative !important;
+      z-index:3 !important;
+    }
+    .svc-card .price-cell{
+      border-radius:999px !important;
+      min-height:58px !important;
+      display:flex !important;
+      flex-direction:column !important;
+      align-items:center !important;
+      justify-content:center !important;
+      padding:10px 12px !important;
+    }
+    .svc-card .price-cell-l,
+    .svc-card .price-cell-v{
+      line-height:1 !important;
+      text-align:center !important;
+      white-space:nowrap !important;
+    }
+    .svc-card .price-2col + .price-note{
+      margin-top:-12px !important;
+      margin-bottom:20px !important;
+      min-height:14px !important;
+      position:relative !important;
+      z-index:3 !important;
+    }
+    .svc-card .price-grid + .wheel-cta,
+    .svc-card .price-2col + .price-note + .wheel-cta{
+      margin-top:0 !important;
+    }
+    @media(max-width:640px){
+      .svc-card .price-grid{
+        grid-template-columns:repeat(3,1fr) !important;
+        gap:7px !important;
+      }
+      .svc-card .price-2col{
+        grid-template-columns:repeat(2,1fr) !important;
+        gap:7px !important;
+      }
+      .svc-card .price-cell{
+        min-height:52px !important;
+        padding:8px 7px !important;
+      }
+      .svc-card .price-cell-v{font-size:1.28rem !important;}
+      .svc-card .price-cell-l{font-size:.52rem !important;}
+    }
+
 </style>
 </head>
 <body>
