@@ -425,6 +425,36 @@
         align-self:stretch !important;
       }
     }
+
+    /* Ajuste final: preços arredondados e CTAs sempre alinhados */
+    .svc-card .price-wrap{
+      margin-top:auto !important;
+      margin-bottom:24px !important;
+    }
+    .svc-card .wheel-cta{
+      width:230px !important;
+      min-width:230px !important;
+      max-width:230px !important;
+      min-height:56px !important;
+      border-radius:999px !important;
+      align-self:center !important;
+      margin-top:0 !important;
+      flex-shrink:0 !important;
+    }
+    .svc-card.feat .wheel-cta{
+      width:230px !important;
+      min-width:230px !important;
+      max-width:230px !important;
+    }
+    @media(max-width:860px){
+      .svc-card .wheel-cta,
+      .svc-card.feat .wheel-cta{
+        width:100% !important;
+        min-width:0 !important;
+        max-width:100% !important;
+      }
+    }
+
 </style>
 </head>
 <body>
@@ -657,7 +687,7 @@
       </ul>
       <div class="price-wrap">
         <div class="price-lbl">Valor único</div>
-        <div class="price-val">R$ 120,00</div>
+        <div class="price-val">R$ 120</div>
         <div class="price-note">*Valor para todo o veículo</div>
       </div>
       <a class="wheel-cta" href="https://wa.me/5512992228205?text=Ol%C3%A1%2C%20tenho%20interesse%20na%20Revitaliza%C3%A7%C3%A3o%20de%20Pl%C3%A1sticos." target="_blank" rel="noopener">Tenho interesse</a>
@@ -679,8 +709,8 @@
         <li>Menos uso de limpadores de para-brisa</li>
       </ul>
       <div class="price-2col">
-        <div class="price-cell"><div class="price-cell-l">Para-brisa</div><div class="price-cell-v">R$80</div></div>
-        <div class="price-cell"><div class="price-cell-l">Completo</div><div class="price-cell-v">R$120</div></div>
+        <div class="price-cell"><div class="price-cell-l">Para-brisa</div><div class="price-cell-v">R$ 80</div></div>
+        <div class="price-cell"><div class="price-cell-l">Completo</div><div class="price-cell-v">R$ 120</div></div>
       </div>
       <div class="price-note" style="margin-top:8px">*Não recomendado para vidros antigos</div>
       <a class="wheel-cta" href="https://wa.me/5512992228205?text=Ol%C3%A1%2C%20tenho%20interesse%20na%20Impermeabiliza%C3%A7%C3%A3o%20dos%20Vidros." target="_blank" rel="noopener">Tenho interesse</a>
@@ -702,7 +732,7 @@
       </ul>
       <div class="price-wrap">
         <div class="price-lbl">Valor por banco muda</div>
-        <div class="price-val">R$ 120,00</div>
+        <div class="price-val">R$ 120</div>
       </div>
       <a class="wheel-cta" href="https://wa.me/5512992228205?text=Ol%C3%A1%2C%20tenho%20interesse%20na%20Higieniza%C3%A7%C3%A3o%20de%20Couro." target="_blank" rel="noopener">Tenho interesse</a>
     </div>
@@ -725,7 +755,7 @@
       </ul>
       <div class="price-wrap">
         <div class="price-lbl">A partir de</div>
-        <div class="price-val">R$ 450,00</div>
+        <div class="price-val">R$ 450</div>
         <div class="price-note">*Preço varia conforme tamanho e sujidade do veículo</div>
       </div>
       <a class="wheel-cta" href="https://wa.me/5512992228205?text=Ol%C3%A1%2C%20tenho%20interesse%20no%20Polimento%20T%C3%A9cnico." target="_blank" rel="noopener">Tenho interesse</a>
@@ -747,7 +777,7 @@
         <li>Descontaminação de pintura</li>
         <li>Detalhamento de emblemas</li>
       </ul>
-      <div class="price-wrap"><div class="price-lbl">A partir de</div><div class="price-val">R$ 230,00</div></div>
+      <div class="price-wrap"><div class="price-lbl">A partir de</div><div class="price-val">R$ 230</div></div>
       <a class="wheel-cta" href="https://wa.me/5512992228205?text=Ol%C3%A1%2C%20tenho%20interesse%20na%20Detalhada%20Externa." target="_blank" rel="noopener">Tenho interesse</a>
     </div>
 
@@ -767,7 +797,7 @@
         <li>Restauração de tapete</li>
         <li>Cheirinho de brinde 🎁</li>
       </ul>
-      <div class="price-wrap"><div class="price-lbl">A partir de</div><div class="price-val">R$ 210,00</div></div>
+      <div class="price-wrap"><div class="price-lbl">A partir de</div><div class="price-val">R$ 210</div></div>
       <a class="wheel-cta" href="https://wa.me/5512992228205?text=Ol%C3%A1%2C%20tenho%20interesse%20na%20Detalhada%20Interna." target="_blank" rel="noopener">Tenho interesse</a>
     </div>
 
@@ -787,7 +817,7 @@
         <li>Higienização do carpete</li>
         <li>Restauração de tapetes</li>
       </ul>
-      <div class="price-wrap"><div class="price-lbl">A partir de</div><div class="price-val">R$ 390,00</div></div>
+      <div class="price-wrap"><div class="price-lbl">A partir de</div><div class="price-val">R$ 390</div></div>
       <a class="wheel-cta" href="https://wa.me/5512992228205?text=Ol%C3%A1%2C%20tenho%20interesse%20na%20Higieniza%C3%A7%C3%A3o%20Interna." target="_blank" rel="noopener">Tenho interesse</a>
     </div>
 
@@ -810,9 +840,9 @@
       </ul>
       <div class="price-wrap">
         <div class="price-lbl">A partir de</div>
-        <div class="price-val">R$ 1.450,00</div>
-        <a class="wheel-cta" href="https://wa.me/5512992228205?text=Ol%C3%A1%2C%20tenho%20interesse%20no%20Pacote%20JR%20Elite." target="_blank" rel="noopener">Tenho interesse no JR Elite</a>
+        <div class="price-val">R$ 1.450</div>
       </div>
+      <a class="wheel-cta" href="https://wa.me/5512992228205?text=Ol%C3%A1%2C%20tenho%20interesse%20no%20Pacote%20JR%20Elite." target="_blank" rel="noopener">Tenho interesse</a>
     </div>
 
   </div>
