@@ -104,7 +104,8 @@
     .price-lbl{font-family:var(--fc);font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--lgy)}
     .price-val{font-family:var(--fd);font-size:2rem;color:var(--or);line-height:1}
     .price-note{font-size:.72rem;font-weight:300;color:var(--lgy);margin-top:4px}
-    .price-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}
+    .price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}
+    .price-grid-4{grid-template-columns:repeat(2,1fr) !important}
     .price-cell{background:rgba(224,123,0,.07);border:1px solid rgba(224,123,0,.14);padding:9px 6px;text-align:center;border-radius:999px}
     .price-cell-l{font-family:var(--fc);font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gy)}
     .price-cell-v{font-family:var(--fd);font-size:1.35rem;color:var(--or)}
@@ -493,8 +494,11 @@
     }
     @media(max-width:640px){
       .svc-card .price-grid{
-        grid-template-columns:repeat(2,1fr) !important;
+        grid-template-columns:repeat(3,1fr) !important;
         gap:7px !important;
+      }
+      .svc-card .price-grid-4{
+        grid-template-columns:repeat(2,1fr) !important;
       }
       .svc-card .price-2col{
         grid-template-columns:repeat(2,1fr) !important;
@@ -713,7 +717,7 @@
         <li>Limpeza das borrachas</li>
         <li>Limpeza dos vidros</li>
       </ul>
-      <div class="price-grid">
+      <div class="price-grid price-grid-4">
         <div class="price-cell"><div class="price-cell-l">Hatch</div><div class="price-cell-v">R$85</div></div>
         <div class="price-cell"><div class="price-cell-l">Sedã/Perua</div><div class="price-cell-v">R$100</div></div>
         <div class="price-cell"><div class="price-cell-l">SUV</div><div class="price-cell-v">R$110</div></div>
