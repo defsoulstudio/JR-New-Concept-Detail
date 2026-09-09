@@ -4,7 +4,7 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>JR New Concept Detail — Estética Automotiva Delivery | São José dos Campos</title>
-  <meta name="description" content="Estética automotiva premium delivery em São José dos Campos. Cuidado minucioso no conforto da sua casa ou trabalho. Agende pelo WhatsApp."/>
+  <meta name="description" content="Estética automotiva premium delivery em São José dos Campos. Cuidados especializados para veículos vitrificados e com PPF, polimento técnico e higienização no conforto da sua casa ou trabalho."/>
   
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -16,10 +16,11 @@
     :root {
       --or: #E07B00;
       --or-lt: #FF9F2E;
-      --or-glow: rgba(224, 123, 0, 0.35);
-      --blk: #080808;
-      --dk: #0F0F0F;
-      --dk2: #161616;
+      --or-glow: rgba(224, 123, 0, 0.45);
+      --blk: #070707;
+      --dk: #0D0D0D;
+      --dk2: #141414;
+      --dk3: #1C1C1C;
       --wh: #F5F5F5;
       --gy: #999;
       --lgy: #555;
@@ -44,7 +45,7 @@
       content: '';
       position: fixed;
       inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.035'/%3E%3C/svg%3E");
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.032'/%3E%3C/svg%3E");
       background-size: 220px;
       pointer-events: none;
       z-index: 0;
@@ -59,16 +60,16 @@
       align-items: center;
       justify-content: space-between;
       padding: 14px 5vw;
-      background: rgba(8, 8, 8, 0.88);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
+      background: rgba(7, 7, 7, 0.88);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
       border-bottom: 1px solid rgba(255, 255, 255, 0.05);
       transition: all 0.3s ease;
     }
     nav#nav.scrolled {
-      background: rgba(8, 8, 8, 0.96);
+      background: rgba(7, 7, 7, 0.98);
       border-bottom-color: rgba(224, 123, 0, 0.25);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
     }
     .nav-logo {
       display: flex;
@@ -181,12 +182,12 @@
       justify-content: center;
       padding: 130px 5vw 80px;
       overflow: hidden;
-      background: radial-gradient(circle at 80% 40%, rgba(224, 123, 0, 0.12) 0%, transparent 60%);
+      background: radial-gradient(circle at 82% 42%, rgba(224, 123, 0, 0.14) 0%, transparent 65%);
     }
     .hero-content {
       position: relative;
       z-index: 5;
-      max-width: 680px;
+      max-width: 700px;
     }
     .hero-badge {
       display: inline-flex;
@@ -205,7 +206,7 @@
     }
     .hero-h1 {
       font-family: var(--fd);
-      font-size: clamp(3.8rem, 8vw, 7.8rem);
+      font-size: clamp(3.8rem, 8vw, 7.6rem);
       line-height: 0.92;
       letter-spacing: 0.02em;
       margin-bottom: 22px;
@@ -271,15 +272,16 @@
       background: rgba(224, 123, 0, 0.05);
       transform: translateY(-2px);
     }
-    .hero-backdrop-car {
+
+    .hero-gt-silhouette {
       position: absolute;
-      right: 2vw;
-      bottom: 6%;
-      width: 50vw;
+      right: -2vw;
+      bottom: 8%;
+      width: 52vw;
       max-width: 820px;
-      opacity: 0.12;
+      opacity: 0.14;
       pointer-events: none;
-      filter: drop-shadow(0 0 30px var(--or-glow));
+      filter: drop-shadow(0 0 35px var(--or-glow));
       animation: floatCar 6s ease-in-out infinite;
     }
     @keyframes floatCar {
@@ -328,7 +330,7 @@
     .ticker-inner .dot { opacity: 0.4; }
     @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
-    /* ── SEÇÕES ── */
+    /* ── SEÇÃO PADRÃO ── */
     section { padding: 90px 5vw; position: relative; }
     .sec-label {
       font-family: var(--fc);
@@ -350,98 +352,137 @@
       color: var(--gy);
       font-size: 0.95rem;
       line-height: 1.7;
-      max-width: 520px;
+      max-width: 540px;
       margin-top: 14px;
       font-weight: 300;
     }
 
-    /* ── CAR EXPLORER ── */
-    #explorer { background: var(--dk); border-top: 1px solid rgba(255, 255, 255, 0.04); border-bottom: 1px solid rgba(255, 255, 255, 0.04); }
-    .explorer-header { text-align: center; margin-bottom: 48px; }
-    .explorer-header .sec-sub { margin-left: auto; margin-right: auto; text-align: center; }
+    /* ── CAR EXPLORER: SUPERESPORTIVO GT + CALLOUTS DE IDENTIFICAÇÃO ── */
+    #explorer {
+      background: var(--dk);
+      border-top: 1px solid rgba(255, 255, 255, 0.04);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    }
+    .explorer-header { text-align: center; margin-bottom: 45px; }
     .explorer-inner {
       display: grid;
-      grid-template-columns: 240px 1fr 270px;
+      grid-template-columns: 245px 1fr 285px;
       gap: 32px;
       align-items: center;
-      max-width: 1240px;
+      max-width: 1300px;
       margin: 0 auto;
     }
-    .explorer-tabs { display: flex; flex-direction: column; gap: 6px; }
+    .explorer-tabs { display: flex; flex-direction: column; gap: 8px; }
     .etab {
       display: flex;
       align-items: center;
       gap: 14px;
       padding: 14px 16px;
       background: rgba(255, 255, 255, 0.02);
-      border: 1px solid rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.06);
       border-left: 3px solid transparent;
-      color: var(--gy);
+      color: #888;
       cursor: pointer;
       text-align: left;
-      border-radius: 0 4px 4px 0;
+      border-radius: 4px;
       transition: all 0.25s ease;
     }
-    .etab:hover { background: rgba(224, 123, 0, 0.05); color: var(--wh); border-color: rgba(224, 123, 0, 0.2); }
+    .etab:hover {
+      background: rgba(224, 123, 0, 0.06);
+      border-color: rgba(224, 123, 0, 0.3);
+      color: #fff;
+    }
     .etab.active {
-      background: rgba(224, 123, 0, 0.08);
+      background: linear-gradient(90deg, rgba(224, 123, 0, 0.12), rgba(224, 123, 0, 0.02));
       border-left-color: var(--or);
-      border-color: rgba(224, 123, 0, 0.25);
-      color: var(--wh);
+      border-color: rgba(224, 123, 0, 0.35);
+      color: #fff;
     }
     .etab-num {
       font-family: var(--fd);
       font-size: 1.6rem;
-      color: rgba(255, 255, 255, 0.12);
+      color: rgba(255, 255, 255, 0.15);
       line-height: 1;
     }
     .etab.active .etab-num { color: var(--or); }
-    .etab-name { font-family: var(--fc); font-size: 0.85rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; }
-    .etab-cat { font-size: 0.68rem; color: var(--lgy); }
+    .etab-name {
+      font-family: var(--fc);
+      font-size: 0.88rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .etab-cat { font-size: 0.68rem; color: #666; margin-top: 2px; }
+    .etab.active .etab-cat { color: var(--or-lt); }
 
-    .explorer-car-wrap { position: relative; }
-    .explorer-view-badge {
+    .car-stage {
+      position: relative;
+      background: radial-gradient(ellipse at 50% 60%, rgba(224, 123, 0, 0.09) 0%, transparent 70%);
+      padding: 30px 10px 20px;
+    }
+    .stage-badge {
       position: absolute;
-      top: -12px;
+      top: -10px;
       left: 50%;
       transform: translateX(-50%);
       display: flex;
       align-items: center;
       gap: 8px;
       font-family: var(--fc);
-      font-size: 0.65rem;
-      letter-spacing: 0.2em;
+      font-size: 0.68rem;
+      letter-spacing: 0.22em;
       text-transform: uppercase;
       color: var(--or);
-      background: rgba(8, 8, 8, 0.9);
-      border: 1px solid rgba(224, 123, 0, 0.3);
-      padding: 5px 14px;
+      background: rgba(10, 10, 10, 0.95);
+      border: 1px solid rgba(224, 123, 0, 0.35);
+      padding: 5px 16px;
       border-radius: 999px;
       z-index: 10;
+      white-space: nowrap;
     }
-    .ecar-ext, .ecar-int { width: 100%; height: auto; display: block; transition: opacity 0.5s ease; }
-    .ecar-int { position: absolute; inset: 0; opacity: 0; }
-    .ez { transition: opacity 0.4s ease; opacity: 0.2; }
-    .ez.ez-active { opacity: 1; filter: drop-shadow(0 0 10px rgba(224, 123, 0, 0.8)); }
-    .ez.ez-dim { opacity: 0.06; }
-    .iz { transition: opacity 0.4s ease; opacity: 0; }
-    .iz.iz-active { opacity: 1; filter: drop-shadow(0 0 10px rgba(224, 123, 0, 0.8)); }
+    .gt-car-svg {
+      width: 100%;
+      height: auto;
+      display: block;
+      filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.85));
+    }
+    
+    .zone {
+      transition: opacity 0.35s ease, filter 0.35s ease;
+      opacity: 0.22;
+    }
+    .zone.active {
+      opacity: 1;
+      filter: drop-shadow(0 0 12px rgba(224, 123, 0, 0.95));
+    }
+    .zone.dim { opacity: 0.06; }
 
-    .explorer-info { position: relative; min-height: 280px; }
+    .callout-tag {
+      transition: opacity 0.35s ease, transform 0.35s ease;
+      opacity: 0;
+      transform: translateY(4px);
+      pointer-events: none;
+    }
+    .callout-tag.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .explorer-info { position: relative; min-height: 310px; }
     .einfo { display: none; flex-direction: column; gap: 12px; }
     .einfo.active { display: flex; animation: fadeIn 0.3s ease; }
     @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
-    .einfo-eyebrow { font-family: var(--fc); font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--or); }
-    .einfo-title { font-family: var(--fd); font-size: 2.2rem; line-height: 1; }
+    .einfo-eyebrow { font-family: var(--fc); font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--or); font-weight: 700; }
+    .einfo-title { font-family: var(--fd); font-size: 2.25rem; line-height: 1; color: #fff; }
     .einfo-zones { display: flex; flex-wrap: wrap; gap: 6px; }
-    .eztag { font-family: var(--fc); font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; background: var(--or); color: #000; font-weight: 700; padding: 3px 8px; border-radius: 2px; }
+    .eztag { font-family: var(--fc); font-size: 0.64rem; letter-spacing: 0.1em; text-transform: uppercase; background: var(--or); color: #000; font-weight: 800; padding: 3px 8px; border-radius: 2px; }
     .einfo-list { list-style: none; }
-    .einfo-list li { font-size: 0.85rem; color: #aaa; padding: 5px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.05); display: flex; align-items: center; gap: 8px; }
-    .einfo-list li::before { content: '•'; color: var(--or); font-size: 1.2rem; }
-    .einfo-price-lbl { font-family: var(--fc); font-size: 0.68rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--lgy); }
-    .einfo-price { font-family: var(--fd); font-size: 2.1rem; color: var(--or); line-height: 1; }
+    .einfo-list li { font-size: 0.86rem; color: #aaa; padding: 6px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.05); display: flex; align-items: center; gap: 8px; }
+    .einfo-list li::before { content: '✓'; color: var(--or); font-weight: bold; }
+    .einfo-price-lbl { font-family: var(--fc); font-size: 0.68rem; letter-spacing: 0.16em; text-transform: uppercase; color: #666; }
+    .einfo-price { font-family: var(--fd); font-size: 2.4rem; color: var(--or); line-height: 1; }
 
-    /* ── SERVIÇOS ── */
+    /* ── CATÁLOGO DE SERVIÇOS EM ABAS ── */
     #servicos { background: var(--blk); }
     .svc-header {
       display: flex;
@@ -506,7 +547,7 @@
     }
     .svc-card.featured-deal {
       background: linear-gradient(145deg, #181410, #141414);
-      border: 1.5px solid rgba(224, 123, 0, 0.4);
+      border: 1.5px solid rgba(224, 123, 0, 0.45);
     }
     .svc-badge {
       display: inline-flex;
@@ -1197,10 +1238,10 @@
     .fab-wa svg { width: 30px; height: 30px; fill: #fff; }
 
     /* ── RESPONSIVIDADE ── */
-    @media(max-width: 992px) {
-      .explorer-inner { grid-template-columns: 1fr; }
-      .explorer-tabs { flex-direction: row; overflow-x: auto; padding-bottom: 8px; }
-      .etab { min-width: 130px; flex-shrink: 0; }
+    @media(max-width: 1024px) {
+      .explorer-inner { grid-template-columns: 1fr; gap: 30px; }
+      .explorer-tabs { flex-direction: row; overflow-x: auto; padding-bottom: 6px; }
+      .etab { min-width: 140px; flex-shrink: 0; }
       .why-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
     }
     @media(max-width: 860px) {
@@ -1211,7 +1252,7 @@
         flex-direction: column;
         position: absolute;
         top: 100%; left: 0; right: 0;
-        background: rgba(8, 8, 8, 0.98);
+        background: rgba(7, 7, 7, 0.98);
         padding: 24px 5vw;
         gap: 18px;
         border-bottom: 1px solid rgba(224, 123, 0, 0.2);
@@ -1224,14 +1265,14 @@
       section { padding: 65px 5vw; }
       #hero { padding-top: 105px; }
       .hero-actions a { width: 100%; justify-content: center; text-align: center; }
-      .hero-backdrop-car { width: 95vw; opacity: 0.08; }
+      .hero-gt-silhouette { width: 95vw; opacity: 0.08; }
       .calc-total-val { font-size: 2.3rem; }
     }
   </style>
 </head>
 <body>
 
-<!-- ── HEADER / NAV ── -->
+<!-- ── HEADER / NAVEGAÇÃO ── -->
 <nav id="nav">
   <a href="#hero" class="nav-logo" aria-label="JR New Concept Detail">
     <div class="logo-title"><span>JR</span><span class="orange">NEW CONCEPT</span><span>DETAIL</span></div>
@@ -1239,6 +1280,7 @@
   </a>
   <ul class="nav-links" id="navLinks">
     <li><a href="#servicos">Serviços</a></li>
+    <li><a href="#explorer">Zonas do Carro</a></li>
     <li><a href="#simulador">Orçamento Rápido</a></li>
     <li><a href="#comparador">Antes & Depois</a></li>
     <li><a href="#faq">Dúvidas (FAQ)</a></li>
@@ -1253,10 +1295,10 @@
 
 <!-- ── HERO ── -->
 <section id="hero">
-  <svg class="hero-backdrop-car" viewBox="0 0 900 380" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M80 260 Q100 220 160 190 Q240 155 350 145 L420 130 Q480 118 560 120 L660 125 Q740 130 790 160 Q830 180 848 220 L856 255 Q840 265 820 268 L840 270 Q850 290 850 300 Q820 310 790 308 L770 300 Q755 320 720 330 Q685 340 660 325 L640 308 L250 308 L230 325 Q195 340 160 330 Q130 320 118 300 L100 308 Q70 308 62 290 Q55 270 65 260 Z" stroke="#E07B00" stroke-width="2.5" opacity=".5"/>
-    <circle cx="175" cy="310" r="46" stroke="#E07B00" stroke-width="2.5" opacity=".6"/>
-    <circle cx="700" cy="310" r="46" stroke="#E07B00" stroke-width="2.5" opacity=".6"/>
+  <svg class="hero-gt-silhouette" viewBox="0 0 1000 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M60 252 L115 242 Q175 235 240 202 L380 134 Q450 100 540 98 L695 104 Q800 112 865 158 L925 212 Q960 240 948 260 L905 266" stroke="#E07B00" stroke-width="2.5" opacity=".5"/>
+    <circle cx="230" cy="265" r="52" stroke="#E07B00" stroke-width="2.5" opacity=".5"/>
+    <circle cx="770" cy="265" r="52" stroke="#E07B00" stroke-width="2.5" opacity=".5"/>
   </svg>
 
   <div class="hero-content">
@@ -1267,7 +1309,7 @@
       <span class="highlight">NA SUA PORTA.</span>
     </h1>
     <p class="hero-sub">
-      Cuidado técnico minucioso na sua <strong>casa ou empresa</strong>. Sem perder tempo em filas ou deslocamento: agendamento com hora marcada e acabamento de alto padrão.
+      Cuidado técnico minucioso na sua <strong>casa ou empresa</strong>. Especialistas em <strong>veículos vitrificados e com PPF</strong>, polimento técnico e higienização. Sem filas, com hora marcada e produtos de alta tecnologia.
     </p>
     <div class="hero-actions">
       <a href="https://wa.me/5512992228205?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20servi%C3%A7o%20com%20a%20JR%20New%20Concept%20Detail." target="_blank" class="btn-primary">
@@ -1277,8 +1319,8 @@
       <a href="#simulador" class="btn-outline">Simular Orçamento</a>
     </div>
     <div class="fast-perks">
-      <div class="f-perk"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Produtos Profissionais</div>
-      <div class="f-perk"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Sem Sair de Casa</div>
+      <div class="f-perk"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Especialistas em PPF & Vitrificação</div>
+      <div class="f-perk"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Delivery na sua Porta</div>
       <div class="f-perk"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Hora Marcada</div>
     </div>
   </div>
@@ -1288,96 +1330,249 @@
 <div class="ticker-wrap">
   <div class="ticker-inner">
     <span>Delivery em São José dos Campos</span><span class="dot">◆</span>
-    <span>Snow Foam & Lavagem Técnica</span><span class="dot">◆</span>
-    <span>Vitrificação de Pinturas e Plásticos</span><span class="dot">◆</span>
-    <span>Higienização Profunda e Couro</span><span class="dot">◆</span>
-    <span>Polimento Técnico</span><span class="dot">◆</span>
-    <span>Atendimento com Hora Marcada</span><span class="dot">◆</span>
+    <span>Manutenção para Vitrificados e PPF</span><span class="dot">◆</span>
+    <span>Snow Foam com pH Neutro</span><span class="dot">◆</span>
+    <span>Vitrificação Cerâmica de Pinturas e Plásticos</span><span class="dot">◆</span>
+    <span>Higienização Profunda & Hidratação de Couro</span><span class="dot">◆</span>
+    <span>Polimento Técnico Profissional</span><span class="dot">◆</span>
     <span>Delivery em São José dos Campos</span><span class="dot">◆</span>
-    <span>Snow Foam & Lavagem Técnica</span><span class="dot">◆</span>
-    <span>Vitrificação de Pinturas e Plásticos</span><span class="dot">◆</span>
-    <span>Higienização Profunda e Couro</span><span class="dot">◆</span>
-    <span>Polimento Técnico</span><span class="dot">◆</span>
-    <span>Atendimento com Hora Marcada</span><span class="dot">◆</span>
+    <span>Manutenção para Vitrificados e PPF</span><span class="dot">◆</span>
+    <span>Snow Foam com pH Neutro</span><span class="dot">◆</span>
+    <span>Vitrificação Cerâmica de Pinturas e Plásticos</span><span class="dot">◆</span>
+    <span>Higienização Profunda & Hidratação de Couro</span><span class="dot">◆</span>
+    <span>Polimento Técnico Profissional</span><span class="dot">◆</span>
   </div>
 </div>
 
-<!-- ── CAR EXPLORER INTERATIVO ── -->
+<!-- ── CAR EXPLORER COM SUPERESPORTIVO GT & IDENTIFICADOR DE PARTES ── -->
 <section id="explorer">
   <div class="explorer-header">
-    <div class="sec-label">Guia Interativo</div>
-    <h2 class="sec-title">VEJA O QUE CADA <span class="highlight">SERVIÇO TRATA</span></h2>
-    <p class="sec-sub">Clique nos serviços abaixo para visualizar no modelo quais partes do veículo recebem tratamento específico.</p>
+    <div class="sec-label">Guia Técnico Visual</div>
+    <h2 class="sec-title">EXPLORE AS ZONAS DO <span class="highlight">VEÍCULO</span></h2>
+    <p class="sec-sub" style="margin: 10px auto 0; text-align:center">Clique no serviço para ver o superesportivo acender e identificar exatamente os itens e superfícies tratados.</p>
   </div>
+
   <div class="explorer-inner">
     <div class="explorer-tabs">
-      <button class="etab active" data-svc="basic"><span class="etab-num">01</span><div><div class="etab-name">Manutenção</div><div class="etab-cat">Exterior básico</div></div></button>
-      <button class="etab" data-svc="externa"><span class="etab-num">02</span><div><div class="etab-name">Detalhada Externa</div><div class="etab-cat">Descontaminação & Cera</div></div></button>
-      <button class="etab" data-svc="interna"><span class="etab-num">03</span><div><div class="etab-name">Detalhada Interna</div><div class="etab-cat">Interior completo</div></div></button>
-      <button class="etab" data-svc="higie"><span class="etab-num">04</span><div><div class="etab-name">Higienização</div><div class="etab-cat">Sanitização profunda</div></div></button>
-      <button class="etab" data-svc="elite"><span class="etab-num">05</span><div><div class="etab-name">JR Elite</div><div class="etab-cat">Tratamento total VIP</div></div></button>
+      <button class="etab active" data-svc="basic">
+        <span class="etab-num">01</span>
+        <div><div class="etab-name">Manutenção Geral</div><div class="etab-cat">Lavagem Técnica Suave</div></div>
+      </button>
+      <button class="etab" data-svc="ppf">
+        <span class="etab-num">02</span>
+        <div><div class="etab-name">Vitrificados & PPF</div><div class="etab-cat">Preservação & Repelência</div></div>
+      </button>
+      <button class="etab" data-svc="externa">
+        <span class="etab-num">03</span>
+        <div><div class="etab-name">Detalhada Externa</div><div class="etab-cat">Descontaminação & Cera</div></div>
+      </button>
+      <button class="etab" data-svc="interna">
+        <span class="etab-num">04</span>
+        <div><div class="etab-name">Detalhada Interna</div><div class="etab-cat">Teto, Painel & Plásticos</div></div>
+      </button>
+      <button class="etab" data-svc="higie">
+        <span class="etab-num">05</span>
+        <div><div class="etab-name">Higienização</div><div class="etab-cat">Sanitização Profunda</div></div>
+      </button>
+      <button class="etab" data-svc="elite">
+        <span class="etab-num">06</span>
+        <div><div class="etab-name">Pacote JR Elite</div><div class="etab-cat">Tratamento Total VIP 360°</div></div>
+      </button>
     </div>
-    
-    <div class="explorer-car-wrap" id="explorerWrap">
-      <div class="explorer-view-badge" id="explorerBadge"><span id="explorerBadgeText">VISÃO EXTERIOR</span></div>
-      <!-- SVG Exterior -->
-      <svg class="ecar-ext" id="ecarExt" viewBox="0 0 960 445" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M84 295 Q100 250 160 218 Q240 180 348 168 L426 152 Q486 140 564 142 L654 148 Q734 154 788 184 Q832 206 852 246 L862 282 Q844 294 822 297 L842 299 Q854 320 852 332 Q820 344 788 340 L768 330 Q752 352 716 364 Q680 374 656 357 L636 338 L254 338 L234 357 Q198 374 162 364 Q130 352 118 330 L100 338 Q70 338 62 320 Q56 302 68 292 Z" stroke="rgba(224,123,0,.15)" stroke-width="1.5" fill="rgba(8,8,8,.4)"/>
-        <g id="ez-body" class="ez"><path d="M84 295 Q100 250 160 218 Q240 180 348 168 L426 152 Q486 140 564 142 L654 148 Q734 154 788 184 Q832 206 852 246 L862 282 Q844 294 822 297 L842 299 Q854 320 852 332 Q820 344 788 340 L768 330 Q752 352 716 364 Q680 374 656 357 L636 338 L254 338 L234 357 Q198 374 162 364 Q130 352 118 330 L100 338 Q70 338 62 320 Q56 302 68 292 Z" stroke="#E07B00" stroke-width="2.5" fill="rgba(224,123,0,.03)"/></g>
-        <g id="ez-hood" class="ez"><path d="M84 295 Q100 250 160 218 Q222 186 296 172 L360 164 L344 252 Q280 260 218 274 Q148 285 90 295 Z" stroke="#E07B00" stroke-width="2" fill="rgba(224,123,0,.08)"/></g>
-        <g id="ez-windows" class="ez"><path d="M362 166 L426 152 Q486 140 564 142 L654 148 L656 172 Q572 166 492 166 Q428 166 364 174 Z" stroke="#6EC6FF" stroke-width="1.5" fill="rgba(180,220,255,.08)"/></g>
-        <g id="ez-frontwheel" class="ez"><circle cx="200" cy="340" r="54" stroke="#E07B00" stroke-width="2.5" fill="rgba(224,123,0,.04)"/><circle cx="200" cy="340" r="32" stroke="#E07B00" stroke-width="1.5"/></g>
-        <g id="ez-rearwheel" class="ez"><circle cx="716" cy="340" r="54" stroke="#E07B00" stroke-width="2.5" fill="rgba(224,123,0,.04)"/><circle cx="716" cy="340" r="32" stroke="#E07B00" stroke-width="1.5"/></g>
-      </svg>
-      <!-- SVG Interior -->
-      <svg class="ecar-int" id="ecarInt" viewBox="0 0 960 445" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M84 295 Q100 250 160 218 Q240 180 348 168 L426 152 Q486 140 564 142 L654 148 Q734 154 788 184 Q832 206 852 246 L862 282 Q844 294 822 297 L842 299 Q854 320 852 332 Q820 344 788 340 L768 330 Q752 352 716 364 Q680 374 656 357 L636 338 L254 338 L234 357 Q198 374 162 364 Q130 352 118 330 L100 338 Q70 338 62 320 Q56 302 68 292 Z" stroke="rgba(224,123,0,.2)" stroke-width="1.5" fill="rgba(8,8,8,.88)"/>
-        <g id="iz-carpet" class="iz"><rect x="242" y="310" width="462" height="30" rx="3" stroke="#E07B00" stroke-width="1.5" fill="rgba(224,123,0,.1)"/></g>
-        <g id="iz-ceiling" class="iz"><path d="M364 172 L654 170 L650 196 L368 196 Z" stroke="#E07B00" stroke-width="1.5" fill="rgba(224,123,0,.1)"/></g>
-        <g id="iz-frontseat" class="iz"><rect x="454" y="212" width="54" height="96" rx="7" stroke="#E07B00" stroke-width="1.5" fill="rgba(224,123,0,.12)"/></g>
-        <g id="iz-rearseat" class="iz"><rect x="574" y="212" width="90" height="96" rx="7" stroke="#E07B00" stroke-width="1.5" fill="rgba(224,123,0,.12)"/></g>
+
+    <!-- Palco do Superesportivo GT com Reflexo e Callouts -->
+    <div class="car-stage">
+      <div class="stage-badge" id="stageBadge"><span>ZONAS EM DESTAQUE</span></div>
+
+      <svg class="gt-car-svg" viewBox="0 0 1000 370" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="porscheBodyGrad" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#E07B00"/>
+            <stop offset="100%" stop-color="#FF9F2E"/>
+          </linearGradient>
+          <linearGradient id="groundStudioGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="rgba(224,123,0,0.22)"/>
+            <stop offset="100%" stop-color="transparent"/>
+          </linearGradient>
+        </defs>
+
+        <!-- Piso Espelhado de Estúdio com Reflexo Suave -->
+        <ellipse cx="500" cy="315" rx="440" ry="18" fill="url(#groundStudioGrad)"/>
+        <line x1="80" y1="315" x2="920" y2="315" stroke="rgba(224,123,0,0.25)" stroke-width="1.5" stroke-dasharray="8 6"/>
+
+        <!-- ESTRUTURA GERAL PERMANENTE (Wireframe sutil) -->
+        <path d="M60 252 L115 242 Q175 235 240 202 L380 134 Q450 100 540 98 L695 104 Q800 112 865 158 L925 212 Q960 240 948 260 L905 266" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+
+        <!-- 1. ZONA: PINTURA, CAPÔ E PARACHOQUE (LATARIA GT) -->
+        <g id="zn-body" class="zone">
+          <path d="M60 252 Q80 236 125 232 L245 204 Q365 142 445 110 Q535 96 645 102 L745 118 Q845 142 895 192 L938 238 Q958 258 928 264 L880 264" stroke="url(#porscheBodyGrad)" stroke-width="3" stroke-linecap="round"/>
+          <path d="M260 215 L430 205 Q620 200 765 212" stroke="#E07B00" stroke-width="1.5" opacity="0.75"/>
+          <path d="M280 232 L460 226 L730 230" stroke="#E07B00" stroke-width="1" opacity="0.45"/>
+          <path d="M335 272 L665 272" stroke="#E07B00" stroke-width="2.5"/>
+          <path d="M915 220 L945 224 L940 235 Z" fill="#E07B00" opacity="0.85"/>
+        </g>
+
+        <!-- 2. ZONA: FARÓIS DRL LASER / LED E LANTERNA -->
+        <g id="zn-lights" class="zone">
+          <polygon points="68,248 135,234 152,244 76,254" fill="rgba(255,159,46,0.3)" stroke="#FF9F2E" stroke-width="1.8"/>
+          <line x1="78" y1="250" x2="140" y2="238" stroke="#fff" stroke-width="2"/>
+          <path d="M905 230 L935 240 L930 248 L895 242 Z" fill="rgba(224,123,0,0.35)" stroke="#E07B00" stroke-width="1.6"/>
+        </g>
+
+        <!-- 3. ZONA: VIDROS, PARA-BRISA E TETO SOLAR -->
+        <g id="zn-glass" class="zone">
+          <path d="M380 140 Q440 114 515 110 L660 114 Q740 122 785 158 L720 190 Q580 185 430 192 Z" stroke="#6EC6FF" stroke-width="2" fill="rgba(110, 198, 255, 0.08)"/>
+          <line x1="565" y1="112" x2="550" y2="186" stroke="rgba(110, 198, 255, 0.4)" stroke-width="1.5"/>
+        </g>
+
+        <!-- 4. ZONA: CABINE INTERNA (Bancos Esportivos, Painel e Teto) -->
+        <g id="zn-interior" class="zone">
+          <path d="M475 135 Q495 132 505 155 L495 185 L465 185 Z" stroke="#E07B00" stroke-width="1.6" fill="rgba(224,123,0,0.14)"/>
+          <circle cx="490" cy="130" r="7" stroke="#E07B00" stroke-width="1.3"/>
+          <path d="M605 142 Q620 140 628 160 L620 185 L595 185 Z" stroke="#E07B00" stroke-width="1.6" fill="rgba(224,123,0,0.14)"/>
+          <path d="M410 180 L435 158 L440 182" stroke="#E07B00" stroke-width="2"/>
+        </g>
+
+        <!-- 5. ZONA: RODA DIANTEIRA ESPORTIVA GT COM PINÇA -->
+        <g id="zn-frontwheel" class="zone">
+          <circle cx="230" cy="275" r="54" stroke="#E07B00" stroke-width="3" fill="#0c0c0c"/>
+          <circle cx="230" cy="275" r="38" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+          <circle cx="230" cy="275" r="14" stroke="#E07B00" stroke-width="2" fill="rgba(224,123,0,0.3)"/>
+          <line x1="230" y1="223" x2="230" y2="327" stroke="#E07B00" stroke-width="1.5"/>
+          <line x1="178" y1="275" x2="282" y2="275" stroke="#E07B00" stroke-width="1.5"/>
+          <line x1="193" y1="238" x2="267" y2="312" stroke="#E07B00" stroke-width="1.5"/>
+          <line x1="193" y1="312" x2="267" y2="238" stroke="#E07B00" stroke-width="1.5"/>
+          <path d="M245 245 A 30 30 0 0 1 260 270" stroke="#FF9F2E" stroke-width="4.5" stroke-linecap="round"/>
+        </g>
+
+        <!-- 6. ZONA: RODA TRASEIRA ESPORTIVA GT COM PINÇA -->
+        <g id="zn-rearwheel" class="zone">
+          <circle cx="770" cy="275" r="54" stroke="#E07B00" stroke-width="3" fill="#0c0c0c"/>
+          <circle cx="770" cy="275" r="38" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+          <circle cx="770" cy="275" r="14" stroke="#E07B00" stroke-width="2" fill="rgba(224,123,0,0.3)"/>
+          <line x1="770" y1="223" x2="770" y2="327" stroke="#E07B00" stroke-width="1.5"/>
+          <line x1="718" y1="275" x2="822" y2="275" stroke="#E07B00" stroke-width="1.5"/>
+          <line x1="733" y1="238" x2="807" y2="312" stroke="#E07B00" stroke-width="1.5"/>
+          <line x1="733" y1="312" x2="807" y2="238" stroke="#E07B00" stroke-width="1.5"/>
+          <path d="M785 245 A 30 30 0 0 1 800 270" stroke="#FF9F2E" stroke-width="4.5" stroke-linecap="round"/>
+        </g>
+
+        <!-- ── IDENTIFICADORES VISUAIS (CALLOUT BADGES) ── -->
+        <g id="cl-hood" class="callout-tag">
+          <line x1="160" y1="170" x2="185" y2="220" stroke="#FF9F2E" stroke-width="1.5" stroke-dasharray="3 3"/>
+          <circle cx="185" cy="220" r="4" fill="#FF9F2E"/>
+          <rect x="70" y="145" width="135" height="24" rx="3" fill="#181818" stroke="#FF9F2E" stroke-width="1.2"/>
+          <text x="137" y="161" fill="#fff" font-family="'Barlow Condensed', sans-serif" font-size="11" font-weight="700" letter-spacing="1" text-anchor="middle">CAPÔ / VERNIZ / PPF</text>
+        </g>
+
+        <g id="cl-glass" class="callout-tag">
+          <line x1="510" y1="60" x2="490" y2="120" stroke="#6EC6FF" stroke-width="1.5" stroke-dasharray="3 3"/>
+          <circle cx="490" cy="120" r="4" fill="#6EC6FF"/>
+          <rect x="420" y="38" width="145" height="24" rx="3" fill="#181818" stroke="#6EC6FF" stroke-width="1.2"/>
+          <text x="492" y="54" fill="#6EC6FF" font-family="'Barlow Condensed', sans-serif" font-size="11" font-weight="700" letter-spacing="1" text-anchor="middle">VIDROS & TETO SOLAR</text>
+        </g>
+
+        <g id="cl-interior" class="callout-tag">
+          <line x1="620" y1="65" x2="570" y2="150" stroke="#E07B00" stroke-width="1.5" stroke-dasharray="3 3"/>
+          <circle cx="570" cy="150" r="4" fill="#E07B00"/>
+          <rect x="560" y="44" width="135" height="24" rx="3" fill="#181818" stroke="#E07B00" stroke-width="1.2"/>
+          <text x="627" y="60" fill="#fff" font-family="'Barlow Condensed', sans-serif" font-size="11" font-weight="700" letter-spacing="1" text-anchor="middle">CABINE & COURO</text>
+        </g>
+
+        <g id="cl-wheels" class="callout-tag">
+          <line x1="230" y1="355" x2="230" y2="320" stroke="#FF9F2E" stroke-width="1.5" stroke-dasharray="3 3"/>
+          <circle cx="230" cy="320" r="4" fill="#FF9F2E"/>
+          <rect x="150" y="345" width="155" height="24" rx="3" fill="#181818" stroke="#FF9F2E" stroke-width="1.2"/>
+          <text x="227" y="361" fill="#fff" font-family="'Barlow Condensed', sans-serif" font-size="11" font-weight="700" letter-spacing="1" text-anchor="middle">RODAS, CAIXAS & FREIOS</text>
+        </g>
+
+        <g id="cl-rear" class="callout-tag">
+          <line x1="840" y1="165" x2="880" y2="215" stroke="#FF9F2E" stroke-width="1.5" stroke-dasharray="3 3"/>
+          <circle cx="880" cy="215" r="4" fill="#FF9F2E"/>
+          <rect x="780" y="142" width="140" height="24" rx="3" fill="#181818" stroke="#FF9F2E" stroke-width="1.2"/>
+          <text x="850" y="158" fill="#fff" font-family="'Barlow Condensed', sans-serif" font-size="11" font-weight="700" letter-spacing="1" text-anchor="middle">LANTERNA & DIFUSOR</text>
+        </g>
       </svg>
     </div>
 
-    <div class="explorer-info" id="explorerInfo">
+    <!-- Painel Lateral de Informações -->
+    <div class="explorer-info">
+      <!-- 01 Manutenção Básico -->
       <div class="einfo active" data-svc="basic">
         <div class="einfo-eyebrow">Plano Básico</div>
         <div class="einfo-title">LIMPEZA DE MANUTENÇÃO</div>
-        <div class="einfo-zones"><span class="eztag">Carroceria</span><span class="eztag">Rodas</span><span class="eztag">Vidros</span></div>
+        <div class="einfo-zones">
+          <span class="eztag">Carroceria</span>
+          <span class="eztag">Rodas & Pneus</span>
+          <span class="eztag">Vidros</span>
+        </div>
         <ul class="einfo-list">
-          <li>Lavagem Snow Foam</li>
-          <li>Aspiração interna cuidadosa</li>
-          <li>Plásticos e borrachas limpos</li>
-          <li>Vidros desengordurados</li>
+          <li>Lavagem técnica com Snow Foam neutro</li>
+          <li>Aspiração minuciosa da cabine e tapetes</li>
+          <li>Limpeza detalhada das rodas e pneus</li>
+          <li>Borrachas e vidros desengordurados</li>
         </ul>
         <div>
           <div class="einfo-price-lbl">A partir de</div>
           <div class="einfo-price">R$ 150</div>
         </div>
       </div>
+
+      <!-- 02 Manutenção Vitrificados & PPF -->
+      <div class="einfo" data-svc="ppf">
+        <div class="einfo-eyebrow" style="color:var(--or-lt)">★ Especialidade JR</div>
+        <div class="einfo-title">P/ VITRIFICADOS OU PPF</div>
+        <div class="einfo-zones">
+          <span class="eztag" style="background:#fff; color:#000;">PELÍCULA PPF</span>
+          <span class="eztag">VITRIFICAÇÃO</span>
+          <span class="eztag">HIDRORREPELÊNCIA</span>
+        </div>
+        <ul class="einfo-list">
+          <li>Lavagem técnica sem agredir a proteção existente</li>
+          <li>Descontaminação química leve anti-manchas</li>
+          <li>Reaplicação de booster / reforço hidrofóbico</li>
+          <li>Finalização especial preservando o brilho original</li>
+        </ul>
+        <div>
+          <div class="einfo-price-lbl">A partir de</div>
+          <div class="einfo-price">R$ 150</div>
+        </div>
+      </div>
+
+      <!-- 03 Detalhada Externa -->
       <div class="einfo" data-svc="externa">
         <div class="einfo-eyebrow">Tratamento Externo</div>
         <div class="einfo-title">DETALHADA EXTERNA</div>
-        <div class="einfo-zones"><span class="eztag">Pintura</span><span class="eztag">Descontaminação</span><span class="eztag">Enceramento</span></div>
+        <div class="einfo-zones">
+          <span class="eztag">Pintura</span>
+          <span class="eztag">Descontaminação</span>
+          <span class="eztag">Cera Protetora</span>
+        </div>
         <ul class="einfo-list">
-          <li>Lavagem técnica + Enceramento protetor</li>
-          <li>Descontaminação de pintura com claybar</li>
-          <li>Pincéis em cantos, grades e emblemas</li>
-          <li>Limpeza minuciosa de rodas e caixas</li>
+          <li>Lavagem técnica completa + Enceramento protetor</li>
+          <li>Descontaminação com Clay Bar em toda a lataria</li>
+          <li>Pincelamento em grades, frisos e emblemas</li>
+          <li>Revitalização e proteção UV de plásticos externos</li>
         </ul>
         <div>
           <div class="einfo-price-lbl">A partir de</div>
           <div class="einfo-price">R$ 330</div>
         </div>
       </div>
+
+      <!-- 04 Detalhada Interna -->
       <div class="einfo" data-svc="interna">
         <div class="einfo-eyebrow">Tratamento Interno</div>
         <div class="einfo-title">DETALHADA INTERNA</div>
-        <div class="einfo-zones"><span class="eztag">Teto</span><span class="eztag">Painel</span><span class="eztag">Carpetes</span></div>
+        <div class="einfo-zones">
+          <span class="eztag">Forro de Teto</span>
+          <span class="eztag">Painel & Portas</span>
+          <span class="eztag">Carpetes</span>
+        </div>
         <ul class="einfo-list">
-          <li>Limpeza técnica de forro de teto</li>
-          <li>Desinfecção de painel e saídas de ar</li>
-          <li>Proteção de plásticos (filtro UV - 3 meses)</li>
+          <li>Limpeza técnica do forro de teto sem encharcar</li>
+          <li>Pincéis em saídas de ar condicionado e botões</li>
+          <li>Condicionamento fosco dos plásticos (filtro UV 3 meses)</li>
           <li>Cheirinho cortesia de alto padrão</li>
         </ul>
         <div>
@@ -1385,31 +1580,41 @@
           <div class="einfo-price">R$ 320</div>
         </div>
       </div>
+
+      <!-- 05 Higienização Profunda -->
       <div class="einfo" data-svc="higie">
-        <div class="einfo-eyebrow">Sanitização</div>
+        <div class="einfo-eyebrow">Sanitização Profunda</div>
         <div class="einfo-title">HIGIENIZAÇÃO INTERNA</div>
-        <div class="einfo-zones"><span class="eztag">Bancos</span><span class="eztag">Carpetes</span><span class="eztag">Cofre Estepe</span></div>
+        <div class="einfo-zones">
+          <span class="eztag">Bancos</span>
+          <span class="eztag">Carpetes</span>
+          <span class="eztag">Cofre Estepe</span>
+        </div>
         <ul class="einfo-list">
-          <li>Higienização e extração profunda dos bancos</li>
-          <li>Sanitização completa do carpete e teto</li>
-          <li>Higienização de cofre e estepe</li>
-          <li>Neutralização de odores e ácaros</li>
+          <li>Extração profunda com máquina profissional nos bancos</li>
+          <li>Eliminação de ácaros, bactérias e odores impregnados</li>
+          <li>Higienização completa de carpete, estepe e cofre</li>
+          <li>Secagem rápida e tecido com toque renovado</li>
         </ul>
         <div>
           <div class="einfo-price-lbl">A partir de</div>
           <div class="einfo-price">R$ 390</div>
         </div>
       </div>
+
+      <!-- 06 Pacote JR Elite -->
       <div class="einfo" data-svc="elite">
         <div class="einfo-eyebrow">★ Experiência Completa</div>
         <div class="einfo-title">PACOTE JR ELITE</div>
-        <div class="einfo-zones"><span class="eztag">Tratamento Completo 360°</span></div>
+        <div class="einfo-zones">
+          <span class="eztag" style="background:#fff; color:#000;">TRATAMENTO TOTAL 360°</span>
+        </div>
         <ul class="einfo-list">
-          <li>Detalhada Externa + Interna completa</li>
-          <li>Higienização interna profunda</li>
-          <li>Polimento técnico para brilho máximo</li>
-          <li>Vitrificação de pintura e plásticos</li>
-          <li>Bônus: 2 duchas de manutenção 🚿</li>
+          <li>Detalhada Externa + Detalhada Interna completa</li>
+          <li>Higienização profunda de bancos e carpetes</li>
+          <li>Polimento técnico profissional para brilho máximo</li>
+          <li>Vitrificação cerâmica de pintura e plásticos</li>
+          <li>Bônus exclusivo: 2 duchas de manutenção cortesia 🚿</li>
         </ul>
         <div>
           <div class="einfo-price-lbl">A partir de</div>
@@ -1420,18 +1625,19 @@
   </div>
 </section>
 
-<!-- ── SERVIÇOS EM ABAS / CATEGORIAS ── -->
+<!-- ── CATÁLOGO DE SERVIÇOS EM ABAS ── -->
 <section id="servicos">
   <div class="svc-header">
     <div>
       <div class="sec-label">Catálogo de Serviços</div>
       <h2 class="sec-title">NOSSOS <span class="highlight">SERVIÇOS</span></h2>
     </div>
-    <p class="sec-sub">Filtre abaixo pela modalidade que você procura ou veja todos os tratamentos disponíveis.</p>
+    <p class="sec-sub">Filtre pela modalidade que você procura ou veja todos os tratamentos especializados disponíveis.</p>
   </div>
 
   <div class="svc-filters">
-    <button class="svc-filter-btn active" data-filter="all">Todos os Serviços (10)</button>
+    <button class="svc-filter-btn active" data-filter="all">Todos os Serviços (11)</button>
+    <button class="svc-filter-btn" data-filter="ppf-vitrificado">Vitrificados & PPF</button>
     <button class="svc-filter-btn" data-filter="lavagem">Lavagem & Detalhe</button>
     <button class="svc-filter-btn" data-filter="interior">Interior & Couro</button>
     <button class="svc-filter-btn" data-filter="protecao">Proteção & Polimento</button>
@@ -1439,16 +1645,37 @@
   </div>
 
   <div class="svc-grid">
-    <!-- 01 Manutenção -->
-    <div class="svc-card" data-cat="lavagem">
+    <!-- NOVO SERVIÇO: Manutenção para Veículos Vitrificados ou com PPF -->
+    <div class="svc-card featured-deal" data-cat="ppf-vitrificado">
       <div class="svc-num">01</div>
+      <div class="svc-badge">Destaque Especial</div>
+      <div class="svc-cat">Proteção • Brilho • Valorização</div>
+      <h3 class="svc-name">MANUTENÇÃO P/ VITRIFICADOS OU PPF</h3>
+      <p class="svc-desc">O cuidado certo para manter a proteção e o brilho do seu veículo por muito mais tempo, sem comprometer a película ou o revestimento cerâmico.</p>
+      <ul class="svc-items">
+        <li>Lavagem técnica que remove sujeiras sem agredir a proteção</li>
+        <li>Descontaminação química leve eliminando resíduos opacos</li>
+        <li>Reaplicação de reforço de hidrorrepelência (quando necessário)</li>
+        <li>Finalização especial preservando o brilho original</li>
+      </ul>
+      <div class="price-wrap">
+        <div class="price-lbl">A partir de</div>
+        <div class="price-val">R$ 150</div>
+        <div class="price-note">*Preserva o brilho, evita manchas e aumenta a vida útil</div>
+      </div>
+      <a href="https://wa.me/5512992228205?text=Ol%C3%A1%2C%20tenho%20interesse%20na%20Manuten%C3%A7%C3%A3o%20para%20Ve%C3%ADculos%20Vitrificados%20ou%20com%20PPF." target="_blank" class="card-cta">Agendar no WhatsApp</a>
+    </div>
+
+    <!-- Limpeza de Manutenção Regular -->
+    <div class="svc-card" data-cat="lavagem">
+      <div class="svc-num">02</div>
       <div class="svc-badge">Mais Pedido</div>
       <div class="svc-cat">Lavagem Técnica</div>
       <h3 class="svc-name">LIMPEZA DE MANUTENÇÃO</h3>
       <p class="svc-desc">Para manter o carro protegido e impecável entre tratamentos profundos. Lavagem suave sem riscar o verniz.</p>
       <ul class="svc-items">
         <li>Lavagem externa com Snow Foam neutro</li>
-        <li>Aspiração interna detalhada</li>
+        <li>Aspiração interna detalhada da cabine</li>
         <li>Limpeza de rodas e caixas de rodas</li>
         <li>Borrachas e vidros desengordurados</li>
       </ul>
@@ -1459,12 +1686,12 @@
       <a href="https://wa.me/5512992228205?text=Ol%C3%A1%2C%20tenho%20interesse%20na%20Limpeza%20de%20Manuten%C3%A7%C3%A3o." target="_blank" class="card-cta">Agendar no WhatsApp</a>
     </div>
 
-    <!-- 02 Detalhada Externa -->
+    <!-- Detalhada Externa -->
     <div class="svc-card" data-cat="lavagem">
-      <div class="svc-num">02</div>
+      <div class="svc-num">03</div>
       <div class="svc-cat">Estética Externa</div>
       <h3 class="svc-name">DETALHADA EXTERNA</h3>
-      <p class="svc-desc">Descontaminação minuciosa da pintura com pincéis em grades, emblemas e aplicação de cera protetora.</p>
+      <p class="svc-desc">Descontaminação minuciosa da pintura com pincéis em grades, emblemas e aplicação de cera protetora de alta fixação.</p>
       <ul class="svc-items">
         <li>Lavagem externa detalhada + Enceramento</li>
         <li>Descontaminação de pintura com claybar</li>
@@ -1478,17 +1705,17 @@
       <a href="https://wa.me/5512992228205?text=Ol%C3%A1%2C%20tenho%20interesse%20na%20Detalhada%20Externa." target="_blank" class="card-cta">Agendar no WhatsApp</a>
     </div>
 
-    <!-- 03 Detalhada Interna -->
+    <!-- Detalhada Interna -->
     <div class="svc-card" data-cat="interior">
-      <div class="svc-num">03</div>
+      <div class="svc-num">04</div>
       <div class="svc-cat">Interior</div>
       <h3 class="svc-name">DETALHADA INTERNA</h3>
       <p class="svc-desc">Interior revitalizado do teto ao carpete com proteção UV e aroma agradável de carro novo.</p>
       <ul class="svc-items">
-        <li>Higienização técnica de teto</li>
+        <li>Higienização técnica de forro de teto</li>
         <li>Limpeza minuciosa de plásticos e painel</li>
-        <li>Proteção de plásticos (duração até 3 meses)</li>
-        <li>Detalhada de carpete + tapetes</li>
+        <li>Proteção de plásticos com filtro UV (3 meses)</li>
+        <li>Detalhada de carpete + restauração de tapetes</li>
       </ul>
       <div class="price-wrap">
         <div class="price-lbl">A partir de</div>
@@ -1497,9 +1724,9 @@
       <a href="https://wa.me/5512992228205?text=Ol%C3%A1%2C%20tenho%20interesse%20na%20Detalhada%20Interna." target="_blank" class="card-cta">Agendar no WhatsApp</a>
     </div>
 
-    <!-- 04 Higienização Interna Profunda -->
+    <!-- Higienização Interna Profunda -->
     <div class="svc-card" data-cat="interior">
-      <div class="svc-num">04</div>
+      <div class="svc-num">05</div>
       <div class="svc-badge">Saúde & Conforto</div>
       <div class="svc-cat">Higienização</div>
       <h3 class="svc-name">HIGIENIZAÇÃO INTERNA</h3>
@@ -1517,17 +1744,17 @@
       <a href="https://wa.me/5512992228205?text=Ol%C3%A1%2C%20tenho%20interesse%20na%20Higieniza%C3%A7%C3%A3o%20Interna." target="_blank" class="card-cta">Agendar no WhatsApp</a>
     </div>
 
-    <!-- 05 Higienização de Couro -->
+    <!-- Higienização de Couro -->
     <div class="svc-card" data-cat="interior">
-      <div class="svc-num">05</div>
-      <div class="svc-cat">Couro</div>
+      <div class="svc-num">06</div>
+      <div class="svc-cat">Couro Nobre</div>
       <h3 class="svc-name">HIGIENIZAÇÃO DE COURO</h3>
-      <p class="svc-desc">Restaura a textura fosca original do couro nobre, prevenindo rachaduras causadas pelo ressecamento e sol.</p>
+      <p class="svc-desc">Restaura a textura fosca original do couro nobre, prevenindo rachaduras causadas pelo ressecamento e calor.</p>
       <ul class="svc-items">
         <li>Limpeza profunda sem agredir as fibras</li>
         <li>Hidratação intensiva com produto específico</li>
         <li>Toque aveludado e acabamento fosco original</li>
-        <li>Proteção contra ressecamento</li>
+        <li>Proteção duradoura contra ressecamento</li>
       </ul>
       <div class="price-wrap">
         <div class="price-lbl">Valor por banco</div>
@@ -1536,16 +1763,16 @@
       <a href="https://wa.me/5512992228205?text=Ol%C3%A1%2C%20tenho%20interesse%20na%20Higieniza%C3%A7%C3%A3o%20de%20Couro." target="_blank" class="card-cta">Agendar no WhatsApp</a>
     </div>
 
-    <!-- 06 Polimento Técnico -->
+    <!-- Polimento Técnico -->
     <div class="svc-card" data-cat="protecao">
-      <div class="svc-num">06</div>
+      <div class="svc-num">07</div>
       <div class="svc-cat">Correção de Verniz</div>
       <h3 class="svc-name">POLIMENTO TÉCNICO</h3>
       <p class="svc-desc">Elimina microrriscos circulares (swirls) e hologramas, devolvendo a profundidade e reflexo de espelho na pintura.</p>
       <ul class="svc-items">
         <li>Descontaminação completa da pintura</li>
-        <li>Isolamento de frisos, borrachas e plásticos</li>
-        <li>Correção técnica de riscos e marcas</li>
+        <li>Isolamento técnico de borrachas e plásticos</li>
+        <li>Correção de riscos e marcas de lavagem incorreta</li>
         <li>Restauração total do brilho espelhado</li>
       </ul>
       <div class="price-wrap">
@@ -1556,15 +1783,15 @@
       <a href="https://wa.me/5512992228205?text=Ol%C3%A1%2C%20tenho%20interesse%20no%20Polimento%20T%C3%A9cnico." target="_blank" class="card-cta">Agendar no WhatsApp</a>
     </div>
 
-    <!-- 07 Vitrificação de Plásticos -->
+    <!-- Vitrificação de Plásticos -->
     <div class="svc-card" data-cat="protecao">
-      <div class="svc-num">07</div>
+      <div class="svc-num">08</div>
       <div class="svc-cat">Proteção Cerâmica</div>
       <h3 class="svc-name">VITRIFICAÇÃO DE PLÁSTICOS</h3>
       <p class="svc-desc">Cria uma barreira cerâmica inteligente nos plásticos externos. Evita esbranquiçado por até 12 meses!</p>
       <ul class="svc-items">
         <li>Proteção solar UV de alta durabilidade</li>
-        <li>Repelência à água e lama (hidrofóbico)</li>
+        <li>Repelência extrema à água e lama</li>
         <li>Para-choques, molduras, retrovisores e caixas</li>
         <li>Garantia e durabilidade de até 1 ano</li>
       </ul>
@@ -1575,15 +1802,15 @@
       <a href="https://wa.me/5512992228205?text=Ol%C3%A1%2C%20tenho%20interesse%20na%20Vitrifica%C3%A7%C3%A3o%20de%20Pl%C3%A1sticos." target="_blank" class="card-cta">Agendar no WhatsApp</a>
     </div>
 
-    <!-- 08 Revitalização de Plásticos -->
+    <!-- Revitalização de Plásticos -->
     <div class="svc-card" data-cat="protecao">
-      <div class="svc-num">08</div>
+      <div class="svc-num">09</div>
       <div class="svc-cat">Acabamento</div>
       <h3 class="svc-name">REVITALIZAÇÃO DE PLÁSTICOS</h3>
-      <p class="svc-desc">Tratamento de renovação rápida para peças plásticas ressecadas, devolvendo o preto original.</p>
+      <p class="svc-desc">Tratamento de renovação rápida para peças plásticas ressecadas, devolvendo o aspecto escuro original.</p>
       <ul class="svc-items">
         <li>Limpeza preparatória dos plásticos</li>
-        <li>Remoção de resíduos e manchas</li>
+        <li>Remoção de resíduos e manchas brancas</li>
         <li>Aplicação de condicionador protetor</li>
         <li>Acabamento seco sem grudar poeira</li>
       </ul>
@@ -1594,12 +1821,12 @@
       <a href="https://wa.me/5512992228205?text=Ol%C3%A1%2C%20tenho%20interesse%20na%20Revitaliza%C3%A7%C3%A3o%20de%20Pl%C3%A1sticos." target="_blank" class="card-cta">Agendar no WhatsApp</a>
     </div>
 
-    <!-- 09 Impermeabilização de Vidros -->
+    <!-- Impermeabilização de Vidros -->
     <div class="svc-card" data-cat="protecao">
-      <div class="svc-num">09</div>
+      <div class="svc-num">10</div>
       <div class="svc-cat">Segurança na Chuva</div>
       <h3 class="svc-name">IMPERMEABILIZAÇÃO DE VIDROS</h3>
-      <p class="svc-desc">Efeito gota d'água deslizante na chuva. Aumenta drasticamente a visibilidade e reduz manchas de água.</p>
+      <p class="svc-desc">Efeito gota d'água deslizante na chuva. Aumenta drasticamente a visibilidade e reduz manchas d'água nos vidros.</p>
       <ul class="svc-items">
         <li>Descontaminação do vidro</li>
         <li>Película repelente de alta eficiência</li>
@@ -1618,19 +1845,19 @@
       <a href="https://wa.me/5512992228205?text=Ol%C3%A1%2C%20tenho%20interesse%20na%20Impermeabiliza%C3%A7%C3%A3o%20de%20Vidros." target="_blank" class="card-cta">Agendar no WhatsApp</a>
     </div>
 
-    <!-- 10 PACOTE JR ELITE -->
+    <!-- Pacote JR Elite VIP -->
     <div class="svc-card featured-deal" data-cat="vip">
-      <div class="svc-num">10</div>
+      <div class="svc-num">11</div>
       <div class="svc-badge">★ PACOTE SIGNATURE VIP</div>
       <div class="svc-cat">Experiência 360°</div>
       <h3 class="svc-name">PACOTE JR ELITE</h3>
-      <p class="svc-desc">Para quem exige padrão de colecionador. Une o melhor do tratamento externo, interno e vitrificação com benefício exclusivo.</p>
+      <p class="svc-desc">Para quem exige padrão de colecionador. Une o melhor do tratamento externo, interno e vitrificação cerâmica com benefício exclusivo.</p>
       <ul class="svc-items">
         <li>Detalhada Externa completa + Enceramento</li>
-        <li>Detalhada Interna e Higienização de bancos</li>
-        <li>Polimento técnico para brilho impecável</li>
-        <li>Vitrificação de pintura e plásticos</li>
-        <li><strong>Bônus especial: 2 duchas de manutenção</strong></li>
+        <li>Detalhada Interna e Higienização profunda de bancos</li>
+        <li>Polimento técnico para brilho espelhado sem riscos</li>
+        <li>Vitrificação cerâmica de pintura e plásticos</li>
+        <li><strong>Bônus especial: 2 duchas de manutenção cortesia</strong></li>
       </ul>
       <div class="price-wrap">
         <div class="price-lbl">A partir de</div>
@@ -1643,9 +1870,9 @@
 
 <!-- ── SIMULADOR DE ORÇAMENTO PARA WHATSAPP ── -->
 <section id="simulador">
-  <div class="sec-label" style="text-align:center">Monte seu Pacote</div>
+  <div class="sec-label" style="text-align:center">Monte seu Pacote Personalizado</div>
   <h2 class="sec-title" style="text-align:center">SIMULADOR DE <span class="highlight">ORÇAMENTO RÁPIDO</span></h2>
-  <p class="sec-sub" style="margin: 12px auto 0; text-align:center">Escolha o porte do seu carro e marque os serviços desejados. Em seguida, envie para o WhatsApp com 1 clique.</p>
+  <p class="sec-sub" style="margin: 12px auto 0; text-align:center">Escolha o porte do seu carro e selecione os serviços desejados. Em seguida, envie para o WhatsApp com 1 clique.</p>
 
   <div class="calc-container">
     <div class="calc-step-title"><span>1</span> Selecione o porte do veículo:</div>
@@ -1674,8 +1901,15 @@
 
     <div class="calc-step-title"><span>2</span> Escolha os serviços:</div>
     <div class="calc-services-grid">
-      <div class="calc-svc-item checked" data-price="150" data-name="Limpeza de Manutenção">
+      <div class="calc-svc-item checked" data-price="150" data-name="Manutenção p/ Vitrificados ou PPF">
         <div class="calc-checkbox">✓</div>
+        <div class="calc-svc-info">
+          <div class="calc-svc-title">Manutenção p/ Vitrificados ou PPF</div>
+          <div class="calc-svc-cost">Base: R$ 150</div>
+        </div>
+      </div>
+      <div class="calc-svc-item" data-price="150" data-name="Limpeza de Manutenção">
+        <div class="calc-checkbox"></div>
         <div class="calc-svc-info">
           <div class="calc-svc-title">Limpeza de Manutenção</div>
           <div class="calc-svc-cost">Base: R$ 150</div>
@@ -1745,7 +1979,6 @@
   <p class="sec-sub" style="margin: 12px auto 0; text-align:center">Arraste a barra central para os lados e compare a diferença entre uma pintura opaca com microrriscos e o acabamento espelhado JR.</p>
 
   <div class="ba-slider-container" id="baSlider">
-    <!-- DEPOIS -->
     <div class="ba-pane ba-after">
       <div class="ba-visual-content">
         <span class="ba-pill">Depois do Detalhamento</span>
@@ -1753,7 +1986,6 @@
         <p class="ba-desc">Verniz corrigido, sem teias de aranha (swirls), reflexo nítido de espelho e proteção hidrofóbica ativa.</p>
       </div>
     </div>
-    <!-- ANTES -->
     <div class="ba-pane ba-before" id="baBefore">
       <div class="ba-visual-content">
         <span class="ba-pill">Antes do Tratamento</span>
@@ -1761,7 +1993,6 @@
         <p class="ba-desc">Marcas de lavagem incorreta, manchas de sol e verniz fosco sem profundidade de cor.</p>
       </div>
     </div>
-    <!-- Alça -->
     <div class="ba-handle" id="baHandle">
       <div class="ba-handle-btn">⇄</div>
     </div>
@@ -1797,17 +2028,27 @@
 
     <div class="faq-item">
       <div class="faq-question">
-        <span>3. Quanto tempo costuma durar o serviço?</span>
+        <span>3. Por que carros com Vitrificação ou PPF precisam de manutenção especial?</span>
         <span class="faq-icon">+</span>
       </div>
       <div class="faq-answer">
-        Depende do pacote escolhido. Uma <strong>Limpeza de Manutenção</strong> leva em média de 1h30 a 2h. Já procedimentos mais aprofundados como <strong>Higienização Interna completa ou Polimento Técnico</strong> podem levar de 4 a 6 horas para garantir o padrão de excelência.
+        Lava-rápidos comuns utilizam químicos altamente ácidos ou alcalinos que atacam a camada cerâmica da vitrificação e deixam a película de PPF amarelada ou ressecada. Nossa lavagem utiliza <strong>Snow Foam de pH rigorosamente neutro</strong>, descontaminação química leve e <strong>reforço da camada de hidrorrepelência</strong>, preservando a garantia do tratamento.
       </div>
     </div>
 
     <div class="faq-item">
       <div class="faq-question">
-        <span>4. Quais são as formas de pagamento aceitas?</span>
+        <span>4. Quanto tempo costuma durar o serviço?</span>
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-answer">
+        Depende do pacote escolhido. Uma <strong>Limpeza de Manutenção</strong> leva em média de 1h30 a 2h. Já procedimentos mais aprofundados como <strong>Higienização Interna completa ou Polimento Técnico</strong> levam de 4 a 6 horas para garantir o acabamento impecável.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>5. Quais são as formas de pagamento aceitas?</span>
         <span class="faq-icon">+</span>
       </div>
       <div class="faq-answer">
@@ -1817,17 +2058,17 @@
 
     <div class="faq-item">
       <div class="faq-question">
-        <span>5. E se chover no dia do agendamento?</span>
+        <span>6. E se chover no dia do agendamento?</span>
         <span class="faq-icon">+</span>
       </div>
       <div class="faq-answer">
-        Se o veículo estiver em garagem coberta, o atendimento ocorre normalmente. Caso a vaga seja descoberta e o clima não colabore, remarcamos imediatamente para o próximo horário disponível que melhor atenda você, sem nenhuma taxa extra.
+        Se o veículo estiver em garagem coberta, o atendimento ocorre normalmente. Caso a vaga seja descoberta e o tempo fique instável, remarcamos imediatamente para o próximo horário disponível sem custo extra.
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── REGIÕES ATENDIDAS SJC ── -->
+<!-- ── REGIÕES ATENDIDAS EM SJC ── -->
 <section id="regioes">
   <div class="sec-label">Onde Atendemos</div>
   <h2 class="sec-title">ATENDIMENTO EM TODA <span class="highlight">SÃO JOSÉ DOS CAMPOS</span></h2>
@@ -1874,14 +2115,14 @@
           <div class="why-ico">✦</div>
           <div>
             <h3>Produtos de Padrão Internacional</h3>
-            <p>Utilizamos os melhores químicos do mercado (pH neutro, vitrificadores certificados, hidratantes de couro nobres e panos de microfibra de alta gramatura).</p>
+            <p>Utilizamos os melhores químicos do mercado (pH neutro, vitrificadores certificados, hidratantes nobres de couro e panos de microfibra de alta gramatura).</p>
           </div>
         </div>
         <div class="why-item">
           <div class="why-ico">🛡</div>
           <div>
             <h3>Atenção aos Mínimos Detalhes</h3>
-            <p>Emblemas, frisos, borrachas e costuras de bancos. Onde um lava-rápido comum passa batido, a gente foca com atenção cirúrgica.</p>
+            <p>Emblemas, frisos, borrachas e costuras de bancos. Onde um lava-rápido comum passa batido, a gente foca com precisão cirúrgica.</p>
           </div>
         </div>
       </div>
@@ -1959,7 +2200,7 @@
   <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.555 4.126 1.528 5.858L.057 23.855c-.083.329.243.613.564.491l5.912-2.186A11.947 11.947 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.929 0-3.73-.52-5.27-1.425l-.376-.225-3.897 1.44 1.317-3.96-.244-.388A9.958 9.958 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
 </a>
 
-<!-- ── JAVASCRIPT ── -->
+<!-- ── JAVASCRIPT COMPLETO ── -->
 <script>
   // Navbar scroll
   const nav = document.getElementById('nav');
@@ -1977,59 +2218,77 @@
     link.addEventListener('click', () => navLinks.classList.remove('mobile-active'));
   });
 
-  // ── CAR EXPLORER ──
-  const expData = {
-    basic:   { view: 'ext', ext: ['ez-body', 'ez-frontwheel', 'ez-rearwheel', 'ez-windows'], int: [], badge: 'VISÃO EXTERIOR' },
-    externa: { view: 'ext', ext: ['ez-body', 'ez-hood', 'ez-windows', 'ez-frontwheel', 'ez-rearwheel'], int: [], badge: 'EXTERIOR COMPLETO' },
-    interna: { view: 'int', ext: [], int: ['iz-carpet', 'iz-ceiling', 'iz-frontseat', 'iz-rearseat'], badge: 'VISÃO INTERIOR' },
-    higie:   { view: 'int', ext: [], int: ['iz-frontseat', 'iz-rearseat', 'iz-carpet', 'iz-ceiling'], badge: 'INTERIOR PROFUNDO' },
-    elite:   { view: 'both', ext: ['ez-body', 'ez-hood', 'ez-windows', 'ez-frontwheel', 'ez-rearwheel'], int: ['iz-carpet', 'iz-ceiling', 'iz-frontseat', 'iz-rearseat'], badge: 'TRATAMENTO COMPLETO 360°' }
+  // ── SUPERESPORTIVO GT EXPLORER INTERATIVO COM CALLOUTS ──
+  const gtExplorerData = {
+    basic: {
+      activeZones: ['zn-body', 'zn-frontwheel', 'zn-rearwheel', 'zn-glass'],
+      callouts: ['cl-hood', 'cl-wheels', 'cl-glass'],
+      badge: 'ZONAS: EXTERIOR & RODAS'
+    },
+    ppf: {
+      activeZones: ['zn-body', 'zn-glass', 'zn-frontwheel', 'zn-rearwheel'],
+      callouts: ['cl-hood', 'cl-glass', 'cl-rear'],
+      badge: 'ZONAS: PELÍCULA PPF & REVESTIMENTO CERÂMICO'
+    },
+    externa: {
+      activeZones: ['zn-body', 'zn-lights', 'zn-frontwheel', 'zn-rearwheel', 'zn-glass'],
+      callouts: ['cl-hood', 'cl-wheels', 'cl-rear'],
+      badge: 'ZONAS: PINTURA, DESCONTAMINAÇÃO & CERA'
+    },
+    interna: {
+      activeZones: ['zn-interior'],
+      callouts: ['cl-interior'],
+      badge: 'ZONAS: CABINE, PAINEL & FORRO'
+    },
+    higie: {
+      activeZones: ['zn-interior'],
+      callouts: ['cl-interior'],
+      badge: 'ZONAS: HIGIENIZAÇÃO DE BANCOS & CARPETES'
+    },
+    elite: {
+      activeZones: ['zn-body', 'zn-lights', 'zn-glass', 'zn-interior', 'zn-frontwheel', 'zn-rearwheel'],
+      callouts: ['cl-hood', 'cl-glass', 'cl-interior', 'cl-wheels', 'cl-rear'],
+      badge: 'TRATAMENTO COMPLETO 360° VIP'
+    }
   };
-  const expTabs = document.querySelectorAll('.etab');
-  const expInfos = document.querySelectorAll('.einfo');
-  const expExt = document.getElementById('ecarExt');
-  const expInt = document.getElementById('ecarInt');
-  const expBadge = document.getElementById('explorerBadgeText');
 
-  function setExplorer(svcKey) {
-    const data = expData[svcKey];
+  const etabBtns = document.querySelectorAll('.etab');
+  const einfoPanels = document.querySelectorAll('.einfo');
+  const stageBadge = document.getElementById('stageBadge');
+  const allZones = document.querySelectorAll('.zone');
+  const allCallouts = document.querySelectorAll('.callout-tag');
+
+  function updateGtExplorer(svc) {
+    const data = gtExplorerData[svc];
     if (!data) return;
-    expTabs.forEach(t => t.classList.toggle('active', t.dataset.svc === svcKey));
-    expInfos.forEach(info => info.classList.toggle('active', info.dataset.svc === svcKey));
-    expBadge.textContent = data.badge;
 
-    document.querySelectorAll('.ez').forEach(el => {
-      el.classList.remove('ez-active', 'ez-dim');
-      if (data.view === 'ext' || data.view === 'both') {
-        if (data.ext.includes(el.id)) el.classList.add('ez-active');
-        else el.classList.add('ez-dim');
+    etabBtns.forEach(b => b.classList.toggle('active', b.dataset.svc === svc));
+    einfoPanels.forEach(p => p.classList.toggle('active', p.dataset.svc === svc));
+    stageBadge.innerHTML = `<span>${data.badge}</span>`;
+
+    allZones.forEach(z => {
+      if (data.activeZones.includes(z.id)) {
+        z.classList.add('active');
+        z.classList.remove('dim');
+      } else {
+        z.classList.remove('active');
+        z.classList.add('dim');
       }
     });
 
-    document.querySelectorAll('.iz').forEach(el => {
-      el.classList.remove('iz-active');
-      if (data.view === 'int' || data.view === 'both') {
-        if (data.int.includes(el.id)) el.classList.add('iz-active');
+    allCallouts.forEach(c => {
+      if (data.callouts.includes(c.id)) {
+        c.classList.add('active');
+      } else {
+        c.classList.remove('active');
       }
     });
-
-    if (data.view === 'ext' || data.view === 'both') {
-      expExt.style.opacity = '1';
-    } else {
-      expExt.style.opacity = '0.2';
-    }
-
-    if (data.view === 'int' || data.view === 'both') {
-      expInt.style.opacity = '1';
-    } else {
-      expInt.style.opacity = '0';
-    }
   }
 
-  expTabs.forEach(btn => {
-    btn.addEventListener('click', () => setExplorer(btn.dataset.svc));
+  etabBtns.forEach(btn => {
+    btn.addEventListener('click', () => updateGtExplorer(btn.dataset.svc));
   });
-  setExplorer('basic');
+  updateGtExplorer('basic');
 
   // ── FILTRO DE CATEGORIAS DE SERVIÇOS ──
   const filterBtns = document.querySelectorAll('.svc-filter-btn');
