@@ -168,8 +168,8 @@
     }
     .ham span {
       width: 26px; height: 2.5px;
-      background: var(--wh);
       border-radius: 2px;
+      background: var(--wh);
       transition: 0.3s;
     }
 
@@ -279,7 +279,7 @@
       bottom: 8%;
       width: 52vw;
       max-width: 820px;
-      opacity: 0.14;
+      opacity: 0.13;
       pointer-events: none;
       filter: drop-shadow(0 0 35px var(--or-glow));
       animation: floatCar 6s ease-in-out infinite;
@@ -357,130 +357,212 @@
       font-weight: 300;
     }
 
-    /* ── CAR EXPLORER: SUPERESPORTIVO GT + CALLOUTS DE IDENTIFICAÇÃO ── */
+    /* ── SUPERESPORTIVO PORSCHE 911 GT + 4 ZONAS TÉCNICAS (ESTILO COCKPIT) ── */
     #explorer {
       background: var(--dk);
       border-top: 1px solid rgba(255, 255, 255, 0.04);
       border-bottom: 1px solid rgba(255, 255, 255, 0.04);
     }
-    .explorer-header { text-align: center; margin-bottom: 45px; }
-    .explorer-inner {
-      display: grid;
-      grid-template-columns: 245px 1fr 285px;
-      gap: 32px;
-      align-items: center;
-      max-width: 1300px;
-      margin: 0 auto;
-    }
-    .explorer-tabs { display: flex; flex-direction: column; gap: 8px; }
-    .etab {
+    .porsche-header { text-align: center; margin-bottom: 40px; }
+    
+    .porsche-tabs-bar {
       display: flex;
-      align-items: center;
-      gap: 14px;
-      padding: 14px 16px;
-      background: rgba(255, 255, 255, 0.02);
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      border-left: 3px solid transparent;
-      color: #888;
-      cursor: pointer;
-      text-align: left;
-      border-radius: 4px;
-      transition: all 0.25s ease;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
     }
-    .etab:hover {
-      background: rgba(224, 123, 0, 0.06);
-      border-color: rgba(224, 123, 0, 0.3);
-      color: #fff;
-    }
-    .etab.active {
-      background: linear-gradient(90deg, rgba(224, 123, 0, 0.12), rgba(224, 123, 0, 0.02));
-      border-left-color: var(--or);
-      border-color: rgba(224, 123, 0, 0.35);
-      color: #fff;
-    }
-    .etab-num {
-      font-family: var(--fd);
-      font-size: 1.6rem;
-      color: rgba(255, 255, 255, 0.15);
-      line-height: 1;
-    }
-    .etab.active .etab-num { color: var(--or); }
-    .etab-name {
+    .ptab {
+      background: var(--dk2);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      color: #999;
       font-family: var(--fc);
       font-size: 0.88rem;
-      font-weight: 700;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-    }
-    .etab-cat { font-size: 0.68rem; color: #666; margin-top: 2px; }
-    .etab.active .etab-cat { color: var(--or-lt); }
-
-    .car-stage {
-      position: relative;
-      background: radial-gradient(ellipse at 50% 60%, rgba(224, 123, 0, 0.09) 0%, transparent 70%);
-      padding: 30px 10px 20px;
-    }
-    .stage-badge {
-      position: absolute;
-      top: -10px;
-      left: 50%;
-      transform: translateX(-50%);
+      font-weight: 700;
+      padding: 12px 22px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.25s ease;
       display: flex;
       align-items: center;
       gap: 8px;
+    }
+    .ptab:hover {
+      border-color: rgba(224, 123, 0, 0.4);
+      color: #fff;
+      background: rgba(224, 123, 0, 0.05);
+    }
+    .ptab.active {
+      background: linear-gradient(135deg, var(--or), var(--or-lt));
+      color: #000;
+      border-color: var(--or);
+      box-shadow: 0 4px 18px rgba(224, 123, 0, 0.35);
+    }
+    .ptab-badge {
+      font-size: 0.7rem;
+      background: rgba(0, 0, 0, 0.2);
+      padding: 2px 6px;
+      border-radius: 3px;
+    }
+    .ptab.active .ptab-badge {
+      background: rgba(0, 0, 0, 0.35);
+      color: #fff;
+    }
+
+    /* Palco Central do Porsche 911 */
+    .porsche-stage-card {
+      background: linear-gradient(180deg, rgba(20, 20, 20, 0.6) 0%, rgba(10, 10, 10, 0.95) 100%);
+      border: 1px solid rgba(224, 123, 0, 0.25);
+      border-radius: 8px;
+      padding: 34px 20px 24px;
+      max-width: 1200px;
+      margin: 0 auto 36px;
+      position: relative;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.65);
+    }
+    .porsche-stage-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 16px;
+      padding: 0 10px;
+    }
+    .porsche-ref-tag {
       font-family: var(--fc);
-      font-size: 0.68rem;
-      letter-spacing: 0.22em;
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
       text-transform: uppercase;
       color: var(--or);
-      background: rgba(10, 10, 10, 0.95);
-      border: 1px solid rgba(224, 123, 0, 0.35);
-      padding: 5px 16px;
-      border-radius: 999px;
-      z-index: 10;
-      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 700;
     }
-    .gt-car-svg {
+    .porsche-price-tag {
+      font-family: var(--fd);
+      font-size: 1.8rem;
+      color: var(--or);
+      line-height: 1;
+    }
+    .porsche-svg-wrap {
+      width: 100%;
+      position: relative;
+    }
+    .porsche-svg {
       width: 100%;
       height: auto;
       display: block;
-      filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.85));
+      filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.9));
     }
-    
-    .zone {
+
+    .pzone {
       transition: opacity 0.35s ease, filter 0.35s ease;
-      opacity: 0.22;
+      opacity: 0.2;
     }
-    .zone.active {
+    .pzone.active {
       opacity: 1;
-      filter: drop-shadow(0 0 12px rgba(224, 123, 0, 0.95));
+      filter: drop-shadow(0 0 14px rgba(224, 123, 0, 0.95));
     }
-    .zone.dim { opacity: 0.06; }
+    .pzone.dim { opacity: 0.05; }
 
-    .callout-tag {
-      transition: opacity 0.35s ease, transform 0.35s ease;
-      opacity: 0;
-      transform: translateY(4px);
-      pointer-events: none;
+    /* ── OS 4 CARDS DE ZONAS TÉCNICAS (OPÇÃO 2) ── */
+    .tech-zones-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+      max-width: 1200px;
+      margin: 0 auto;
     }
-    .callout-tag.active {
-      opacity: 1;
-      transform: translateY(0);
+    .tech-zone-card {
+      background: var(--dk2);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 6px;
+      padding: 24px 22px;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
     }
-
-    .explorer-info { position: relative; min-height: 310px; }
-    .einfo { display: none; flex-direction: column; gap: 12px; }
-    .einfo.active { display: flex; animation: fadeIn 0.3s ease; }
-    @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
-    .einfo-eyebrow { font-family: var(--fc); font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--or); font-weight: 700; }
-    .einfo-title { font-family: var(--fd); font-size: 2.25rem; line-height: 1; color: #fff; }
-    .einfo-zones { display: flex; flex-wrap: wrap; gap: 6px; }
-    .eztag { font-family: var(--fc); font-size: 0.64rem; letter-spacing: 0.1em; text-transform: uppercase; background: var(--or); color: #000; font-weight: 800; padding: 3px 8px; border-radius: 2px; }
-    .einfo-list { list-style: none; }
-    .einfo-list li { font-size: 0.86rem; color: #aaa; padding: 6px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.05); display: flex; align-items: center; gap: 8px; }
-    .einfo-list li::before { content: '✓'; color: var(--or); font-weight: bold; }
-    .einfo-price-lbl { font-family: var(--fc); font-size: 0.68rem; letter-spacing: 0.16em; text-transform: uppercase; color: #666; }
-    .einfo-price { font-family: var(--fd); font-size: 2.4rem; color: var(--or); line-height: 1; }
+    .tech-zone-card.included {
+      border-color: rgba(224, 123, 0, 0.45);
+      background: linear-gradient(145deg, #191510, #141414);
+      box-shadow: 0 8px 25px rgba(224, 123, 0, 0.12);
+    }
+    .tech-zone-card.excluded {
+      opacity: 0.4;
+      border-color: rgba(255, 255, 255, 0.03);
+    }
+    .tz-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 14px;
+    }
+    .tz-icon {
+      font-size: 1.8rem;
+    }
+    .tz-status-badge {
+      font-family: var(--fc);
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 800;
+      padding: 3px 8px;
+      border-radius: 2px;
+    }
+    .tech-zone-card.included .tz-status-badge {
+      background: var(--or);
+      color: #000;
+    }
+    .tech-zone-card.excluded .tz-status-badge {
+      background: #2a2a2a;
+      color: #777;
+    }
+    .tz-title {
+      font-family: var(--fc);
+      font-size: 1.15rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+    .tz-desc {
+      font-size: 0.82rem;
+      color: #888;
+      line-height: 1.5;
+      margin-bottom: 14px;
+    }
+    .tz-items-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-top: auto;
+      padding-top: 12px;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .tz-items-list li {
+      font-size: 0.82rem;
+      color: #bbb;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .tech-zone-card.included .tz-items-list li::before {
+      content: '✓';
+      color: var(--or);
+      font-weight: bold;
+    }
+    .tech-zone-card.excluded .tz-items-list li::before {
+      content: '—';
+      color: #555;
+    }
 
     /* ── CATÁLOGO DE SERVIÇOS EM ABAS ── */
     #servicos { background: var(--blk); }
@@ -877,7 +959,7 @@
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      transition: all 0.2s ease;
+      transition: all 0.25s ease;
       box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
     }
     .calc-send-btn:hover {
@@ -1238,10 +1320,8 @@
     .fab-wa svg { width: 30px; height: 30px; fill: #fff; }
 
     /* ── RESPONSIVIDADE ── */
-    @media(max-width: 1024px) {
-      .explorer-inner { grid-template-columns: 1fr; gap: 30px; }
-      .explorer-tabs { flex-direction: row; overflow-x: auto; padding-bottom: 6px; }
-      .etab { min-width: 140px; flex-shrink: 0; }
+    @media(max-width: 992px) {
+      .tech-zones-grid { grid-template-columns: repeat(2, 1fr); }
       .why-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
     }
     @media(max-width: 860px) {
@@ -1260,12 +1340,15 @@
       }
       .calc-summary-bar { flex-direction: column; align-items: stretch; text-align: center; }
       .calc-send-btn { justify-content: center; }
+      .porsche-tabs-bar { overflow-x: auto; justify-content: flex-start; padding-bottom: 8px; }
+      .ptab { flex-shrink: 0; }
     }
     @media(max-width: 640px) {
       section { padding: 65px 5vw; }
       #hero { padding-top: 105px; }
       .hero-actions a { width: 100%; justify-content: center; text-align: center; }
       .hero-gt-silhouette { width: 95vw; opacity: 0.08; }
+      .tech-zones-grid { grid-template-columns: 1fr; }
       .calc-total-val { font-size: 2.3rem; }
     }
   </style>
@@ -1280,7 +1363,7 @@
   </a>
   <ul class="nav-links" id="navLinks">
     <li><a href="#servicos">Serviços</a></li>
-    <li><a href="#explorer">Zonas do Carro</a></li>
+    <li><a href="#explorer">Zonas do Veículo</a></li>
     <li><a href="#simulador">Orçamento Rápido</a></li>
     <li><a href="#comparador">Antes & Depois</a></li>
     <li><a href="#faq">Dúvidas (FAQ)</a></li>
@@ -1296,9 +1379,9 @@
 <!-- ── HERO ── -->
 <section id="hero">
   <svg class="hero-gt-silhouette" viewBox="0 0 1000 360" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M60 252 L115 242 Q175 235 240 202 L380 134 Q450 100 540 98 L695 104 Q800 112 865 158 L925 212 Q960 240 948 260 L905 266" stroke="#E07B00" stroke-width="2.5" opacity=".5"/>
-    <circle cx="230" cy="265" r="52" stroke="#E07B00" stroke-width="2.5" opacity=".5"/>
-    <circle cx="770" cy="265" r="52" stroke="#E07B00" stroke-width="2.5" opacity=".5"/>
+    <path d="M55 268 Q75 250 120 240 L240 210 Q355 142 435 110 Q525 96 635 102 L735 118 Q835 142 885 192 L935 238 Q955 258 925 264 L875 264" stroke="#E07B00" stroke-width="2.5" opacity=".5"/>
+    <circle cx="225" cy="275" r="52" stroke="#E07B00" stroke-width="2.5" opacity=".5"/>
+    <circle cx="760" cy="275" r="52" stroke="#E07B00" stroke-width="2.5" opacity=".5"/>
   </svg>
 
   <div class="hero-content">
@@ -1344,283 +1427,191 @@
   </div>
 </div>
 
-<!-- ── CAR EXPLORER COM SUPERESPORTIVO GT & IDENTIFICADOR DE PARTES ── -->
+<!-- ── CONFIGURADOR DE ZONAS: PORSCHE 911 GT + 4 PAINÉIS TÉCNICOS ── -->
 <section id="explorer">
-  <div class="explorer-header">
-    <div class="sec-label">Guia Técnico Visual</div>
-    <h2 class="sec-title">EXPLORE AS ZONAS DO <span class="highlight">VEÍCULO</span></h2>
-    <p class="sec-sub" style="margin: 10px auto 0; text-align:center">Clique no serviço para ver o superesportivo acender e identificar exatamente os itens e superfícies tratados.</p>
+  <div class="porsche-header">
+    <div class="sec-label">Configurador Técnico Visual</div>
+    <h2 class="sec-title">SILHUETA DE REFERÊNCIA: <span class="highlight">PORSCHE 911 GT</span></h2>
+    <p class="sec-sub" style="margin: 10px auto 0; text-align:center">Utilizamos a icônica silhueta do <strong>Porsche 911 GT</strong> como modelo de estúdio. Selecione o serviço para acender o modelo e conferir exatamente quais das 4 zonas técnicas estão incluídas.</p>
   </div>
 
-  <div class="explorer-inner">
-    <div class="explorer-tabs">
-      <button class="etab active" data-svc="basic">
-        <span class="etab-num">01</span>
-        <div><div class="etab-name">Manutenção Geral</div><div class="etab-cat">Lavagem Técnica Suave</div></div>
-      </button>
-      <button class="etab" data-svc="ppf">
-        <span class="etab-num">02</span>
-        <div><div class="etab-name">Vitrificados & PPF</div><div class="etab-cat">Preservação & Repelência</div></div>
-      </button>
-      <button class="etab" data-svc="externa">
-        <span class="etab-num">03</span>
-        <div><div class="etab-name">Detalhada Externa</div><div class="etab-cat">Descontaminação & Cera</div></div>
-      </button>
-      <button class="etab" data-svc="interna">
-        <span class="etab-num">04</span>
-        <div><div class="etab-name">Detalhada Interna</div><div class="etab-cat">Teto, Painel & Plásticos</div></div>
-      </button>
-      <button class="etab" data-svc="higie">
-        <span class="etab-num">05</span>
-        <div><div class="etab-name">Higienização</div><div class="etab-cat">Sanitização Profunda</div></div>
-      </button>
-      <button class="etab" data-svc="elite">
-        <span class="etab-num">06</span>
-        <div><div class="etab-name">Pacote JR Elite</div><div class="etab-cat">Tratamento Total VIP 360°</div></div>
-      </button>
+  <!-- Abas de Seleção Rápida -->
+  <div class="porsche-tabs-bar">
+    <button class="ptab active" data-svc="ppf">
+      <span>01. Vitrificados & PPF</span>
+      <span class="ptab-badge">Especialidade</span>
+    </button>
+    <button class="ptab" data-svc="basic">
+      <span>02. Manutenção Regular</span>
+    </button>
+    <button class="ptab" data-svc="externa">
+      <span>03. Detalhada Externa</span>
+    </button>
+    <button class="ptab" data-svc="interna">
+      <span>04. Detalhada Interna</span>
+    </button>
+    <button class="ptab" data-svc="higie">
+      <span>05. Higienização</span>
+    </button>
+    <button class="ptab" data-svc="elite">
+      <span>06. Pacote JR Elite</span>
+      <span class="ptab-badge">VIP 360°</span>
+    </button>
+  </div>
+
+  <!-- Palco do Porsche 911 GT com Iluminação e Reflexo -->
+  <div class="porsche-stage-card">
+    <div class="porsche-stage-top">
+      <div class="porsche-ref-tag" id="porscheRefTag">
+        <span class="logo-dot"></span>
+        <span id="porscheSvcTitle">MANUTENÇÃO P/ VEÍCULOS VITRIFICADOS OU COM PPF</span>
+      </div>
+      <div class="porsche-price-tag" id="porschePriceTag">A partir de R$ 150</div>
     </div>
 
-    <!-- Palco do Superesportivo GT com Reflexo e Callouts -->
-    <div class="car-stage">
-      <div class="stage-badge" id="stageBadge"><span>ZONAS EM DESTAQUE</span></div>
-
-      <svg class="gt-car-svg" viewBox="0 0 1000 370" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Vetor da Silhueta Porsche 911 (Geração 992) -->
+    <div class="porsche-svg-wrap">
+      <svg class="porsche-svg" viewBox="0 0 1000 360" fill="none" xmlns="http://www.w3.org/2000/svg">
         <defs>
-          <linearGradient id="porscheBodyGrad" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0%" stop-color="#E07B00"/>
-            <stop offset="100%" stop-color="#FF9F2E"/>
-          </linearGradient>
-          <linearGradient id="groundStudioGrad" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="rgba(224,123,0,0.22)"/>
+          <linearGradient id="pStudioGround" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="rgba(224,123,0,0.28)"/>
             <stop offset="100%" stop-color="transparent"/>
+          </linearGradient>
+          <linearGradient id="p911BodyGrad" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#E07B00"/>
+            <stop offset="40%" stop-color="#FF9F2E"/>
+            <stop offset="85%" stop-color="#E07B00"/>
+            <stop offset="100%" stop-color="#FFB554"/>
           </linearGradient>
         </defs>
 
-        <!-- Piso Espelhado de Estúdio com Reflexo Suave -->
-        <ellipse cx="500" cy="315" rx="440" ry="18" fill="url(#groundStudioGrad)"/>
-        <line x1="80" y1="315" x2="920" y2="315" stroke="rgba(224,123,0,0.25)" stroke-width="1.5" stroke-dasharray="8 6"/>
+        <!-- Piso Espelhado com Linha Técnica Pontilhada -->
+        <ellipse cx="500" cy="318" rx="440" ry="17" fill="url(#pStudioGround)"/>
+        <line x1="70" y1="318" x2="930" y2="318" stroke="rgba(224,123,0,0.3)" stroke-width="1.5" stroke-dasharray="8 6"/>
 
-        <!-- ESTRUTURA GERAL PERMANENTE (Wireframe sutil) -->
-        <path d="M60 252 L115 242 Q175 235 240 202 L380 134 Q450 100 540 98 L695 104 Q800 112 865 158 L925 212 Q960 240 948 260 L905 266" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+        <!-- Contorno Base Suave de Apoio -->
+        <path d="M55 270 L95 270 Q130 266 155 244 Q175 220 225 212 Q280 215 300 270 L685 270 Q705 215 760 212 Q815 215 840 270 L930 268" stroke="rgba(255,255,255,0.08)" stroke-width="1.5"/>
 
-        <!-- 1. ZONA: PINTURA, CAPÔ E PARACHOQUE (LATARIA GT) -->
-        <g id="zn-body" class="zone">
-          <path d="M60 252 Q80 236 125 232 L245 204 Q365 142 445 110 Q535 96 645 102 L745 118 Q845 142 895 192 L938 238 Q958 258 928 264 L880 264" stroke="url(#porscheBodyGrad)" stroke-width="3" stroke-linecap="round"/>
-          <path d="M260 215 L430 205 Q620 200 765 212" stroke="#E07B00" stroke-width="1.5" opacity="0.75"/>
-          <path d="M280 232 L460 226 L730 230" stroke="#E07B00" stroke-width="1" opacity="0.45"/>
-          <path d="M335 272 L665 272" stroke="#E07B00" stroke-width="2.5"/>
-          <path d="M915 220 L945 224 L940 235 Z" fill="#E07B00" opacity="0.85"/>
+        <!-- 1. ZONA PINTURA / FLYLINE LENDÁRIA DO PORSCHE 911 -->
+        <g id="pz-body" class="pzone">
+          <path d="M55 270 Q70 252 110 242 L230 214 Q350 148 435 114 Q520 98 630 104 L730 118 Q835 142 890 192 L945 238 Q965 258 930 265 L880 265" 
+                stroke="url(#p911BodyGrad)" stroke-width="3.2" stroke-linecap="round"/>
+          <path d="M120 242 Q175 222 235 214" stroke="#FF9F2E" stroke-width="1.8" opacity="0.9"/>
+          <path d="M685 220 Q760 205 845 215 L890 226" stroke="#FF9F2E" stroke-width="2" opacity="0.85"/>
+          <path d="M255 225 L430 215 Q620 210 760 220" stroke="#E07B00" stroke-width="1.5" opacity="0.75"/>
+          <path d="M315 274 L665 274" stroke="#E07B00" stroke-width="2.8"/>
+          <path d="M885 220 L945 224 L940 234 Z" fill="#E07B00" opacity="0.9"/>
         </g>
 
-        <!-- 2. ZONA: FARÓIS DRL LASER / LED E LANTERNA -->
-        <g id="zn-lights" class="zone">
-          <polygon points="68,248 135,234 152,244 76,254" fill="rgba(255,159,46,0.3)" stroke="#FF9F2E" stroke-width="1.8"/>
-          <line x1="78" y1="250" x2="140" y2="238" stroke="#fff" stroke-width="2"/>
-          <path d="M905 230 L935 240 L930 248 L895 242 Z" fill="rgba(224,123,0,0.35)" stroke="#E07B00" stroke-width="1.6"/>
+        <!-- 2. ZONA FARÓIS OVALADOS & LANTERNA INTERLIGADA 992 -->
+        <g id="pz-lights" class="pzone">
+          <ellipse cx="120" cy="238" rx="20" ry="12" transform="rotate(-15 120 238)" fill="rgba(255,159,46,0.35)" stroke="#FF9F2E" stroke-width="1.8"/>
+          <line x1="108" y1="240" x2="132" y2="234" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M900 230 L945 238 L940 246 L892 240 Z" fill="rgba(224,123,0,0.4)" stroke="#E07B00" stroke-width="1.8"/>
         </g>
 
-        <!-- 3. ZONA: VIDROS, PARA-BRISA E TETO SOLAR -->
-        <g id="zn-glass" class="zone">
-          <path d="M380 140 Q440 114 515 110 L660 114 Q740 122 785 158 L720 190 Q580 185 430 192 Z" stroke="#6EC6FF" stroke-width="2" fill="rgba(110, 198, 255, 0.08)"/>
-          <line x1="565" y1="112" x2="550" y2="186" stroke="rgba(110, 198, 255, 0.4)" stroke-width="1.5"/>
+        <!-- 3. ZONA VIDROS & TEARDROP WINDOW PORSCHE -->
+        <g id="pz-glass" class="pzone">
+          <path d="M375 142 Q440 116 515 112 L655 116 Q735 125 780 162 L715 194 Q575 188 425 196 Z" 
+                stroke="#6EC6FF" stroke-width="2" fill="rgba(110, 198, 255, 0.08)"/>
+          <line x1="560" y1="114" x2="545" y2="190" stroke="rgba(110, 198, 255, 0.45)" stroke-width="1.5"/>
         </g>
 
-        <!-- 4. ZONA: CABINE INTERNA (Bancos Esportivos, Painel e Teto) -->
-        <g id="zn-interior" class="zone">
-          <path d="M475 135 Q495 132 505 155 L495 185 L465 185 Z" stroke="#E07B00" stroke-width="1.6" fill="rgba(224,123,0,0.14)"/>
-          <circle cx="490" cy="130" r="7" stroke="#E07B00" stroke-width="1.3"/>
-          <path d="M605 142 Q620 140 628 160 L620 185 L595 185 Z" stroke="#E07B00" stroke-width="1.6" fill="rgba(224,123,0,0.14)"/>
-          <path d="M410 180 L435 158 L440 182" stroke="#E07B00" stroke-width="2"/>
+        <!-- 4. ZONA INTERIOR: BANCOS CONCHA ESPORTIVOS & COCKPIT -->
+        <g id="pz-interior" class="pzone">
+          <path d="M470 138 Q490 135 500 158 L490 188 L460 188 Z" stroke="#E07B00" stroke-width="1.6" fill="rgba(224,123,0,0.16)"/>
+          <circle cx="485" cy="132" r="7" stroke="#E07B00" stroke-width="1.4"/>
+          <path d="M600 145 Q615 143 622 163 L615 188 L590 188 Z" stroke="#E07B00" stroke-width="1.6" fill="rgba(224,123,0,0.16)"/>
+          <path d="M405 182 L430 160 L435 184" stroke="#E07B00" stroke-width="2"/>
         </g>
 
-        <!-- 5. ZONA: RODA DIANTEIRA ESPORTIVA GT COM PINÇA -->
-        <g id="zn-frontwheel" class="zone">
-          <circle cx="230" cy="275" r="54" stroke="#E07B00" stroke-width="3" fill="#0c0c0c"/>
-          <circle cx="230" cy="275" r="38" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
-          <circle cx="230" cy="275" r="14" stroke="#E07B00" stroke-width="2" fill="rgba(224,123,0,0.3)"/>
-          <line x1="230" y1="223" x2="230" y2="327" stroke="#E07B00" stroke-width="1.5"/>
-          <line x1="178" y1="275" x2="282" y2="275" stroke="#E07B00" stroke-width="1.5"/>
-          <line x1="193" y1="238" x2="267" y2="312" stroke="#E07B00" stroke-width="1.5"/>
-          <line x1="193" y1="312" x2="267" y2="238" stroke="#E07B00" stroke-width="1.5"/>
-          <path d="M245 245 A 30 30 0 0 1 260 270" stroke="#FF9F2E" stroke-width="4.5" stroke-linecap="round"/>
+        <!-- 5. ZONA RODA DIANTEIRA CENTER-LOCK COM FREIO CERÂMICO (PCCB) -->
+        <g id="pz-frontwheel" class="pzone">
+          <circle cx="225" cy="275" r="54" stroke="#E07B00" stroke-width="3" fill="#0b0b0b"/>
+          <circle cx="225" cy="275" r="39" stroke="rgba(255,255,255,0.35)" stroke-width="1.5"/>
+          <circle cx="225" cy="275" r="13" stroke="#E07B00" stroke-width="2" fill="rgba(224,123,0,0.4)"/>
+          <line x1="225" y1="223" x2="225" y2="327" stroke="#E07B00" stroke-width="1.6"/>
+          <line x1="173" y1="275" x2="277" y2="275" stroke="#E07B00" stroke-width="1.6"/>
+          <line x1="188" y1="238" x2="262" y2="312" stroke="#E07B00" stroke-width="1.6"/>
+          <line x1="188" y1="312" x2="262" y2="238" stroke="#E07B00" stroke-width="1.6"/>
+          <path d="M242 245 A 30 30 0 0 1 257 270" stroke="#FF9F2E" stroke-width="4.5" stroke-linecap="round"/>
         </g>
 
-        <!-- 6. ZONA: RODA TRASEIRA ESPORTIVA GT COM PINÇA -->
-        <g id="zn-rearwheel" class="zone">
-          <circle cx="770" cy="275" r="54" stroke="#E07B00" stroke-width="3" fill="#0c0c0c"/>
-          <circle cx="770" cy="275" r="38" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
-          <circle cx="770" cy="275" r="14" stroke="#E07B00" stroke-width="2" fill="rgba(224,123,0,0.3)"/>
-          <line x1="770" y1="223" x2="770" y2="327" stroke="#E07B00" stroke-width="1.5"/>
-          <line x1="718" y1="275" x2="822" y2="275" stroke="#E07B00" stroke-width="1.5"/>
-          <line x1="733" y1="238" x2="807" y2="312" stroke="#E07B00" stroke-width="1.5"/>
-          <line x1="733" y1="312" x2="807" y2="238" stroke="#E07B00" stroke-width="1.5"/>
-          <path d="M785 245 A 30 30 0 0 1 800 270" stroke="#FF9F2E" stroke-width="4.5" stroke-linecap="round"/>
-        </g>
-
-        <!-- ── IDENTIFICADORES VISUAIS (CALLOUT BADGES) ── -->
-        <g id="cl-hood" class="callout-tag">
-          <line x1="160" y1="170" x2="185" y2="220" stroke="#FF9F2E" stroke-width="1.5" stroke-dasharray="3 3"/>
-          <circle cx="185" cy="220" r="4" fill="#FF9F2E"/>
-          <rect x="70" y="145" width="135" height="24" rx="3" fill="#181818" stroke="#FF9F2E" stroke-width="1.2"/>
-          <text x="137" y="161" fill="#fff" font-family="'Barlow Condensed', sans-serif" font-size="11" font-weight="700" letter-spacing="1" text-anchor="middle">CAPÔ / VERNIZ / PPF</text>
-        </g>
-
-        <g id="cl-glass" class="callout-tag">
-          <line x1="510" y1="60" x2="490" y2="120" stroke="#6EC6FF" stroke-width="1.5" stroke-dasharray="3 3"/>
-          <circle cx="490" cy="120" r="4" fill="#6EC6FF"/>
-          <rect x="420" y="38" width="145" height="24" rx="3" fill="#181818" stroke="#6EC6FF" stroke-width="1.2"/>
-          <text x="492" y="54" fill="#6EC6FF" font-family="'Barlow Condensed', sans-serif" font-size="11" font-weight="700" letter-spacing="1" text-anchor="middle">VIDROS & TETO SOLAR</text>
-        </g>
-
-        <g id="cl-interior" class="callout-tag">
-          <line x1="620" y1="65" x2="570" y2="150" stroke="#E07B00" stroke-width="1.5" stroke-dasharray="3 3"/>
-          <circle cx="570" cy="150" r="4" fill="#E07B00"/>
-          <rect x="560" y="44" width="135" height="24" rx="3" fill="#181818" stroke="#E07B00" stroke-width="1.2"/>
-          <text x="627" y="60" fill="#fff" font-family="'Barlow Condensed', sans-serif" font-size="11" font-weight="700" letter-spacing="1" text-anchor="middle">CABINE & COURO</text>
-        </g>
-
-        <g id="cl-wheels" class="callout-tag">
-          <line x1="230" y1="355" x2="230" y2="320" stroke="#FF9F2E" stroke-width="1.5" stroke-dasharray="3 3"/>
-          <circle cx="230" cy="320" r="4" fill="#FF9F2E"/>
-          <rect x="150" y="345" width="155" height="24" rx="3" fill="#181818" stroke="#FF9F2E" stroke-width="1.2"/>
-          <text x="227" y="361" fill="#fff" font-family="'Barlow Condensed', sans-serif" font-size="11" font-weight="700" letter-spacing="1" text-anchor="middle">RODAS, CAIXAS & FREIOS</text>
-        </g>
-
-        <g id="cl-rear" class="callout-tag">
-          <line x1="840" y1="165" x2="880" y2="215" stroke="#FF9F2E" stroke-width="1.5" stroke-dasharray="3 3"/>
-          <circle cx="880" cy="215" r="4" fill="#FF9F2E"/>
-          <rect x="780" y="142" width="140" height="24" rx="3" fill="#181818" stroke="#FF9F2E" stroke-width="1.2"/>
-          <text x="850" y="158" fill="#fff" font-family="'Barlow Condensed', sans-serif" font-size="11" font-weight="700" letter-spacing="1" text-anchor="middle">LANTERNA & DIFUSOR</text>
+        <!-- 6. ZONA RODA TRASEIRA LARGA COM PINÇA -->
+        <g id="pz-rearwheel" class="pzone">
+          <circle cx="760" cy="275" r="54" stroke="#E07B00" stroke-width="3" fill="#0b0b0b"/>
+          <circle cx="760" cy="275" r="39" stroke="rgba(255,255,255,0.35)" stroke-width="1.5"/>
+          <circle cx="760" cy="275" r="13" stroke="#E07B00" stroke-width="2" fill="rgba(224,123,0,0.4)"/>
+          <line x1="760" y1="223" x2="760" y2="327" stroke="#E07B00" stroke-width="1.6"/>
+          <line x1="708" y1="275" x2="812" y2="275" stroke="#E07B00" stroke-width="1.6"/>
+          <line x1="723" y1="238" x2="797" y2="312" stroke="#E07B00" stroke-width="1.6"/>
+          <line x1="723" y1="312" x2="797" y2="238" stroke="#E07B00" stroke-width="1.6"/>
+          <path d="M777 245 A 30 30 0 0 1 792 270" stroke="#FF9F2E" stroke-width="4.5" stroke-linecap="round"/>
         </g>
       </svg>
     </div>
+  </div>
 
-    <!-- Painel Lateral de Informações -->
-    <div class="explorer-info">
-      <!-- 01 Manutenção Básico -->
-      <div class="einfo active" data-svc="basic">
-        <div class="einfo-eyebrow">Plano Básico</div>
-        <div class="einfo-title">LIMPEZA DE MANUTENÇÃO</div>
-        <div class="einfo-zones">
-          <span class="eztag">Carroceria</span>
-          <span class="eztag">Rodas & Pneus</span>
-          <span class="eztag">Vidros</span>
-        </div>
-        <ul class="einfo-list">
-          <li>Lavagem técnica com Snow Foam neutro</li>
-          <li>Aspiração minuciosa da cabine e tapetes</li>
-          <li>Limpeza detalhada das rodas e pneus</li>
-          <li>Borrachas e vidros desengordurados</li>
-        </ul>
-        <div>
-          <div class="einfo-price-lbl">A partir de</div>
-          <div class="einfo-price">R$ 150</div>
-        </div>
+  <!-- OS 4 PAINÉIS TÉCNICOS DE ZONAS -->
+  <div class="tech-zones-grid">
+    <!-- Zona 1: Pintura & PPF -->
+    <div class="tech-zone-card included" id="tz-paint">
+      <div class="tz-header">
+        <span class="tz-icon">🛡️</span>
+        <span class="tz-status-badge" id="tz-paint-status">INCLUÍDO</span>
       </div>
+      <div class="tz-title">01. Pintura, PPF & Verniz</div>
+      <p class="tz-desc">Tratamento de lataria e proteção contra microrriscos, raios UV e contaminantes químicos.</p>
+      <ul class="tz-items-list" id="tz-paint-list">
+        <li>Lavagem técnica com Snow Foam pH neutro</li>
+        <li>Descontaminação química sem agredir</li>
+        <li>Preservação de película PPF / Vitrificação</li>
+      </ul>
+    </div>
 
-      <!-- 02 Manutenção Vitrificados & PPF -->
-      <div class="einfo" data-svc="ppf">
-        <div class="einfo-eyebrow" style="color:var(--or-lt)">★ Especialidade JR</div>
-        <div class="einfo-title">P/ VITRIFICADOS OU PPF</div>
-        <div class="einfo-zones">
-          <span class="eztag" style="background:#fff; color:#000;">PELÍCULA PPF</span>
-          <span class="eztag">VITRIFICAÇÃO</span>
-          <span class="eztag">HIDRORREPELÊNCIA</span>
-        </div>
-        <ul class="einfo-list">
-          <li>Lavagem técnica sem agredir a proteção existente</li>
-          <li>Descontaminação química leve anti-manchas</li>
-          <li>Reaplicação de booster / reforço hidrofóbico</li>
-          <li>Finalização especial preservando o brilho original</li>
-        </ul>
-        <div>
-          <div class="einfo-price-lbl">A partir de</div>
-          <div class="einfo-price">R$ 150</div>
-        </div>
+    <!-- Zona 2: Rodas & Pinças -->
+    <div class="tech-zone-card included" id="tz-wheels">
+      <div class="tz-header">
+        <span class="tz-icon">🛞</span>
+        <span class="tz-status-badge" id="tz-wheels-status">INCLUÍDO</span>
       </div>
+      <div class="tz-title">02. Rodas, Pinças & Caixas</div>
+      <p class="tz-desc">Descontaminação de fuligem de pastilha de freio, caixas de rodas e condicionamento de pneus.</p>
+      <ul class="tz-items-list" id="tz-wheels-list">
+        <li>Limpeza profunda de caixas de roda</li>
+        <li>Remoção ferrosa dos aros e pinças</li>
+        <li>Pretinho nobre sem grudar poeira</li>
+      </ul>
+    </div>
 
-      <!-- 03 Detalhada Externa -->
-      <div class="einfo" data-svc="externa">
-        <div class="einfo-eyebrow">Tratamento Externo</div>
-        <div class="einfo-title">DETALHADA EXTERNA</div>
-        <div class="einfo-zones">
-          <span class="eztag">Pintura</span>
-          <span class="eztag">Descontaminação</span>
-          <span class="eztag">Cera Protetora</span>
-        </div>
-        <ul class="einfo-list">
-          <li>Lavagem técnica completa + Enceramento protetor</li>
-          <li>Descontaminação com Clay Bar em toda a lataria</li>
-          <li>Pincelamento em grades, frisos e emblemas</li>
-          <li>Revitalização e proteção UV de plásticos externos</li>
-        </ul>
-        <div>
-          <div class="einfo-price-lbl">A partir de</div>
-          <div class="einfo-price">R$ 330</div>
-        </div>
+    <!-- Zona 3: Vidros & Visibilidade -->
+    <div class="tech-zone-card included" id="tz-glass">
+      <div class="tz-header">
+        <span class="tz-icon">🪟</span>
+        <span class="tz-status-badge" id="tz-glass-status">INCLUÍDO</span>
       </div>
+      <div class="tz-title">03. Vidros & Para-brisa</div>
+      <p class="tz-desc">Desengorduramento químico, remoção de marcas d'água e máxima clareza óptica.</p>
+      <ul class="tz-items-list" id="tz-glass-list">
+        <li>Vidros internos e externos sem estrias</li>
+        <li>Borrachas e guarnições limpas</li>
+        <li>Repelência à chuva (quando contratado)</li>
+      </ul>
+    </div>
 
-      <!-- 04 Detalhada Interna -->
-      <div class="einfo" data-svc="interna">
-        <div class="einfo-eyebrow">Tratamento Interno</div>
-        <div class="einfo-title">DETALHADA INTERNA</div>
-        <div class="einfo-zones">
-          <span class="eztag">Forro de Teto</span>
-          <span class="eztag">Painel & Portas</span>
-          <span class="eztag">Carpetes</span>
-        </div>
-        <ul class="einfo-list">
-          <li>Limpeza técnica do forro de teto sem encharcar</li>
-          <li>Pincéis em saídas de ar condicionado e botões</li>
-          <li>Condicionamento fosco dos plásticos (filtro UV 3 meses)</li>
-          <li>Cheirinho cortesia de alto padrão</li>
-        </ul>
-        <div>
-          <div class="einfo-price-lbl">A partir de</div>
-          <div class="einfo-price">R$ 320</div>
-        </div>
+    <!-- Zona 4: Cockpit & Couro -->
+    <div class="tech-zone-card excluded" id="tz-cabin">
+      <div class="tz-header">
+        <span class="tz-icon">💺</span>
+        <span class="tz-status-badge" id="tz-cabin-status">NÃO INCLUÍDO</span>
       </div>
-
-      <!-- 05 Higienização Profunda -->
-      <div class="einfo" data-svc="higie">
-        <div class="einfo-eyebrow">Sanitização Profunda</div>
-        <div class="einfo-title">HIGIENIZAÇÃO INTERNA</div>
-        <div class="einfo-zones">
-          <span class="eztag">Bancos</span>
-          <span class="eztag">Carpetes</span>
-          <span class="eztag">Cofre Estepe</span>
-        </div>
-        <ul class="einfo-list">
-          <li>Extração profunda com máquina profissional nos bancos</li>
-          <li>Eliminação de ácaros, bactérias e odores impregnados</li>
-          <li>Higienização completa de carpete, estepe e cofre</li>
-          <li>Secagem rápida e tecido com toque renovado</li>
-        </ul>
-        <div>
-          <div class="einfo-price-lbl">A partir de</div>
-          <div class="einfo-price">R$ 390</div>
-        </div>
-      </div>
-
-      <!-- 06 Pacote JR Elite -->
-      <div class="einfo" data-svc="elite">
-        <div class="einfo-eyebrow">★ Experiência Completa</div>
-        <div class="einfo-title">PACOTE JR ELITE</div>
-        <div class="einfo-zones">
-          <span class="eztag" style="background:#fff; color:#000;">TRATAMENTO TOTAL 360°</span>
-        </div>
-        <ul class="einfo-list">
-          <li>Detalhada Externa + Detalhada Interna completa</li>
-          <li>Higienização profunda de bancos e carpetes</li>
-          <li>Polimento técnico profissional para brilho máximo</li>
-          <li>Vitrificação cerâmica de pintura e plásticos</li>
-          <li>Bônus exclusivo: 2 duchas de manutenção cortesia 🚿</li>
-        </ul>
-        <div>
-          <div class="einfo-price-lbl">A partir de</div>
-          <div class="einfo-price">R$ 2.500</div>
-        </div>
-      </div>
+      <div class="tz-title">04. Cockpit, Couro & Tecidos</div>
+      <p class="tz-desc">Higienização profunda com extratora a quente, revitalização de couro nobre e proteção UV.</p>
+      <ul class="tz-items-list" id="tz-cabin-list">
+        <li>Aspiração detalhada de frestas e bancos</li>
+        <li>Hidratação de couro fosco original</li>
+        <li>Desinfecção de saídas de ar e teto</li>
+      </ul>
     </div>
   </div>
 </section>
@@ -1645,7 +1636,7 @@
   </div>
 
   <div class="svc-grid">
-    <!-- NOVO SERVIÇO: Manutenção para Veículos Vitrificados ou com PPF -->
+    <!-- NOVO SERVIÇO: Manutenção para Veículos Vitrificados ou com PPF (DO FLYER OFICIAL) -->
     <div class="svc-card featured-deal" data-cat="ppf-vitrificado">
       <div class="svc-num">01</div>
       <div class="svc-badge">Destaque Especial</div>
@@ -2218,55 +2209,162 @@
     link.addEventListener('click', () => navLinks.classList.remove('mobile-active'));
   });
 
-  // ── SUPERESPORTIVO GT EXPLORER INTERATIVO COM CALLOUTS ──
-  const gtExplorerData = {
-    basic: {
-      activeZones: ['zn-body', 'zn-frontwheel', 'zn-rearwheel', 'zn-glass'],
-      callouts: ['cl-hood', 'cl-wheels', 'cl-glass'],
-      badge: 'ZONAS: EXTERIOR & RODAS'
-    },
+  // ── DADOS DO CONFIGURADOR PORSCHE 911 + 4 CARDS DE ZONAS ──
+  const porscheData = {
     ppf: {
-      activeZones: ['zn-body', 'zn-glass', 'zn-frontwheel', 'zn-rearwheel'],
-      callouts: ['cl-hood', 'cl-glass', 'cl-rear'],
-      badge: 'ZONAS: PELÍCULA PPF & REVESTIMENTO CERÂMICO'
+      title: 'MANUTENÇÃO P/ VEÍCULOS VITRIFICADOS OU COM PPF',
+      price: 'A partir de R$ 150',
+      activeZones: ['pz-body', 'pz-glass', 'pz-frontwheel', 'pz-rearwheel'],
+      cards: {
+        paint: {
+          included: true,
+          items: ['Lavagem técnica sem agredir a camada cerâmica/PPF', 'Descontaminação química leve eliminando resíduos opacos', 'Reforço de hidrorrepelência (SiO2 booster quando necessário)']
+        },
+        wheels: {
+          included: true,
+          items: ['Limpeza de aros forjados com pH neutro', 'Descontaminação ferrosa de pinças e pastilhas', 'Pretinho nobre acetinado']
+        },
+        glass: {
+          included: true,
+          items: ['Desengorduramento químico dos vidros', 'Preservação de películas e tratamento hidrofóbico']
+        },
+        cabin: {
+          included: false,
+          items: ['Aspiração básica interna cortesia', 'Não inclui higienização de bancos']
+        }
+      }
+    },
+    basic: {
+      title: 'LIMPEZA DE MANUTENÇÃO REGULAR',
+      price: 'A partir de R$ 150',
+      activeZones: ['pz-body', 'pz-frontwheel', 'pz-rearwheel', 'pz-glass'],
+      cards: {
+        paint: {
+          included: true,
+          items: ['Lavagem externa com Snow Foam neutro', 'Secagem técnica com toalha de microfibra de alta gramatura', 'Enxágue sem marcas d\'água']
+        },
+        wheels: {
+          included: true,
+          items: ['Limpeza técnica de rodas e caixas de rodas', 'Aplicação de condicionador em pneus']
+        },
+        glass: {
+          included: true,
+          items: ['Limpeza de vidros internos e externos']
+        },
+        cabin: {
+          included: true,
+          items: ['Aspiração minuciosa de carpetes e tapetes', 'Limpeza superficial de painel e borrachas']
+        }
+      }
     },
     externa: {
-      activeZones: ['zn-body', 'zn-lights', 'zn-frontwheel', 'zn-rearwheel', 'zn-glass'],
-      callouts: ['cl-hood', 'cl-wheels', 'cl-rear'],
-      badge: 'ZONAS: PINTURA, DESCONTAMINAÇÃO & CERA'
+      title: 'DETALHADA EXTERNA',
+      price: 'A partir de R$ 330',
+      activeZones: ['pz-body', 'pz-lights', 'pz-frontwheel', 'pz-rearwheel', 'pz-glass'],
+      cards: {
+        paint: {
+          included: true,
+          items: ['Lavagem técnica profunda + Cera de alta fixação', 'Descontaminação completa da pintura com Clay Bar', 'Pincelamento em grades, emblemas e cantos']
+        },
+        wheels: {
+          included: true,
+          items: ['Detalhamento completo de caixas de rodas', 'Limpeza de pinças de freio e faces internas da roda', 'Condicionamento de alta durabilidade']
+        },
+        glass: {
+          included: true,
+          items: ['Descontaminação química de vidros', 'Remoção de oleosidade e película de poluição']
+        },
+        cabin: {
+          included: false,
+          items: ['Apenas aspiração simples de tapetes', 'Foco 100% no exterior do veículo']
+        }
+      }
     },
     interna: {
-      activeZones: ['zn-interior'],
-      callouts: ['cl-interior'],
-      badge: 'ZONAS: CABINE, PAINEL & FORRO'
+      title: 'DETALHADA INTERNA',
+      price: 'A partir de R$ 320',
+      activeZones: ['pz-interior'],
+      cards: {
+        paint: {
+          included: false,
+          items: ['Não inclui lavagem de pintura externa']
+        },
+        wheels: {
+          included: false,
+          items: ['Não inclui tratamento de rodas']
+        },
+        glass: {
+          included: true,
+          items: ['Limpeza interna e desengorduramento de para-brisa']
+        },
+        cabin: {
+          included: true,
+          items: ['Higienização técnica do forro de teto', 'Pincéis em botões, telas e difusores de ar condicionado', 'Condicionamento de plásticos com proteção UV 3 meses', 'Aroma de alto padrão cortesia']
+        }
+      }
     },
     higie: {
-      activeZones: ['zn-interior'],
-      callouts: ['cl-interior'],
-      badge: 'ZONAS: HIGIENIZAÇÃO DE BANCOS & CARPETES'
+      title: 'HIGIENIZAÇÃO INTERNA PROFUNDA',
+      price: 'A partir de R$ 390',
+      activeZones: ['pz-interior'],
+      cards: {
+        paint: {
+          included: false,
+          items: ['Serviço exclusivamente focado no interior']
+        },
+        wheels: {
+          included: false,
+          items: ['Não inclui tratamento de rodas']
+        },
+        glass: {
+          included: true,
+          items: ['Limpeza interna minuciosa dos vidros']
+        },
+        cabin: {
+          included: true,
+          items: ['Extração profunda com máquina profissional nos bancos', 'Sanitização bactericida de carpetes e forrações', 'Higienização de estepe, cofre e porta-malas', 'Eliminação de ácaros, fungos e odores']
+        }
+      }
     },
     elite: {
-      activeZones: ['zn-body', 'zn-lights', 'zn-glass', 'zn-interior', 'zn-frontwheel', 'zn-rearwheel'],
-      callouts: ['cl-hood', 'cl-glass', 'cl-interior', 'cl-wheels', 'cl-rear'],
-      badge: 'TRATAMENTO COMPLETO 360° VIP'
+      title: 'PACOTE JR ELITE (TRATAMENTO 360° VIP)',
+      price: 'A partir de R$ 2.500',
+      activeZones: ['pz-body', 'pz-lights', 'pz-glass', 'pz-interior', 'pz-frontwheel', 'pz-rearwheel'],
+      cards: {
+        paint: {
+          included: true,
+          items: ['Polimento técnico completo eliminando riscos e hologramas', 'Vitrificação cerâmica de pintura 9H de alta durabilidade', 'Vitrificação de plásticos externos']
+        },
+        wheels: {
+          included: true,
+          items: ['Descontaminação total e vitrificação de aros de roda', 'Condicionamento supremo de caixas e pneus']
+        },
+        glass: {
+          included: true,
+          items: ['Impermeabilização completa de para-brisa e vidros', 'Visibilidade extrema sob chuva']
+        },
+        cabin: {
+          included: true,
+          items: ['Higienização interna profunda + Limpeza de teto', 'Hidratação de couro nobre ou tecidos', 'Bônus VIP: 2 duchas de manutenção cortesia 🚿']
+        }
+      }
     }
   };
 
-  const etabBtns = document.querySelectorAll('.etab');
-  const einfoPanels = document.querySelectorAll('.einfo');
-  const stageBadge = document.getElementById('stageBadge');
-  const allZones = document.querySelectorAll('.zone');
-  const allCallouts = document.querySelectorAll('.callout-tag');
+  const ptabs = document.querySelectorAll('.ptab');
+  const pSvcTitle = document.getElementById('porscheSvcTitle');
+  const pPriceTag = document.getElementById('porschePriceTag');
+  const allPzones = document.querySelectorAll('.pzone');
 
-  function updateGtExplorer(svc) {
-    const data = gtExplorerData[svc];
+  function updatePorscheExplorer(svcKey) {
+    const data = porscheData[svcKey];
     if (!data) return;
 
-    etabBtns.forEach(b => b.classList.toggle('active', b.dataset.svc === svc));
-    einfoPanels.forEach(p => p.classList.toggle('active', p.dataset.svc === svc));
-    stageBadge.innerHTML = `<span>${data.badge}</span>`;
+    ptabs.forEach(t => t.classList.toggle('active', t.dataset.svc === svcKey));
+    pSvcTitle.textContent = data.title;
+    pPriceTag.textContent = data.price;
 
-    allZones.forEach(z => {
+    allPzones.forEach(z => {
       if (data.activeZones.includes(z.id)) {
         z.classList.add('active');
         z.classList.remove('dim');
@@ -2276,19 +2374,31 @@
       }
     });
 
-    allCallouts.forEach(c => {
-      if (data.callouts.includes(c.id)) {
-        c.classList.add('active');
+    const cardKeys = ['paint', 'wheels', 'glass', 'cabin'];
+    cardKeys.forEach(k => {
+      const cardEl = document.getElementById(`tz-${k}`);
+      const statusEl = document.getElementById(`tz-${k}-status`);
+      const listEl = document.getElementById(`tz-${k}-list`);
+      const info = data.cards[k];
+
+      if (info.included) {
+        cardEl.classList.add('included');
+        cardEl.classList.remove('excluded');
+        statusEl.textContent = 'INCLUÍDO';
       } else {
-        c.classList.remove('active');
+        cardEl.classList.remove('included');
+        cardEl.classList.add('excluded');
+        statusEl.textContent = 'NÃO INCLUÍDO';
       }
+
+      listEl.innerHTML = info.items.map(item => `<li>${item}</li>`).join('');
     });
   }
 
-  etabBtns.forEach(btn => {
-    btn.addEventListener('click', () => updateGtExplorer(btn.dataset.svc));
+  ptabs.forEach(btn => {
+    btn.addEventListener('click', () => updatePorscheExplorer(btn.dataset.svc));
   });
-  updateGtExplorer('basic');
+  updatePorscheExplorer('ppf');
 
   // ── FILTRO DE CATEGORIAS DE SERVIÇOS ──
   const filterBtns = document.querySelectorAll('.svc-filter-btn');
