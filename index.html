@@ -350,7 +350,6 @@
     }
     .dash-header { text-align: center; margin-bottom: 40px; }
 
-    /* Seletor Superior de Pacotes */
     .dash-tabs {
       display: flex;
       justify-content: center;
@@ -398,7 +397,6 @@
       color: #fff;
     }
 
-    /* Painel de Resumo do Pacote Selecionado */
     .dash-banner {
       max-width: 1180px;
       margin: 0 auto 28px;
@@ -458,12 +456,12 @@
     }
     .dash-banner-price-val {
       font-family: var(--fd);
-      font-size: 2.6rem;
+      font-size: 2.3rem;
       color: var(--or);
-      line-height: 1;
+      line-height: 1.1;
+      text-align: right;
     }
 
-    /* Grid dos 4 Cards de Zonas */
     .dash-zones-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -728,6 +726,20 @@
       font-size: 0.74rem;
       color: #777;
       margin-top: 4px;
+    }
+    .price-grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      margin-top: auto;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      margin-bottom: 20px;
+    }
+    @media(max-width: 640px) {
+      .price-grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
     .price-2col {
       display: grid;
@@ -1586,22 +1598,36 @@
       <a href="https://wa.me/5512992228205?text=Ol%C3%A1%2C%20tenho%20interesse%20na%20Manuten%C3%A7%C3%A3o%20para%20Ve%C3%ADculos%20Vitrificados%20ou%20com%20PPF." target="_blank" class="card-cta">Agendar no WhatsApp</a>
     </div>
 
-    <!-- Limpeza de Manutenção Regular -->
+    <!-- Limpeza de Manutenção Regular (COM TABELA DE VALORES POR PORTE) -->
     <div class="svc-card" data-cat="lavagem">
       <div class="svc-num">02</div>
       <div class="svc-badge">Mais Pedido</div>
       <div class="svc-cat">Lavagem Técnica</div>
       <h3 class="svc-name">LIMPEZA DE MANUTENÇÃO</h3>
-      <p class="svc-desc">Para manter o carro protegido e impecável entre tratamentos profundos. Lavagem suave sem riscar o verniz.</p>
+      <p class="svc-desc">Para manter o carro protegido e impecável entre tratamentos profundos. Lavagem suave com pH neutro sem riscar o verniz.</p>
       <ul class="svc-items">
         <li>Lavagem externa com Snow Foam neutro</li>
         <li>Aspiração interna detalhada da cabine</li>
         <li>Limpeza de rodas e caixas de rodas</li>
         <li>Borrachas e vidros desengordurados</li>
       </ul>
-      <div class="price-wrap">
-        <div class="price-lbl">A partir de</div>
-        <div class="price-val">R$ 150</div>
+      <div class="price-grid-4">
+        <div class="price-cell">
+          <div class="price-cell-l">Hatch</div>
+          <div class="price-cell-v">R$ 85</div>
+        </div>
+        <div class="price-cell">
+          <div class="price-cell-l">Sedan</div>
+          <div class="price-cell-v">R$ 100</div>
+        </div>
+        <div class="price-cell">
+          <div class="price-cell-l">SUV</div>
+          <div class="price-cell-v">R$ 110</div>
+        </div>
+        <div class="price-cell">
+          <div class="price-cell-l">Picape</div>
+          <div class="price-cell-v">R$ 140</div>
+        </div>
       </div>
       <a href="https://wa.me/5512992228205?text=Ol%C3%A1%2C%20tenho%20interesse%20na%20Limpeza%20de%20Manuten%C3%A7%C3%A3o." target="_blank" class="card-cta">Agendar no WhatsApp</a>
     </div>
@@ -1821,17 +1847,17 @@
 
     <div class="calc-step-title"><span>2</span> Escolha os serviços:</div>
     <div class="calc-services-grid">
-      <div class="calc-svc-item checked" data-price="150" data-name="Manutenção p/ Vitrificados ou PPF">
+      <div class="calc-svc-item checked" id="calc-manutencao-item" data-fixed-porte="true" data-hatch="85" data-sedan="100" data-suv="110" data-picape="140" data-name="Limpeza de Manutenção">
         <div class="calc-checkbox">✓</div>
         <div class="calc-svc-info">
-          <div class="calc-svc-title">Manutenção p/ Vitrificados ou PPF</div>
-          <div class="calc-svc-cost">Base: R$ 150</div>
+          <div class="calc-svc-title">Limpeza de Manutenção</div>
+          <div class="calc-svc-cost" id="calc-manutencao-cost">R$ 85 (Hatch)</div>
         </div>
       </div>
-      <div class="calc-svc-item" data-price="150" data-name="Limpeza de Manutenção">
+      <div class="calc-svc-item" data-price="150" data-name="Manutenção p/ Vitrificados ou PPF">
         <div class="calc-checkbox"></div>
         <div class="calc-svc-info">
-          <div class="calc-svc-title">Limpeza de Manutenção</div>
+          <div class="calc-svc-title">Manutenção p/ Vitrificados ou PPF</div>
           <div class="calc-svc-cost">Base: R$ 150</div>
         </div>
       </div>
@@ -1882,7 +1908,7 @@
     <div class="calc-summary-bar">
       <div class="calc-total-box">
         <div class="calc-total-lbl">Estimativa para seu veículo</div>
-        <div class="calc-total-val" id="calcTotalDisplay">R$ 150</div>
+        <div class="calc-total-val" id="calcTotalDisplay">R$ 85</div>
       </div>
       <a href="#" id="calcWhatsBtn" target="_blank" class="calc-send-btn">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.555 4.126 1.528 5.858L.057 23.855c-.083.329.243.613.564.491l5.912-2.186A11.947 11.947 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.929 0-3.73-.52-5.27-1.425l-.376-.225-3.897 1.44 1.317-3.96-.244-.388A9.958 9.958 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
@@ -2182,8 +2208,8 @@
     basic: {
       category: 'LAVAGEM TÉCNICA SUAVE',
       title: 'LIMPEZA DE MANUTENÇÃO REGULAR',
-      desc: 'Para manter o carro protegido e impecável entre detalhamentos profundos. Lavagem suave sem riscar o verniz.',
-      price: 'R$ 150',
+      desc: 'Para manter o carro protegido e impecável entre detalhamentos profundos. Lavagem suave com pH neutro sem riscar o verniz.',
+      price: 'R$ 85 (Hatch) · R$ 100 (Sedan) · R$ 110 (SUV) · R$ 140 (Picape)',
       whatsMsg: 'Olá! Tenho interesse na Limpeza de Manutenção Regular.',
       zones: {
         paint: {
@@ -2461,17 +2487,32 @@
   });
 
   function updateTotal() {
-    let baseTotal = 0;
+    let finalEstimate = 0;
     const selectedServices = [];
+
+    // Preço exato da Manutenção conforme porte selecionado
+    const manutCostEl = document.getElementById('calc-manutencao-cost');
+    let manutPriceForSelected = 85;
+    if (selectedVehicle.includes('Sedan')) manutPriceForSelected = 100;
+    else if (selectedVehicle.includes('SUV')) manutPriceForSelected = 110;
+    else if (selectedVehicle.includes('Picape')) manutPriceForSelected = 140;
+    
+    if (manutCostEl) {
+      manutCostEl.textContent = `R$ ${manutPriceForSelected} (${selectedVehicle.split('/')[0].trim()})`;
+    }
 
     svcItems.forEach(item => {
       if (item.classList.contains('checked')) {
-        baseTotal += parseFloat(item.dataset.price);
+        if (item.dataset.fixedPorte === 'true') {
+          finalEstimate += manutPriceForSelected;
+        } else {
+          const base = parseFloat(item.dataset.price);
+          finalEstimate += Math.round(base * vehicleMultiplier);
+        }
         selectedServices.push(item.dataset.name);
       }
     });
 
-    const finalEstimate = Math.round(baseTotal * vehicleMultiplier);
     totalDisplay.textContent = `R$ ${finalEstimate.toLocaleString('pt-BR')}`;
 
     const msg = `Olá! Simulei meu orçamento no site da JR Detail:%0A` +
