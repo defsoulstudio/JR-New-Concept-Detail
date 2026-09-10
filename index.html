@@ -208,13 +208,18 @@
       background: radial-gradient(circle at 85% 45%, rgba(255, 107, 0, 0.15) 0%, transparent 65%);
     }
     .hero-grid {
+      display: block;
+      width: 100%;
+      max-width: 760px;
+      position: relative;
+      z-index: 5;
+    }
+    .hero-grid.has-emblem {
       display: grid;
       grid-template-columns: 1.15fr 0.85fr;
       align-items: center;
       gap: 40px;
-      width: 100%;
-      position: relative;
-      z-index: 5;
+      max-width: 100%;
     }
     .hero-content {
       position: relative;
@@ -1098,40 +1103,152 @@
       box-shadow: 0 6px 24px rgba(37, 211, 102, 0.45);
     }
 
-    /* ── SLIDER ANTES E DEPOIS ── */
+    /* ── SLIDER ANTES E DEPOIS (3 CASOS REAIS: RODA, FRONTAL E TRASEIRA) ── */
     #comparador {
       background: var(--blk);
     }
-    .ba-slider-container {
-      max-width: 900px;
-      margin: 40px auto 0;
+    .ba-nav-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin: 34px auto 24px;
+      max-width: 860px;
+    }
+    .ba-tab-btn {
+      background: var(--dk2);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: #aaa;
+      font-family: var(--fc);
+      font-size: 0.88rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 700;
+      padding: 12px 22px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .ba-tab-btn:hover {
+      border-color: rgba(255, 107, 0, 0.4);
+      color: #fff;
+      background: rgba(255, 107, 0, 0.06);
+    }
+    .ba-tab-btn.active {
+      background: linear-gradient(135deg, var(--or), var(--or-lt));
+      color: #000;
+      border-color: var(--or);
+      box-shadow: 0 4px 18px rgba(255, 107, 0, 0.4);
+    }
+    .ba-tab-tag {
+      font-size: 0.7rem;
+      background: rgba(0, 0, 0, 0.25);
+      padding: 2px 7px;
+      border-radius: 3px;
+      font-weight: 800;
+    }
+    .ba-tab-btn.active .ba-tab-tag {
+      background: rgba(0, 0, 0, 0.4);
+      color: #fff;
+    }
+
+    .ba-info-banner {
+      max-width: 960px;
+      margin: 0 auto 20px;
+      background: linear-gradient(135deg, #181512 0%, #121212 100%);
       border: 1px solid rgba(255, 107, 0, 0.25);
       border-radius: 8px;
+      padding: 18px 24px;
+      text-align: center;
+    }
+    .ba-info-title {
+      font-family: var(--fc);
+      font-size: 1.15rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--or);
+      margin-bottom: 4px;
+    }
+    .ba-info-desc {
+      font-size: 0.86rem;
+      color: #bbb;
+      line-height: 1.5;
+    }
+
+    .ba-slider-container {
+      --pos: 50%;
+      max-width: 960px;
+      margin: 0 auto;
+      border: 1.5px solid rgba(255, 107, 0, 0.35);
+      border-radius: 10px;
       overflow: hidden;
       position: relative;
-      background: #111;
+      background: #0d0d0d;
       aspect-ratio: 16/9;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.7);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.8);
       user-select: none;
       touch-action: pan-y;
     }
     .ba-pane {
       position: absolute;
       inset: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      width: 100%;
+      height: 100%;
       overflow: hidden;
     }
     .ba-after {
       background: radial-gradient(circle at center, #24160a 0%, #0a0a0a 80%);
+      z-index: 1;
     }
     .ba-before {
       background: radial-gradient(circle at center, #1b1b1b 0%, #080808 80%);
-      width: 50%;
-      border-right: 2px solid var(--or);
+      clip-path: polygon(0 0, var(--pos) 0, var(--pos) 100%, 0 100%);
+      -webkit-clip-path: polygon(0 0, var(--pos) 0, var(--pos) 100%, 0 100%);
       z-index: 2;
     }
+    .ba-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      pointer-events: none;
+      user-select: none;
+      transition: opacity 0.35s ease;
+    }
+    .ba-badge-tag {
+      position: absolute;
+      top: 18px;
+      z-index: 5;
+      font-family: var(--fc);
+      font-size: 0.75rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-weight: 800;
+      padding: 6px 14px;
+      border-radius: 4px;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+    .ba-badge-tag.left {
+      left: 18px;
+      background: rgba(0, 0, 0, 0.75);
+      color: #bbb;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .ba-badge-tag.right {
+      right: 18px;
+      background: var(--or);
+      color: #000;
+      border: 1px solid var(--or);
+      box-shadow: 0 4px 14px rgba(255, 107, 0, 0.4);
+    }
+
     .ba-visual-content {
       position: absolute;
       inset: 0;
@@ -1141,6 +1258,7 @@
       justify-content: center;
       text-align: center;
       padding: 30px;
+      pointer-events: none;
     }
     .ba-pill {
       font-family: var(--fc);
@@ -1177,29 +1295,42 @@
     .ba-handle {
       position: absolute;
       top: 0; bottom: 0;
-      left: 50%;
-      width: 4px;
+      left: var(--pos);
+      width: 3px;
       background: var(--or);
       cursor: ew-resize;
       z-index: 10;
       transform: translateX(-50%);
+      box-shadow: 0 0 10px rgba(255, 107, 0, 0.8);
     }
     .ba-handle-btn {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 44px; height: 44px;
+      width: 46px; height: 46px;
       border-radius: 50%;
       background: var(--or);
       border: 3px solid #000;
-      box-shadow: 0 0 15px rgba(255, 107, 0, 0.6);
+      box-shadow: 0 0 18px rgba(255, 107, 0, 0.7);
       display: flex;
       align-items: center;
       justify-content: center;
       color: #000;
       font-weight: bold;
-      font-size: 1rem;
+      font-size: 1.1rem;
+    }
+    .ba-hint-bar {
+      display: flex;
+      justify-content: space-between;
+      max-width: 960px;
+      margin: 12px auto 0;
+      font-size: 0.78rem;
+      color: #777;
+      font-family: var(--fc);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0 6px;
     }
 
     /* ── FAQ ── */
@@ -1507,7 +1638,7 @@
 <!-- ── HEADER / NAVEGAÇÃO ── -->
 <nav id="nav">
   <a href="#hero" class="nav-logo" aria-label="JR New Concept Detail">
-    <img src="logo.png" onerror="this.onerror=null; this.src='JR New Concept Detail.png'" alt="Logo JR New Concept Detail" class="nav-logo-img"/>
+    <img src="logo.png" onerror="if(this.src.indexOf('JR')===-1){this.src='JR New Concept Detail.png';}else{this.remove();}" alt="" class="nav-logo-img"/>
     <div class="nav-logo-text">
       <div class="logo-title"><span>JR</span><span class="orange">NEW CONCEPT</span><span>DETAIL</span></div>
       <div class="logo-sub"><span class="logo-dot"></span>Estética Automotiva Delivery · SJC</div>
@@ -1530,7 +1661,7 @@
 
 <!-- ── HERO ── -->
 <section id="hero">
-  <div class="hero-grid">
+  <div class="hero-grid" id="heroGrid">
     <div class="hero-content">
       <div class="hero-badge"><span class="logo-dot"></span> Atendimento Delivery · São José dos Campos e Região</div>
       <h1 class="hero-h1">
@@ -1555,11 +1686,11 @@
       </div>
     </div>
 
-    <!-- Destaque da Logo Oficial JR -->
-    <div class="hero-emblem-wrap">
+    <!-- Destaque da Logo Oficial JR (Exibido apenas quando o arquivo da imagem estiver presente no GitHub) -->
+    <div class="hero-emblem-wrap" id="heroEmblemWrap" style="display: none;">
       <div class="hero-emblem-halo"></div>
       <div class="hero-emblem-card">
-        <img src="logo.png" onerror="this.onerror=null; this.src='JR New Concept Detail.png'" alt="JR New Concept Detail — Logo Oficial" class="hero-emblem-img"/>
+        <img src="logo.png" id="heroLogoImg" onload="document.getElementById('heroEmblemWrap').style.display='flex'; document.getElementById('heroGrid').classList.add('has-emblem');" onerror="if(this.src.indexOf('JR')===-1){this.src='JR New Concept Detail.png';}else{this.remove();}" alt="JR New Concept Detail" class="hero-emblem-img"/>
         <div class="hero-emblem-badge">
           <span class="emblem-sparkle">✦</span>
           <span>EXCELÊNCIA EM CADA DETALHE</span>
@@ -2068,30 +2199,67 @@
   </div>
 </section>
 
-<!-- ── SLIDER INTERATIVO ANTES E DEPOIS ── -->
+<!-- ── SLIDER INTERATIVO ANTES E DEPOIS (3 CASOS REAIS: RODA, FRONTAL E TRASEIRA) ── -->
 <section id="comparador">
-  <div class="sec-label" style="text-align:center">Transformação Visual</div>
-  <h2 class="sec-title" style="text-align:center">O PADRÃO DO <span class="highlight">RESULTADO FINAL</span></h2>
-  <p class="sec-sub" style="margin: 12px auto 0; text-align:center">Arraste a barra central para os lados e compare a diferença entre uma pintura opaca com microrriscos e o acabamento espelhado JR.</p>
+  <div class="sec-label" style="text-align:center">Transformação Visual em Detalhes</div>
+  <h2 class="sec-title" style="text-align:center">RESULTADOS REAIS: <span class="highlight">ANTES & DEPOIS</span></h2>
+  <p class="sec-sub" style="margin: 12px auto 0; text-align:center">Selecione o procedimento abaixo e arraste a barra central para conferir a transformação técnica nos mínimos detalhes.</p>
 
+  <!-- Abas de Seleção dos 3 Pares (Roda, Frontal e Traseira) -->
+  <div class="ba-nav-tabs">
+    <button class="ba-tab-btn active" data-pair="roda">
+      <span>🛞 Rodas & Pinças</span>
+      <span class="ba-tab-tag">Descontaminação</span>
+    </button>
+    <button class="ba-tab-btn" data-pair="frontal">
+      <span>🚘 Interior Frontal</span>
+      <span class="ba-tab-tag">Higienização</span>
+    </button>
+    <button class="ba-tab-btn" data-pair="traseira">
+      <span>💺 Interior Traseiro</span>
+      <span class="ba-tab-tag">Higienização</span>
+    </button>
+  </div>
+
+  <!-- Banner com Descrição do Procedimento Ativo -->
+  <div class="ba-info-banner">
+    <div class="ba-info-title" id="baInfoTitle">LIMPEZA TÉCNICA E DESCONTAMINAÇÃO DE RODAS</div>
+    <p class="ba-info-desc" id="baInfoDesc">Remoção de fuligem pesada de pastilhas de freio, terra acumulada e descontaminação ferrosa de pinças e aros de liga leve.</p>
+  </div>
+
+  <!-- Slider Principal 16:9 -->
   <div class="ba-slider-container" id="baSlider">
+    <!-- DEPOIS (Fundo Completo) -->
     <div class="ba-pane ba-after">
-      <div class="ba-visual-content">
+      <img id="baImgAfter" src="depois-rodas.jpg" alt="Depois do detalhamento" class="ba-img"/>
+      <div class="ba-visual-content" id="baFallbackAfter">
         <span class="ba-pill">Depois do Detalhamento</span>
-        <h3 class="ba-title">BRILHO ESPELHADO & PROTEÇÃO</h3>
-        <p class="ba-desc">Verniz corrigido, sem teias de aranha (swirls), reflexo nítido de espelho e proteção hidrofóbica ativa.</p>
+        <h3 class="ba-title" id="baTitleAfter">RODA DESCONTAMINADA & BRILHO</h3>
+        <p class="ba-desc" id="baDescAfter">Liga leve 100% restaurada, pinças limpas e pneu acetinado seco.</p>
       </div>
+      <span class="ba-badge-tag right">DEPOIS ✓</span>
     </div>
+
+    <!-- ANTES (Sobreposição com recorte) -->
     <div class="ba-pane ba-before" id="baBefore">
-      <div class="ba-visual-content">
+      <img id="baImgBefore" src="antes-roda.jpg" alt="Antes do tratamento" class="ba-img"/>
+      <div class="ba-visual-content" id="baFallbackBefore">
         <span class="ba-pill">Antes do Tratamento</span>
-        <h3 class="ba-title">PINTURA OPACA E RISCADA</h3>
-        <p class="ba-desc">Marcas de lavagem incorreta, manchas de sol e verniz fosco sem profundidade de cor.</p>
+        <h3 class="ba-title" id="baTitleBefore">FULIGEM PESADA & ÓXIDO</h3>
+        <p class="ba-desc" id="baDescBefore">Poeira de freio incrustada, caixas sujas e aspecto sem brilho.</p>
       </div>
+      <span class="ba-badge-tag left">ANTES</span>
     </div>
+
+    <!-- Puxador Central -->
     <div class="ba-handle" id="baHandle">
       <div class="ba-handle-btn">⇄</div>
     </div>
+  </div>
+
+  <div class="ba-hint-bar">
+    <span>◀ Deslize para ver o Antes</span>
+    <span>Deslize para ver o Depois ▶</span>
   </div>
 </section>
 
@@ -2284,7 +2452,7 @@
 <!-- ── FOOTER ── -->
 <footer>
   <div class="footer-brand-wrap">
-    <img src="logo.png" onerror="this.onerror=null; this.src='JR New Concept Detail.png'" alt="JR New Concept Detail" class="footer-logo-img"/>
+    <img src="logo.png" onerror="if(this.src.indexOf('JR')===-1){this.src='JR New Concept Detail.png';}else{this.remove();}" alt="" class="footer-logo-img"/>
     <div>
       <div class="footer-brand">JR <span>NEW CONCEPT</span> DETAIL</div>
       <div class="footer-sub">Estética Automotiva Delivery · São José dos Campos, SP</div>
@@ -2683,10 +2851,118 @@
   }
   updateTotal();
 
-  // ── SLIDER ANTES E DEPOIS ──
+  // ── SLIDER ANTES E DEPOIS (3 CASOS REAIS: RODA, FRONTAL E TRASEIRA) ──
+  const baPairsData = {
+    roda: {
+      title: "LIMPEZA TÉCNICA E DESCONTAMINAÇÃO DE RODAS",
+      desc: "Remoção de fuligem pesada de freio incrustada nos aros e pinças, revitalizando o brilho original da liga leve.",
+      beforeNames: ["antes-roda", "antes-rodas"],
+      afterNames: ["depois-rodas", "depois-roda"],
+      beforeTitle: "FULIGEM PESADA & ÓXIDO",
+      beforeDesc: "Poeira de freio incrustada, caixas sujas e aspecto sem brilho.",
+      afterTitle: "RODA DESCONTAMINADA & BRILHO",
+      afterDesc: "Liga leve 100% restaurada, pinças limpas e pneu acetinado seco."
+    },
+    frontal: {
+      title: "HIGIENIZAÇÃO INTERNA: PARTE FRONTAL & BANCOS DIANTEIROS",
+      desc: "Limpeza minuciosa com extração profunda nos bancos dianteiros, console e painel, eliminando manchas e sujeiras.",
+      beforeNames: ["antes-frontal", "antes-interno-1"],
+      afterNames: ["depois-frontal", "depois-interno-1"],
+      beforeTitle: "MANCHAS & TECIDO ESCURECIDO",
+      beforeDesc: "Sujeira impregnada nas fibras, marcas de uso e odores acumulados.",
+      afterTitle: "INTERIOR FRONTAL RENOVADO",
+      afterDesc: "Tecido limpo na cor original, higienizado e com toque aveludado."
+    },
+    traseira: {
+      title: "HIGIENIZAÇÃO INTERNA: BANCOS TRASEIROS & CARPETES",
+      desc: "Sanitização bactericida profunda dos bancos traseiros e carpetes com eliminação de ácaros e manchas.",
+      beforeNames: ["antes-traseira", "antes-interno-2"],
+      afterNames: ["depois-traseira", "depois-interno-2"],
+      beforeTitle: "POEIRA & MARCAS DE USO",
+      beforeDesc: "Poeira incrustada, manchas no tecido e aspecto envelhecido.",
+      afterTitle: "BANCOS TRASEIROS SANITIZADOS",
+      afterDesc: "Estofamento 100% higienizado, livre de ácaros, fungos e odores."
+    }
+  };
+
   const baContainer = document.getElementById('baSlider');
-  const baBefore = document.getElementById('baBefore');
-  const baHandle = document.getElementById('baHandle');
+  const baImgBefore = document.getElementById('baImgBefore');
+  const baImgAfter = document.getElementById('baImgAfter');
+  const baFallbackBefore = document.getElementById('baFallbackBefore');
+  const baFallbackAfter = document.getElementById('baFallbackAfter');
+  const baInfoTitle = document.getElementById('baInfoTitle');
+  const baInfoDesc = document.getElementById('baInfoDesc');
+  const baTitleBefore = document.getElementById('baTitleBefore');
+  const baDescBefore = document.getElementById('baDescBefore');
+  const baTitleAfter = document.getElementById('baTitleAfter');
+  const baDescAfter = document.getElementById('baDescAfter');
+  const baTabBtns = document.querySelectorAll('.ba-tab-btn');
+
+  // Carrega imagem testando os nomes e extensões (.jpg, .png, .jpeg, etc.)
+  function setImgWithFallbackList(imgEl, fallbackEl, nameList) {
+    imgEl.style.opacity = '0';
+    imgEl.style.display = 'block';
+
+    const extensions = ['.jpg', '.JPG', '.png', '.PNG', '.jpeg', '.webp'];
+    let candidateUrls = [];
+
+    nameList.forEach(name => {
+      extensions.forEach(ext => {
+        candidateUrls.push(name + ext);
+      });
+    });
+
+    let attemptIndex = 0;
+
+    function tryNext() {
+      if (attemptIndex >= candidateUrls.length) {
+        // Se a foto não for encontrada, exibe o cartão de estúdio perfeitamente
+        imgEl.style.display = 'none';
+        if (fallbackEl) fallbackEl.style.display = 'flex';
+        return;
+      }
+      const url = candidateUrls[attemptIndex++];
+      imgEl.src = url;
+    }
+
+    imgEl.onload = function() {
+      imgEl.style.display = 'block';
+      imgEl.style.opacity = '1';
+      if (fallbackEl) fallbackEl.style.display = 'none';
+    };
+
+    imgEl.onerror = function() {
+      tryNext();
+    };
+
+    tryNext();
+  }
+
+  function switchBaPair(pairKey) {
+    const data = baPairsData[pairKey];
+    if (!data) return;
+
+    baTabBtns.forEach(btn => btn.classList.toggle('active', btn.dataset.pair === pairKey));
+
+    baInfoTitle.textContent = data.title;
+    baInfoDesc.textContent = data.desc;
+    baTitleBefore.textContent = data.beforeTitle;
+    baDescBefore.textContent = data.beforeDesc;
+    baTitleAfter.textContent = data.afterTitle;
+    baDescAfter.textContent = data.afterDesc;
+
+    setImgWithFallbackList(baImgBefore, baFallbackBefore, data.beforeNames);
+    setImgWithFallbackList(baImgAfter, baFallbackAfter, data.afterNames);
+  }
+
+  baTabBtns.forEach(btn => {
+    btn.addEventListener('click', () => switchBaPair(btn.dataset.pair));
+  });
+
+  // Inicializa no primeiro par (Roda)
+  switchBaPair('roda');
+
+  // Controle de Arraste Suave (Desktop Mouse + Mobile Touch)
   let isDragging = false;
 
   function updateSlider(x) {
@@ -2694,8 +2970,7 @@
     let pos = ((x - rect.left) / rect.width) * 100;
     if (pos < 5) pos = 5;
     if (pos > 95) pos = 95;
-    baBefore.style.width = pos + '%';
-    baHandle.style.left = pos + '%';
+    baContainer.style.setProperty('--pos', pos + '%');
   }
 
   baContainer.addEventListener('mousedown', (e) => { isDragging = true; updateSlider(e.clientX); });
