@@ -6,6 +6,7 @@
   <title>JR New Concept Detail — Estética Automotiva Delivery | São José dos Campos</title>
   <meta name="description" content="Estética automotiva premium delivery em São José dos Campos. Cuidados especializados para veículos vitrificados e com PPF, polimento técnico e higienização no conforto da sua casa ou trabalho."/>
   
+  <link rel="icon" type="image/png" href="logo.png" onerror="this.href='JR New Concept Detail.png'"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@400;600;700;800&display=swap" rel="stylesheet"/>
@@ -14,15 +15,15 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     
     :root {
-      --or: #E07B00;
-      --or-lt: #FF9F2E;
-      --or-glow: rgba(224, 123, 0, 0.4);
-      --blk: #070707;
-      --dk: #0D0D0D;
-      --dk2: #141414;
+      --or: #FF6B00; /* Laranja esportivo vibrante exato da logo JR */
+      --or-lt: #FF8A22; /* Tom iluminado da pintura da logo */
+      --or-glow: rgba(255, 107, 0, 0.45);
+      --blk: #080808; /* Preto profundo de fundo */
+      --dk: #0F0F0F;
+      --dk2: #151515;
       --dk3: #1C1C1C;
-      --wh: #F5F5F5;
-      --gy: #999;
+      --wh: #FFFFFF; /* Branco puro de alto contraste */
+      --gy: #A0A0A0;
       --lgy: #555;
       --wag: #25D366;
       --wag-dk: #1ea952;
@@ -60,22 +61,45 @@
       align-items: center;
       justify-content: space-between;
       padding: 14px 5vw;
-      background: rgba(7, 7, 7, 0.88);
+      background: rgba(8, 8, 8, 0.90);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
       transition: all 0.3s ease;
     }
     nav#nav.scrolled {
-      background: rgba(7, 7, 7, 0.98);
-      border-bottom-color: rgba(224, 123, 0, 0.25);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+      background: rgba(8, 8, 8, 0.98);
+      border-bottom-color: rgba(255, 107, 0, 0.3);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.85);
     }
+    
+    /* Logo na Navbar */
     .nav-logo {
       display: flex;
-      flex-direction: column;
+      align-items: center;
+      gap: 12px;
       text-decoration: none;
       color: var(--wh);
+    }
+    .nav-logo-img {
+      width: 46px;
+      height: 46px;
+      object-fit: contain;
+      border-radius: 50%;
+      background: #000;
+      border: 1.5px solid var(--or);
+      padding: 1px;
+      box-shadow: 0 0 14px rgba(255, 107, 0, 0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      flex-shrink: 0;
+    }
+    .nav-logo:hover .nav-logo-img {
+      transform: scale(1.08) rotate(4deg);
+      box-shadow: 0 0 20px rgba(255, 107, 0, 0.7);
+    }
+    .nav-logo-text {
+      display: flex;
+      flex-direction: column;
     }
     .logo-title {
       font-family: var(--fd);
@@ -155,7 +179,7 @@
     }
     .nav-cta:hover {
       transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(224, 123, 0, 0.4);
+      box-shadow: 0 6px 20px rgba(255, 107, 0, 0.45);
     }
     .ham {
       display: none;
@@ -173,21 +197,29 @@
       transition: 0.3s;
     }
 
-    /* ── HERO ── */
+    /* ── HERO COM DESTAQUE DA LOGO ── */
     #hero {
       position: relative;
       min-height: 100vh;
       display: flex;
-      flex-direction: column;
-      justify-content: center;
+      align-items: center;
       padding: 130px 5vw 80px;
       overflow: hidden;
-      background: radial-gradient(circle at 80% 40%, rgba(224, 123, 0, 0.12) 0%, transparent 65%);
+      background: radial-gradient(circle at 85% 45%, rgba(255, 107, 0, 0.15) 0%, transparent 65%);
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      align-items: center;
+      gap: 40px;
+      width: 100%;
+      position: relative;
+      z-index: 5;
     }
     .hero-content {
       position: relative;
       z-index: 5;
-      max-width: 720px;
+      max-width: 680px;
     }
     .hero-badge {
       display: inline-flex;
@@ -198,15 +230,15 @@
       letter-spacing: 0.22em;
       text-transform: uppercase;
       color: var(--or);
-      background: rgba(224, 123, 0, 0.08);
-      border: 1px solid rgba(224, 123, 0, 0.3);
+      background: rgba(255, 107, 0, 0.08);
+      border: 1px solid rgba(255, 107, 0, 0.3);
       padding: 6px 14px;
       border-radius: 2px;
       margin-bottom: 24px;
     }
     .hero-h1 {
       font-family: var(--fd);
-      font-size: clamp(3.8rem, 8vw, 7.6rem);
+      font-size: clamp(3.8rem, 7.5vw, 7.2rem);
       line-height: 0.92;
       letter-spacing: 0.02em;
       margin-bottom: 22px;
@@ -214,7 +246,7 @@
     .hero-h1 .highlight {
       color: var(--or);
       display: inline-block;
-      text-shadow: 0 0 35px rgba(224, 123, 0, 0.4);
+      text-shadow: 0 0 35px rgba(255, 107, 0, 0.45);
     }
     .hero-sub {
       font-size: clamp(1rem, 1.3vw, 1.15rem);
@@ -246,11 +278,11 @@
       align-items: center;
       gap: 10px;
       transition: all 0.25s ease;
-      box-shadow: 0 4px 18px rgba(224, 123, 0, 0.3);
+      box-shadow: 0 4px 18px rgba(255, 107, 0, 0.35);
     }
     .btn-primary:hover {
       transform: translateY(-2px);
-      box-shadow: 0 8px 30px rgba(224, 123, 0, 0.5);
+      box-shadow: 0 8px 30px rgba(255, 107, 0, 0.55);
     }
     .btn-outline {
       border: 1.5px solid rgba(255, 255, 255, 0.2);
@@ -269,7 +301,7 @@
     .btn-outline:hover {
       border-color: var(--or);
       color: var(--or);
-      background: rgba(224, 123, 0, 0.05);
+      background: rgba(255, 107, 0, 0.05);
       transform: translateY(-2px);
     }
 
@@ -293,6 +325,87 @@
       text-transform: uppercase;
     }
     .f-perk svg { color: var(--or); flex-shrink: 0; }
+
+    /* Showcase da Logo Oficial */
+    .hero-emblem-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .hero-emblem-halo {
+      position: absolute;
+      width: 380px;
+      height: 380px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255, 107, 0, 0.28) 0%, rgba(255, 107, 0, 0.05) 55%, transparent 75%);
+      filter: blur(28px);
+      pointer-events: none;
+      z-index: 0;
+      animation: pulseHalo 4s ease-in-out infinite alternate;
+    }
+    @keyframes pulseHalo {
+      0% { transform: scale(0.92); opacity: 0.7; }
+      100% { transform: scale(1.08); opacity: 1; }
+    }
+    .hero-emblem-card {
+      position: relative;
+      z-index: 1;
+      background: linear-gradient(145deg, rgba(26, 26, 26, 0.75) 0%, rgba(14, 14, 14, 0.95) 100%);
+      border: 1.5px solid rgba(255, 107, 0, 0.35);
+      border-radius: 16px;
+      padding: 34px 28px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), inset 0 0 30px rgba(255, 107, 0, 0.08);
+      max-width: 420px;
+      width: 100%;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+    .hero-emblem-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(255, 107, 0, 0.6);
+    }
+    .hero-emblem-img {
+      width: clamp(200px, 22vw, 290px);
+      height: clamp(200px, 22vw, 290px);
+      object-fit: contain;
+      filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.8)) drop-shadow(0 0 20px rgba(255, 107, 0, 0.3));
+      transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    .hero-emblem-card:hover .hero-emblem-img {
+      transform: scale(1.03);
+    }
+    .hero-emblem-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 18px;
+      font-family: var(--fc);
+      font-size: 0.82rem;
+      letter-spacing: 0.16em;
+      font-weight: 800;
+      color: var(--or);
+      background: rgba(255, 107, 0, 0.08);
+      border: 1px solid rgba(255, 107, 0, 0.3);
+      padding: 6px 16px;
+      border-radius: 999px;
+      text-transform: uppercase;
+    }
+    .emblem-sparkle { color: #FFF; }
+    .hero-emblem-caption {
+      font-size: 0.78rem;
+      color: #888;
+      margin-top: 8px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
 
     /* ── TICKER ── */
     .ticker-wrap {
@@ -376,15 +489,15 @@
       gap: 8px;
     }
     .dtab:hover {
-      border-color: rgba(224, 123, 0, 0.4);
+      border-color: rgba(255, 107, 0, 0.4);
       color: #fff;
-      background: rgba(224, 123, 0, 0.06);
+      background: rgba(255, 107, 0, 0.06);
     }
     .dtab.active {
       background: linear-gradient(135deg, var(--or), var(--or-lt));
       color: #000;
       border-color: var(--or);
-      box-shadow: 0 4px 18px rgba(224, 123, 0, 0.35);
+      box-shadow: 0 4px 18px rgba(255, 107, 0, 0.4);
     }
     .dtab-tag {
       font-size: 0.68rem;
@@ -401,7 +514,7 @@
       max-width: 1180px;
       margin: 0 auto 28px;
       background: linear-gradient(135deg, #181512 0%, #121212 100%);
-      border: 1.5px solid rgba(224, 123, 0, 0.35);
+      border: 1.5px solid rgba(255, 107, 0, 0.35);
       border-radius: 8px;
       padding: 24px 30px;
       display: flex;
@@ -481,9 +594,9 @@
       overflow: hidden;
     }
     .dash-zone-card.included {
-      border-color: rgba(224, 123, 0, 0.45);
-      background: linear-gradient(160deg, #1a1612 0%, #131313 100%);
-      box-shadow: 0 10px 30px rgba(224, 123, 0, 0.12);
+      border-color: rgba(255, 107, 0, 0.45);
+      background: linear-gradient(160deg, #1c1510 0%, #131313 100%);
+      box-shadow: 0 10px 30px rgba(255, 107, 0, 0.14);
     }
     .dash-zone-card.excluded {
       opacity: 0.42;
@@ -506,8 +619,8 @@
       font-size: 1.5rem;
     }
     .dash-zone-card.included .dz-icon-wrap {
-      background: rgba(224, 123, 0, 0.1);
-      border-color: rgba(224, 123, 0, 0.3);
+      background: rgba(255, 107, 0, 0.1);
+      border-color: rgba(255, 107, 0, 0.3);
     }
     .dz-badge {
       font-family: var(--fc);
@@ -598,15 +711,15 @@
       transition: all 0.25s ease;
     }
     .svc-filter-btn:hover {
-      border-color: rgba(224, 123, 0, 0.4);
+      border-color: rgba(255, 107, 0, 0.4);
       color: var(--wh);
-      background: rgba(224, 123, 0, 0.06);
+      background: rgba(255, 107, 0, 0.06);
     }
     .svc-filter-btn.active {
       background: var(--or);
       color: #000;
       border-color: var(--or);
-      box-shadow: 0 4px 16px rgba(224, 123, 0, 0.35);
+      box-shadow: 0 4px 16px rgba(255, 107, 0, 0.35);
     }
 
     .svc-grid {
@@ -627,12 +740,12 @@
     }
     .svc-card:hover {
       transform: translateY(-5px);
-      border-color: rgba(224, 123, 0, 0.35);
+      border-color: rgba(255, 107, 0, 0.38);
       box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6);
     }
     .svc-card.featured-deal {
-      background: linear-gradient(145deg, #181410, #141414);
-      border: 1.5px solid rgba(224, 123, 0, 0.45);
+      background: linear-gradient(145deg, #1a1510, #141414);
+      border: 1.5px solid rgba(255, 107, 0, 0.45);
     }
     .svc-badge {
       display: inline-flex;
@@ -752,7 +865,7 @@
     }
     .price-cell {
       background: rgba(255, 255, 255, 0.02);
-      border: 1px solid rgba(224, 123, 0, 0.2);
+      border: 1px solid rgba(255, 107, 0, 0.22);
       padding: 10px;
       border-radius: 6px;
       text-align: center;
@@ -776,8 +889,8 @@
       align-items: center;
       justify-content: center;
       gap: 8px;
-      background: rgba(224, 123, 0, 0.1);
-      border: 1px solid rgba(224, 123, 0, 0.35);
+      background: rgba(255, 107, 0, 0.1);
+      border: 1px solid rgba(255, 107, 0, 0.35);
       color: var(--wh);
       text-decoration: none;
       font-family: var(--fc);
@@ -793,7 +906,7 @@
       background: var(--or);
       color: #000;
       border-color: var(--or);
-      box-shadow: 0 4px 16px rgba(224, 123, 0, 0.4);
+      box-shadow: 0 4px 16px rgba(255, 107, 0, 0.45);
     }
     .svc-card.featured-deal .card-cta {
       background: var(--or);
@@ -813,7 +926,7 @@
       max-width: 980px;
       margin: 40px auto 0;
       background: var(--dk2);
-      border: 1px solid rgba(224, 123, 0, 0.25);
+      border: 1px solid rgba(255, 107, 0, 0.25);
       border-radius: 8px;
       padding: clamp(24px, 4vw, 46px);
       box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
@@ -857,13 +970,13 @@
       transition: all 0.2s ease;
     }
     .v-type-card:hover {
-      border-color: rgba(224, 123, 0, 0.4);
-      background: rgba(224, 123, 0, 0.03);
+      border-color: rgba(255, 107, 0, 0.4);
+      background: rgba(255, 107, 0, 0.03);
     }
     .v-type-card.selected {
       border-color: var(--or);
-      background: rgba(224, 123, 0, 0.1);
-      box-shadow: 0 0 18px rgba(224, 123, 0, 0.2);
+      background: rgba(255, 107, 0, 0.1);
+      box-shadow: 0 0 18px rgba(255, 107, 0, 0.25);
     }
     .v-type-name {
       font-family: var(--fc);
@@ -899,11 +1012,11 @@
       transition: all 0.2s;
     }
     .calc-svc-item:hover {
-      border-color: rgba(224, 123, 0, 0.3);
+      border-color: rgba(255, 107, 0, 0.3);
     }
     .calc-svc-item.checked {
-      background: rgba(224, 123, 0, 0.07);
-      border-color: rgba(224, 123, 0, 0.5);
+      background: rgba(255, 107, 0, 0.07);
+      border-color: rgba(255, 107, 0, 0.5);
     }
     .calc-checkbox {
       width: 18px; height: 18px;
@@ -992,7 +1105,7 @@
     .ba-slider-container {
       max-width: 900px;
       margin: 40px auto 0;
-      border: 1px solid rgba(224, 123, 0, 0.25);
+      border: 1px solid rgba(255, 107, 0, 0.25);
       border-radius: 8px;
       overflow: hidden;
       position: relative;
@@ -1011,7 +1124,7 @@
       overflow: hidden;
     }
     .ba-after {
-      background: radial-gradient(circle at center, #231608 0%, #0a0a0a 80%);
+      background: radial-gradient(circle at center, #24160a 0%, #0a0a0a 80%);
     }
     .ba-before {
       background: radial-gradient(circle at center, #1b1b1b 0%, #080808 80%);
@@ -1080,7 +1193,7 @@
       border-radius: 50%;
       background: var(--or);
       border: 3px solid #000;
-      box-shadow: 0 0 15px rgba(224, 123, 0, 0.6);
+      box-shadow: 0 0 15px rgba(255, 107, 0, 0.6);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -1109,7 +1222,7 @@
       transition: border-color 0.25s;
     }
     .faq-item.open {
-      border-color: rgba(224, 123, 0, 0.35);
+      border-color: rgba(255, 107, 0, 0.35);
     }
     .faq-question {
       padding: 20px 24px;
@@ -1166,9 +1279,9 @@
       color: #ccc;
     }
     .bairro-tag.accent {
-      border-color: rgba(224, 123, 0, 0.35);
+      border-color: rgba(255, 107, 0, 0.35);
       color: var(--or);
-      background: rgba(224, 123, 0, 0.05);
+      background: rgba(255, 107, 0, 0.05);
     }
 
     /* ── POR QUE JR ── */
@@ -1203,7 +1316,7 @@
       justify-content: center;
       font-size: 1.2rem;
       flex-shrink: 0;
-      background: rgba(224, 123, 0, 0.05);
+      background: rgba(255, 107, 0, 0.05);
     }
     .why-item h3 {
       font-family: var(--fc);
@@ -1220,8 +1333,8 @@
       line-height: 1.6;
     }
     .why-banner-card {
-      background: linear-gradient(135deg, var(--dk2), #1f1710);
-      border: 1px solid rgba(224, 123, 0, 0.25);
+      background: linear-gradient(135deg, var(--dk2), #201610);
+      border: 1px solid rgba(255, 107, 0, 0.25);
       border-radius: 8px;
       padding: 40px 32px;
       text-align: center;
@@ -1268,7 +1381,7 @@
     .contact-card:hover {
       border-color: var(--or);
       transform: translateX(6px);
-      background: rgba(224, 123, 0, 0.04);
+      background: rgba(255, 107, 0, 0.04);
     }
     .contact-card.wa { border-left: 4px solid var(--wag); }
     .contact-card.ig { border-left: 4px solid var(--igp); }
@@ -1288,7 +1401,7 @@
     .cc-label.ig { color: var(--igp); }
     .cc-value { font-family: var(--fc); font-size: 1.15rem; font-weight: 700; color: var(--wh); }
 
-    /* ── FOOTER ── */
+    /* ── FOOTER COM LOGO ── */
     footer {
       background: #040404;
       border-top: 1px solid rgba(255, 255, 255, 0.06);
@@ -1298,6 +1411,20 @@
       align-items: center;
       flex-wrap: wrap;
       gap: 20px;
+    }
+    .footer-brand-wrap {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .footer-logo-img {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+      border-radius: 50%;
+      border: 1px solid var(--or);
+      background: #000;
+      padding: 1px;
     }
     .footer-brand { font-family: var(--fd); font-size: 1.3rem; letter-spacing: 0.08em; }
     .footer-brand span { color: var(--or); }
@@ -1338,6 +1465,10 @@
 
     /* ── RESPONSIVIDADE ── */
     @media(max-width: 992px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 50px; text-align: center; }
+      .hero-content { margin: 0 auto; }
+      .hero-actions { justify-content: center; }
+      .fast-perks { justify-content: center; }
       .dash-zones-grid { grid-template-columns: repeat(2, 1fr); }
       .why-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
     }
@@ -1352,7 +1483,7 @@
         background: rgba(7, 7, 7, 0.98);
         padding: 24px 5vw;
         gap: 18px;
-        border-bottom: 1px solid rgba(224, 123, 0, 0.2);
+        border-bottom: 1px solid rgba(255, 107, 0, 0.25);
         backdrop-filter: blur(20px);
       }
       .dash-banner { flex-direction: column; align-items: stretch; }
@@ -1364,7 +1495,7 @@
     }
     @media(max-width: 640px) {
       section { padding: 65px 5vw; }
-      #hero { padding-top: 105px; }
+      #hero { padding-top: 110px; }
       .hero-actions a { width: 100%; justify-content: center; text-align: center; }
       .dash-zones-grid { grid-template-columns: 1fr; }
       .calc-total-val { font-size: 2.3rem; }
@@ -1376,8 +1507,11 @@
 <!-- ── HEADER / NAVEGAÇÃO ── -->
 <nav id="nav">
   <a href="#hero" class="nav-logo" aria-label="JR New Concept Detail">
-    <div class="logo-title"><span>JR</span><span class="orange">NEW CONCEPT</span><span>DETAIL</span></div>
-    <div class="logo-sub"><span class="logo-dot"></span>Estética Automotiva Delivery · SJC</div>
+    <img src="logo.png" onerror="this.onerror=null; this.src='JR New Concept Detail.png'" alt="Logo JR New Concept Detail" class="nav-logo-img"/>
+    <div class="nav-logo-text">
+      <div class="logo-title"><span>JR</span><span class="orange">NEW CONCEPT</span><span>DETAIL</span></div>
+      <div class="logo-sub"><span class="logo-dot"></span>Estética Automotiva Delivery · SJC</div>
+    </div>
   </a>
   <ul class="nav-links" id="navLinks">
     <li><a href="#servicos">Serviços</a></li>
@@ -1396,27 +1530,43 @@
 
 <!-- ── HERO ── -->
 <section id="hero">
-  <div class="hero-content">
-    <div class="hero-badge"><span class="logo-dot"></span> Atendimento Delivery · São José dos Campos e Região</div>
-    <h1 class="hero-h1">
-      O PADRÃO MÁXIMO<br/>
-      DE ESTÉTICA,<br/>
-      <span class="highlight">NA SUA PORTA.</span>
-    </h1>
-    <p class="hero-sub">
-      Cuidado técnico minucioso na sua <strong>casa ou empresa</strong>. Especialistas em <strong>veículos vitrificados e com PPF</strong>, polimento técnico e higienização profunda. Sem filas, com hora marcada e produtos de alta tecnologia.
-    </p>
-    <div class="hero-actions">
-      <a href="https://wa.me/5512992228205?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20servi%C3%A7o%20com%20a%20JR%20New%20Concept%20Detail." target="_blank" class="btn-primary">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.555 4.126 1.528 5.858L.057 23.855c-.083.329.243.613.564.491l5.912-2.186A11.947 11.947 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.929 0-3.73-.52-5.27-1.425l-.376-.225-3.897 1.44 1.317-3.96-.244-.388A9.958 9.958 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-        Falar no WhatsApp
-      </a>
-      <a href="#simulador" class="btn-outline">Simular Orçamento</a>
+  <div class="hero-grid">
+    <div class="hero-content">
+      <div class="hero-badge"><span class="logo-dot"></span> Atendimento Delivery · São José dos Campos e Região</div>
+      <h1 class="hero-h1">
+        O PADRÃO MÁXIMO<br/>
+        DE ESTÉTICA,<br/>
+        <span class="highlight">NA SUA PORTA.</span>
+      </h1>
+      <p class="hero-sub">
+        Cuidado técnico minucioso na sua <strong>casa ou empresa</strong>. Especialistas em <strong>veículos vitrificados e com PPF</strong>, polimento técnico e higienização profunda. Sem filas, com hora marcada e produtos de alta tecnologia.
+      </p>
+      <div class="hero-actions">
+        <a href="https://wa.me/5512992228205?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20servi%C3%A7o%20com%20a%20JR%20New%20Concept%20Detail." target="_blank" class="btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.555 4.126 1.528 5.858L.057 23.855c-.083.329.243.613.564.491l5.912-2.186A11.947 11.947 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.929 0-3.73-.52-5.27-1.425l-.376-.225-3.897 1.44 1.317-3.96-.244-.388A9.958 9.958 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+          Falar no WhatsApp
+        </a>
+        <a href="#simulador" class="btn-outline">Simular Orçamento</a>
+      </div>
+      <div class="fast-perks">
+        <div class="f-perk"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Especialistas em PPF & Vitrificação</div>
+        <div class="f-perk"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Delivery na sua Porta</div>
+        <div class="f-perk"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Hora Marcada</div>
+      </div>
     </div>
-    <div class="fast-perks">
-      <div class="f-perk"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Especialistas em PPF & Vitrificação</div>
-      <div class="f-perk"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Delivery na sua Porta</div>
-      <div class="f-perk"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Hora Marcada</div>
+
+    <!-- Destaque da Logo Oficial JR -->
+    <div class="hero-emblem-wrap">
+      <div class="hero-emblem-halo"></div>
+      <div class="hero-emblem-card">
+        <img src="logo.png" onerror="this.onerror=null; this.src='JR New Concept Detail.png'" alt="JR New Concept Detail — Logo Oficial" class="hero-emblem-img"/>
+        <div class="hero-emblem-badge">
+          <span class="emblem-sparkle">✦</span>
+          <span>EXCELÊNCIA EM CADA DETALHE</span>
+          <span class="emblem-sparkle">✦</span>
+        </div>
+        <div class="hero-emblem-caption">Estética Automotiva Delivery · Desde 2026</div>
+      </div>
     </div>
   </div>
 </section>
@@ -2119,7 +2269,7 @@
       </div>
     </div>
 
-    <div style="background:var(--dk2); border: 1px solid rgba(224,123,0,.15); padding: 38px; border-radius: 8px;">
+    <div style="background:var(--dk2); border: 1px solid rgba(255,107,0,.15); padding: 38px; border-radius: 8px;">
       <h3 style="font-family:var(--fd); font-size: 2.4rem; line-height: 1; margin-bottom: 12px;">AGENDE O SEU <span style="color:var(--or)">HORÁRIO</span></h3>
       <p style="color:#aaa; font-size: 0.92rem; line-height: 1.7; margin-bottom: 24px;">
         Clique no botão abaixo para iniciar a conversa no WhatsApp com horário e data de sua preferência.
@@ -2133,9 +2283,12 @@
 
 <!-- ── FOOTER ── -->
 <footer>
-  <div>
-    <div class="footer-brand">JR <span>NEW CONCEPT</span> DETAIL</div>
-    <div class="footer-sub">Estética Automotiva Delivery · São José dos Campos, SP</div>
+  <div class="footer-brand-wrap">
+    <img src="logo.png" onerror="this.onerror=null; this.src='JR New Concept Detail.png'" alt="JR New Concept Detail" class="footer-logo-img"/>
+    <div>
+      <div class="footer-brand">JR <span>NEW CONCEPT</span> DETAIL</div>
+      <div class="footer-sub">Estética Automotiva Delivery · São José dos Campos, SP</div>
+    </div>
   </div>
   <ul class="footer-links">
     <li><a href="#servicos">Serviços</a></li>
