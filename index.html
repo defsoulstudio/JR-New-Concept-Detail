@@ -1156,7 +1156,7 @@
     }
 
     .ba-info-banner {
-      max-width: 960px;
+      max-width: 860px;
       margin: 0 auto 20px;
       background: linear-gradient(135deg, #181512 0%, #121212 100%);
       border: 1px solid rgba(255, 107, 0, 0.25);
@@ -1181,14 +1181,14 @@
 
     .ba-slider-container {
       --pos: 50%;
-      max-width: 960px;
+      max-width: 860px;
       margin: 0 auto;
       border: 1.5px solid rgba(255, 107, 0, 0.35);
       border-radius: 10px;
       overflow: hidden;
       position: relative;
       background: #0d0d0d;
-      aspect-ratio: 16/9;
+      aspect-ratio: 4/3; /* Proporção ideal para fotos de celular, sem cortes agressivos */
       box-shadow: 0 20px 50px rgba(0,0,0,0.8);
       user-select: none;
       touch-action: pan-y;
@@ -1323,7 +1323,7 @@
     .ba-hint-bar {
       display: flex;
       justify-content: space-between;
-      max-width: 960px;
+      max-width: 860px;
       margin: 12px auto 0;
       font-size: 0.78rem;
       color: #777;
@@ -1630,6 +1630,7 @@
       .hero-actions a { width: 100%; justify-content: center; text-align: center; }
       .dash-zones-grid { grid-template-columns: 1fr; }
       .calc-total-val { font-size: 2.3rem; }
+      .ba-slider-container { aspect-ratio: 1/1; } /* No celular em tela pequena, 1:1 fica excelente */
     }
   </style>
 </head>
@@ -2227,7 +2228,7 @@
     <p class="ba-info-desc" id="baInfoDesc">Remoção de fuligem pesada de pastilhas de freio, terra acumulada e descontaminação ferrosa de pinças e aros de liga leve.</p>
   </div>
 
-  <!-- Slider Principal 16:9 -->
+  <!-- Slider Principal 4:3 -->
   <div class="ba-slider-container" id="baSlider">
     <!-- DEPOIS (Fundo Completo) -->
     <div class="ba-pane ba-after">
