@@ -15,14 +15,14 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     
     :root {
-      --or: #FF6B00; /* Laranja esportivo vibrante exato da logo JR */
-      --or-lt: #FF8A22; /* Tom iluminado da pintura da logo */
+      --or: #FF6B00;
+      --or-lt: #FF8A22;
       --or-glow: rgba(255, 107, 0, 0.45);
-      --blk: #080808; /* Preto profundo de fundo */
+      --blk: #080808;
       --dk: #0F0F0F;
       --dk2: #151515;
       --dk3: #1C1C1C;
-      --wh: #FFFFFF; /* Branco puro de alto contraste */
+      --wh: #FFFFFF;
       --gy: #A0A0A0;
       --lgy: #555;
       --wag: #25D366;
@@ -67,7 +67,7 @@
       align-items: center;
       justify-content: space-between;
       padding: 14px 5vw;
-      background: rgba(8, 8, 8, 0.90);
+      background: rgba(8, 8, 8, 0.92);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
       border-bottom: 1px solid rgba(255, 255, 255, 0.06);
@@ -78,8 +78,6 @@
       border-bottom-color: rgba(255, 107, 0, 0.3);
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.85);
     }
-    
-    /* Logo na Navbar */
     .nav-logo {
       display: flex;
       align-items: center;
@@ -88,8 +86,8 @@
       color: var(--wh);
     }
     .nav-logo-img {
-      width: 46px;
-      height: 46px;
+      width: 44px;
+      height: 44px;
       object-fit: contain;
       border-radius: 50%;
       background: #000;
@@ -109,7 +107,7 @@
     }
     .logo-title {
       font-family: var(--fd);
-      font-size: clamp(1.4rem, 2.2vw, 2.1rem);
+      font-size: clamp(1.3rem, 2.2vw, 2.1rem);
       letter-spacing: 0.08em;
       line-height: 1;
       display: flex;
@@ -120,7 +118,7 @@
     .logo-sub {
       font-family: var(--fc);
       font-size: 0.7rem;
-      letter-spacing: 0.24em;
+      letter-spacing: 0.22em;
       color: var(--or);
       display: flex;
       align-items: center;
@@ -203,7 +201,7 @@
       transition: 0.3s;
     }
 
-    /* ── HERO COM DESTAQUE DA LOGO ── */
+    /* ── HERO ── */
     #hero {
       position: relative;
       min-height: 100vh;
@@ -249,8 +247,8 @@
     }
     .hero-h1 {
       font-family: var(--fd);
-      font-size: clamp(3.8rem, 7.5vw, 7.2rem);
-      line-height: 0.92;
+      font-size: clamp(3.2rem, 7vw, 6.8rem);
+      line-height: 0.94;
       letter-spacing: 0.02em;
       margin-bottom: 22px;
     }
@@ -260,7 +258,7 @@
       text-shadow: 0 0 35px rgba(255, 107, 0, 0.45);
     }
     .hero-sub {
-      font-size: clamp(1rem, 1.3vw, 1.15rem);
+      font-size: clamp(0.95rem, 1.3vw, 1.15rem);
       color: #bbb;
       font-weight: 300;
       line-height: 1.7;
@@ -337,7 +335,6 @@
     }
     .f-perk svg { color: var(--or); flex-shrink: 0; }
 
-    /* Showcase da Logo Oficial */
     .hero-emblem-wrap {
       display: flex;
       flex-direction: column;
@@ -452,7 +449,7 @@
     }
     .sec-title {
       font-family: var(--fd);
-      font-size: clamp(2.6rem, 5vw, 4.4rem);
+      font-size: clamp(2.4rem, 5vw, 4.4rem);
       line-height: 0.96;
       letter-spacing: 0.03em;
     }
@@ -466,14 +463,13 @@
       font-weight: 300;
     }
 
-    /* ── DASHBOARD TÉCNICO DE ESTÚDIO (4 CARDS DE ZONAS) ── */
+    /* ── DASHBOARD DE ZONAS ── */
     #dashboard-zonas {
       background: var(--dk);
       border-top: 1px solid rgba(255, 255, 255, 0.04);
       border-bottom: 1px solid rgba(255, 255, 255, 0.04);
     }
     .dash-header { text-align: center; margin-bottom: 40px; }
-
     .dash-tabs {
       display: flex;
       justify-content: center;
@@ -636,9 +632,7 @@
       color: var(--or);
       box-shadow: 0 0 16px rgba(255, 107, 0, 0.25);
     }
-    .dash-zone-card.excluded .dz-icon-wrap {
-      color: #444;
-    }
+    .dash-zone-card.excluded .dz-icon-wrap { color: #444; }
     .dz-badge {
       font-family: var(--fc);
       font-size: 0.7rem;
@@ -697,7 +691,7 @@
       color: #555;
     }
 
-    /* ── CATÁLOGO DE SERVIÇOS EM ABAS ── */
+    /* ── CATÁLOGO DE SERVIÇOS ── */
     #servicos { background: var(--blk); }
     .svc-header {
       display: flex;
@@ -738,7 +732,6 @@
       border-color: var(--or);
       box-shadow: 0 4px 16px rgba(255, 107, 0, 0.35);
     }
-
     .svc-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -831,7 +824,6 @@
       color: var(--or);
       font-weight: bold;
     }
-    
     .price-wrap {
       margin-top: auto;
       padding-top: 18px;
@@ -895,7 +887,6 @@
       color: var(--or);
       line-height: 1.1;
     }
-
     .card-cta {
       display: flex;
       align-items: center;
@@ -924,11 +915,9 @@
       background: var(--or);
       color: #000;
     }
-    .svc-card.featured-deal .card-cta:hover {
-      background: var(--or-lt);
-    }
+    .svc-card.featured-deal .card-cta:hover { background: var(--or-lt); }
 
-    /* ── SIMULADOR DE ORÇAMENTO WHATSAPP ── */
+    /* ── SIMULADOR DE ORÇAMENTO ── */
     #simulador {
       background: linear-gradient(180deg, var(--dk) 0%, var(--blk) 100%);
       border-top: 1px solid rgba(255, 255, 255, 0.04);
@@ -965,7 +954,6 @@
       justify-content: center;
       font-size: 0.72rem;
     }
-
     .vehicle-types {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
@@ -1016,7 +1004,6 @@
       color: #888;
       margin-top: 2px;
     }
-
     .calc-services-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -1035,9 +1022,7 @@
       user-select: none;
       transition: all 0.2s;
     }
-    .calc-svc-item:hover {
-      border-color: rgba(255, 107, 0, 0.3);
-    }
+    .calc-svc-item:hover { border-color: rgba(255, 107, 0, 0.3); }
     .calc-svc-item.checked {
       background: rgba(255, 107, 0, 0.07);
       border-color: rgba(255, 107, 0, 0.5);
@@ -1073,7 +1058,6 @@
       color: var(--or);
       font-weight: 600;
     }
-
     .calc-summary-bar {
       display: flex;
       align-items: center;
@@ -1122,6 +1106,249 @@
       box-shadow: 0 6px 24px rgba(37, 211, 102, 0.45);
     }
 
+    /* ── SLIDER ANTES E DEPOIS (LIMPO E CENTRALIZADO) ── */
+    #comparador {
+      background: var(--blk);
+      position: relative;
+      z-index: 5;
+    }
+    .ba-nav-tabs {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin: 28px auto 20px;
+      max-width: 860px;
+      width: 100%;
+    }
+    .ba-tab-btn {
+      background: var(--dk2);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: #aaa;
+      font-family: var(--fc);
+      font-size: 0.88rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 700;
+      padding: 10px 18px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .ba-tab-btn:hover {
+      border-color: rgba(255, 107, 0, 0.4);
+      color: #fff;
+      background: rgba(255, 107, 0, 0.06);
+    }
+    .ba-tab-btn.active {
+      background: linear-gradient(135deg, var(--or), var(--or-lt));
+      color: #000;
+      border-color: var(--or);
+      box-shadow: 0 4px 18px rgba(255, 107, 0, 0.4);
+    }
+    .ba-tab-tag {
+      font-size: 0.68rem;
+      background: rgba(0, 0, 0, 0.25);
+      padding: 2px 7px;
+      border-radius: 3px;
+      font-weight: 800;
+    }
+    .ba-tab-btn.active .ba-tab-tag {
+      background: rgba(0, 0, 0, 0.4);
+      color: #fff;
+    }
+
+    .ba-info-banner {
+      max-width: 860px;
+      width: 100%;
+      margin: 0 auto 18px;
+      background: linear-gradient(135deg, #181512 0%, #121212 100%);
+      border: 1px solid rgba(255, 107, 0, 0.25);
+      border-radius: 8px;
+      padding: 14px 20px;
+      text-align: center;
+      display: block;
+    }
+    .ba-info-title {
+      font-family: var(--fc);
+      font-size: 1.05rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--or);
+      margin-bottom: 4px;
+    }
+    .ba-info-desc {
+      font-size: 0.84rem;
+      color: #bbb;
+      line-height: 1.45;
+    }
+
+    .ba-slider-container {
+      position: relative;
+      width: 100%;
+      max-width: 860px;
+      margin: 0 auto;
+      aspect-ratio: 4/3;
+      border: 1.5px solid rgba(255, 107, 0, 0.35);
+      border-radius: 10px;
+      overflow: hidden;
+      background: #0d0d0d;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+      user-select: none;
+      touch-action: pan-y;
+    }
+    .ba-pane {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    .ba-after {
+      background: radial-gradient(circle at center, #20140c 0%, #0a0a0a 85%);
+      z-index: 1;
+    }
+    .ba-before {
+      background: radial-gradient(circle at center, #1a1a1a 0%, #080808 85%);
+      clip-path: inset(0 50% 0 0);
+      -webkit-clip-path: inset(0 50% 0 0);
+      z-index: 2;
+    }
+    .ba-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      pointer-events: none;
+      user-select: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .ba-placeholder-box {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 24px 20px;
+      pointer-events: none;
+      z-index: 1;
+    }
+    .ba-pill {
+      font-family: var(--fc);
+      font-size: 0.75rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 8px;
+    }
+    .ba-before .ba-pill {
+      background: rgba(255, 255, 255, 0.1);
+      color: #bbb;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .ba-after .ba-pill {
+      background: var(--or);
+      color: #000;
+    }
+    .ba-ph-title {
+      font-family: var(--fd);
+      font-size: 1.5rem;
+      color: var(--or);
+      margin-bottom: 4px;
+    }
+    .ba-before .ba-ph-title { color: #ddd; }
+    .ba-ph-desc {
+      font-size: 0.8rem;
+      color: #888;
+      max-width: 250px;
+      line-height: 1.4;
+    }
+
+    .ba-badge-tag {
+      position: absolute;
+      top: 14px;
+      z-index: 5;
+      font-family: var(--fc);
+      font-size: 0.72rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-weight: 800;
+      padding: 5px 12px;
+      border-radius: 4px;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      pointer-events: none;
+    }
+    .ba-badge-tag.left {
+      left: 14px;
+      background: rgba(0, 0, 0, 0.8);
+      color: #ddd;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+    }
+    .ba-badge-tag.right {
+      right: 14px;
+      background: var(--or);
+      color: #000;
+      border: 1px solid var(--or);
+      box-shadow: 0 4px 14px rgba(255, 107, 0, 0.4);
+    }
+
+    .ba-handle {
+      position: absolute;
+      top: 0; bottom: 0;
+      left: 50%;
+      width: 3px;
+      background: var(--or);
+      cursor: ew-resize;
+      z-index: 10;
+      transform: translateX(-50%);
+      box-shadow: 0 0 12px rgba(255, 107, 0, 0.85);
+    }
+    .ba-handle-btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      background: var(--or);
+      border: 3px solid #000;
+      box-shadow: 0 0 18px rgba(255, 107, 0, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #000;
+      font-weight: bold;
+      font-size: 1.05rem;
+      user-select: none;
+      touch-action: none;
+    }
+    .ba-hint-bar {
+      display: flex;
+      justify-content: space-between;
+      max-width: 860px;
+      width: 100%;
+      margin: 12px auto 0;
+      font-size: 0.78rem;
+      color: #777;
+      font-family: var(--fc);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0 4px;
+    }
+
     /* ── FAQ ── */
     #faq {
       background: var(--dk);
@@ -1141,9 +1368,7 @@
       overflow: hidden;
       transition: border-color 0.25s;
     }
-    .faq-item.open {
-      border-color: rgba(255, 107, 0, 0.35);
-    }
+    .faq-item.open { border-color: rgba(255, 107, 0, 0.35); }
     .faq-question {
       padding: 20px 24px;
       display: flex;
@@ -1207,9 +1432,7 @@
     }
 
     /* ── POR QUE JR ── */
-    #porque {
-      background: var(--dk);
-    }
+    #porque { background: var(--dk); }
     .why-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -1277,9 +1500,7 @@
     }
 
     /* ── CONTATO ── */
-    #contato {
-      background: var(--blk);
-    }
+    #contato { background: var(--blk); }
     .contact-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -1299,6 +1520,12 @@
       border: 1px solid rgba(255, 255, 255, 0.06);
       transition: all 0.25s ease;
       margin-bottom: 14px;
+    }
+    .contact-schedule-card {
+      background: var(--dk2);
+      border: 1px solid rgba(255, 107, 0, 0.25);
+      padding: 38px 32px;
+      border-radius: 8px;
     }
     .contact-card:hover {
       border-color: var(--or);
@@ -1322,15 +1549,8 @@
     .cc-label.wa { color: var(--wag); }
     .cc-label.ig { color: var(--igp); }
     .cc-value { font-family: var(--fc); font-size: 1.15rem; font-weight: 700; color: var(--wh); }
-    
-    .contact-schedule-card {
-      background: var(--dk2);
-      border: 1px solid rgba(255, 107, 0, 0.25);
-      padding: 38px 32px;
-      border-radius: 8px;
-    }
 
-    /* ── FOOTER COM LOGO ── */
+    /* ── FOOTER ── */
     footer {
       background: #040404;
       border-top: 1px solid rgba(255, 255, 255, 0.06);
@@ -1411,21 +1631,10 @@
       .hero-actions { justify-content: center !important; }
       .fast-perks { justify-content: center !important; }
       
-      .hero-emblem-wrap {
-        width: 100% !important;
-      }
-      .hero-emblem-halo {
-        width: 260px !important;
-        height: 260px !important;
-      }
-      .hero-emblem-card {
-        max-width: 320px !important;
-        padding: 24px 18px !important;
-      }
-      .hero-emblem-img {
-        width: 200px !important;
-        height: 200px !important;
-      }
+      .hero-emblem-wrap { width: 100% !important; }
+      .hero-emblem-halo { width: 260px !important; height: 260px !important; }
+      .hero-emblem-card { max-width: 320px !important; padding: 24px 18px !important; }
+      .hero-emblem-img { width: 200px !important; height: 200px !important; }
 
       .dash-zones-grid {
         grid-template-columns: repeat(2, 1fr) !important;
@@ -1452,7 +1661,6 @@
         backdrop-filter: blur(20px) !important;
       }
 
-      /* Barra de Navegação de Abas do Estúdio (Scroll horizontal suave) */
       .dash-tabs {
         display: flex !important;
         overflow-x: auto !important;
@@ -1477,9 +1685,7 @@
         padding: 20px 16px !important;
         gap: 16px !important;
       }
-      .dash-banner-price {
-        align-items: flex-start !important;
-      }
+      .dash-banner-price { align-items: flex-start !important; }
       .dash-banner-price-val {
         font-size: 2rem !important;
         text-align: left !important;
@@ -1496,7 +1702,6 @@
         text-align: center !important;
       }
 
-      /* Filtros do Catálogo com scroll suave */
       .svc-filters {
         display: flex !important;
         overflow-x: auto !important;
@@ -1529,27 +1734,12 @@
     }
 
     @media(max-width: 640px) {
-      section {
-        padding: 50px 5vw !important;
-      }
-      nav#nav {
-        padding: 10px 4vw !important;
-      }
-      .nav-logo {
-        gap: 8px !important;
-      }
-      .nav-logo-img {
-        width: 36px !important;
-        height: 36px !important;
-      }
-      .logo-title {
-        font-size: 1.15rem !important;
-        letter-spacing: 0.04em !important;
-      }
-      .logo-sub {
-        font-size: 0.58rem !important;
-        letter-spacing: 0.1em !important;
-      }
+      section { padding: 50px 5vw !important; }
+      nav#nav { padding: 10px 4vw !important; }
+      .nav-logo { gap: 8px !important; }
+      .nav-logo-img { width: 36px !important; height: 36px !important; }
+      .logo-title { font-size: 1.15rem !important; letter-spacing: 0.04em !important; }
+      .logo-sub { font-size: 0.58rem !important; letter-spacing: 0.1em !important; }
 
       #hero {
         padding-top: 95px !important;
@@ -1611,53 +1801,35 @@
         grid-template-columns: 1fr !important;
         gap: 14px !important;
       }
-      .dash-zone-card {
-        padding: 20px 16px !important;
-      }
-      .dz-title {
-        font-size: 1.1rem !important;
-      }
+      .dash-zone-card { padding: 20px 16px !important; }
+      .dz-title { font-size: 1.1rem !important; }
 
       .svc-grid {
         grid-template-columns: 1fr !important;
         gap: 16px !important;
       }
-      .svc-card {
-        padding: 24px 18px !important;
-      }
-      .svc-name {
-        font-size: 1.8rem !important;
-      }
+      .svc-card { padding: 24px 18px !important; }
+      .svc-name { font-size: 1.8rem !important; }
       .price-grid-4 {
         grid-template-columns: repeat(2, 1fr) !important;
         gap: 6px !important;
       }
 
-      .calc-container {
-        padding: 20px 14px !important;
-      }
+      .calc-container { padding: 20px 14px !important; }
       .vehicle-types {
         grid-template-columns: repeat(2, 1fr) !important;
         gap: 8px !important;
       }
-      .v-type-card {
-        padding: 12px 6px !important;
-      }
-      .v-type-name {
-        font-size: 0.8rem !important;
-      }
-      .v-type-sub {
-        font-size: 0.64rem !important;
-      }
+      .v-type-card { padding: 12px 6px !important; }
+      .v-type-name { font-size: 0.8rem !important; }
+      .v-type-sub { font-size: 0.64rem !important; }
       .calc-services-grid {
         grid-template-columns: 1fr !important;
         gap: 8px !important;
       }
-      .calc-total-val {
-        font-size: 2.2rem !important;
-      }
+      .calc-total-val { font-size: 2.2rem !important; }
 
-      /* ── COMPARADOR ANTES E DEPOIS NO CELULAR (ORGANIZADO E SEM SOBREPOSIÇÃO) ── */
+      /* Comparador Antes e Depois no Celular */
       .ba-nav-tabs {
         display: flex !important;
         flex-direction: column !important;
@@ -1675,9 +1847,7 @@
         padding: 12px 14px !important;
         margin-bottom: 12px !important;
       }
-      .ba-info-title {
-        font-size: 0.95rem !important;
-      }
+      .ba-info-title { font-size: 0.95rem !important; }
       .ba-info-desc {
         font-size: 0.78rem !important;
         line-height: 1.4 !important;
@@ -1705,7 +1875,7 @@
         margin-top: 8px !important;
       }
 
-      /* ── FAQ NO CELULAR ── */
+      /* FAQ no Celular */
       .faq-container {
         margin-top: 24px !important;
         gap: 10px !important;
@@ -1726,7 +1896,7 @@
         line-height: 1.6 !important;
       }
 
-      /* ── REGIÕES NO CELULAR ── */
+      /* Regiões no Celular */
       .bairros-wrap {
         gap: 6px !important;
         margin-top: 22px !important;
@@ -1736,7 +1906,7 @@
         font-size: 0.76rem !important;
       }
 
-      /* ── DIFERENCIAIS NO CELULAR ── */
+      /* Diferenciais no Celular */
       .why-grid {
         gap: 28px !important;
         margin-top: 24px !important;
@@ -1745,29 +1915,21 @@
         gap: 14px !important;
         padding-bottom: 16px !important;
       }
-      .why-item h3 {
-        font-size: 0.95rem !important;
-      }
-      .why-item p {
-        font-size: 0.82rem !important;
-      }
+      .why-item h3 { font-size: 0.95rem !important; }
+      .why-item p { font-size: 0.82rem !important; }
       .why-ico {
         width: 38px !important;
         height: 38px !important;
         font-size: 1rem !important;
       }
-      .why-banner-card {
-        padding: 24px 18px !important;
-      }
-      .why-banner-title {
-        font-size: 2rem !important;
-      }
+      .why-banner-card { padding: 24px 18px !important; }
+      .why-banner-title { font-size: 2rem !important; }
       .why-banner-p {
         font-size: 0.85rem !important;
         margin-bottom: 20px !important;
       }
 
-      /* ── CONTATO NO CELULAR ── */
+      /* Contato no Celular */
       .contact-grid {
         gap: 24px !important;
         margin-top: 24px !important;
@@ -1776,27 +1938,21 @@
         padding: 16px !important;
         margin-bottom: 10px !important;
       }
-      .cc-value {
-        font-size: 1rem !important;
-      }
-      .contact-schedule-card {
-        padding: 24px 18px !important;
-      }
-      .contact-schedule-card h3 {
-        font-size: 1.9rem !important;
-      }
+      .cc-value { font-size: 1rem !important; }
+      .contact-schedule-card { padding: 24px 18px !important; }
+      .contact-schedule-card h3 { font-size: 1.9rem !important; }
       .contact-schedule-card p {
         font-size: 0.85rem !important;
         margin-bottom: 18px !important;
       }
 
-      /* ── RODAPÉ NO CELULAR ── */
+      /* Rodapé no Celular */
       footer {
         flex-direction: column !important;
         align-items: center !important;
         text-align: center !important;
         gap: 16px !important;
-        padding: 28px 5vw 85px !important; /* 85px de margem inferior para o botão WhatsApp não cobrir nada */
+        padding: 28px 5vw 85px !important;
       }
       .footer-brand-wrap {
         flex-direction: column !important;
@@ -1916,7 +2072,6 @@
     <p class="sec-sub" style="margin: 10px auto 0; text-align:center">Selecione o serviço abaixo para conferir em tempo real a cobertura exata em cada uma das 4 zonas técnicas do seu veículo.</p>
   </div>
 
-  <!-- Seletor Superior de Pacotes -->
   <div class="dash-tabs">
     <button class="dtab active" data-svc="ppf">
       <span>01. Vitrificados & PPF</span>
@@ -1940,7 +2095,6 @@
     </button>
   </div>
 
-  <!-- Banner de Destaque do Pacote Selecionado -->
   <div class="dash-banner">
     <div class="dash-banner-info">
       <div class="dash-banner-eyebrow">
@@ -1963,9 +2117,7 @@
     </div>
   </div>
 
-  <!-- Os 4 Cards de Zonas Técnicas (Com Ícones Vetoriais SVG) -->
   <div class="dash-zones-grid">
-    <!-- Zona 1: Pintura & PPF -->
     <div class="dash-zone-card included" id="dz-paint">
       <div class="dz-header">
         <div class="dz-icon-wrap" title="Pintura, PPF & Verniz">
@@ -1982,7 +2134,6 @@
       </ul>
     </div>
 
-    <!-- Zona 2: Rodas & Caixas -->
     <div class="dash-zone-card included" id="dz-wheels">
       <div class="dz-header">
         <div class="dz-icon-wrap" title="Rodas, Freios & Caixas">
@@ -1999,7 +2150,6 @@
       </ul>
     </div>
 
-    <!-- Zona 3: Vidros & Visibilidade -->
     <div class="dash-zone-card included" id="dz-glass">
       <div class="dz-header">
         <div class="dz-icon-wrap" title="Vidros & Para-brisa">
@@ -2016,7 +2166,6 @@
       </ul>
     </div>
 
-    <!-- Zona 4: Cockpit & Couro -->
     <div class="dash-zone-card excluded" id="dz-cabin">
       <div class="dz-header">
         <div class="dz-icon-wrap" title="Cockpit, Couro & Tecidos">
@@ -2034,7 +2183,7 @@
   </div>
 </section>
 
-<!-- ── CATÁLOGO DE SERVIÇOS EM ABAS ── -->
+<!-- ── CATÁLOGO DE SERVIÇOS ── -->
 <section id="servicos">
   <div class="svc-header">
     <div>
@@ -2054,7 +2203,6 @@
   </div>
 
   <div class="svc-grid">
-    <!-- NOVO SERVIÇO: Manutenção para Veículos Vitrificados ou com PPF (DO FLYER OFICIAL) -->
     <div class="svc-card featured-deal" data-cat="ppf-vitrificado">
       <div class="svc-num">01</div>
       <div class="svc-badge">Destaque Especial</div>
@@ -2075,7 +2223,6 @@
       <a href="https://wa.me/5512992228205?text=Ol%C3%A1%2C%20tenho%20interesse%20na%20Manuten%C3%A7%C3%A3o%20para%20Ve%C3%ADculos%20Vitrificados%20ou%20com%20PPF." target="_blank" class="card-cta">Agendar no WhatsApp</a>
     </div>
 
-    <!-- Limpeza de Manutenção Regular (COM TABELA DE VALORES POR PORTE) -->
     <div class="svc-card" data-cat="lavagem">
       <div class="svc-num">02</div>
       <div class="svc-badge">Mais Pedido</div>
@@ -2109,7 +2256,6 @@
       <a href="https://wa.me/5512992228205?text=Ol%C3%A1%2C%20tenho%20interesse%20na%20Limpeza%20de%20Manuten%C3%A7%C3%A3o." target="_blank" class="card-cta">Agendar no WhatsApp</a>
     </div>
 
-    <!-- Detalhada Externa -->
     <div class="svc-card" data-cat="lavagem">
       <div class="svc-num">03</div>
       <div class="svc-cat">Estética Externa</div>
@@ -2128,7 +2274,6 @@
       <a href="https://wa.me/5512992228205?text=Ol%C3%A1%2C%20tenho%20interesse%20na%20Detalhada%20Externa." target="_blank" class="card-cta">Agendar no WhatsApp</a>
     </div>
 
-    <!-- Detalhada Interna -->
     <div class="svc-card" data-cat="interior">
       <div class="svc-num">04</div>
       <div class="svc-cat">Interior</div>
@@ -2147,7 +2292,6 @@
       <a href="https://wa.me/5512992228205?text=Ol%C3%A1%2C%20tenho%20interesse%20na%20Detalhada%20Interna." target="_blank" class="card-cta">Agendar no WhatsApp</a>
     </div>
 
-    <!-- Higienização Interna Profunda -->
     <div class="svc-card" data-cat="interior">
       <div class="svc-num">05</div>
       <div class="svc-badge">Saúde & Conforto</div>
@@ -2167,7 +2311,6 @@
       <a href="https://wa.me/5512992228205?text=Ol%C3%A1%2C%20tenho%20interesse%20na%20Higieniza%C3%A7%C3%A3o%20Interna." target="_blank" class="card-cta">Agendar no WhatsApp</a>
     </div>
 
-    <!-- Higienização de Couro -->
     <div class="svc-card" data-cat="interior">
       <div class="svc-num">06</div>
       <div class="svc-cat">Couro Nobre</div>
@@ -2186,7 +2329,6 @@
       <a href="https://wa.me/5512992228205?text=Ol%C3%A1%2C%20tenho%20interesse%20na%20Higieniza%C3%A7%C3%A3o%20de%20Couro." target="_blank" class="card-cta">Agendar no WhatsApp</a>
     </div>
 
-    <!-- Polimento Técnico -->
     <div class="svc-card" data-cat="protecao">
       <div class="svc-num">07</div>
       <div class="svc-cat">Correção de Verniz</div>
@@ -2206,7 +2348,6 @@
       <a href="https://wa.me/5512992228205?text=Ol%C3%A1%2C%20tenho%20interesse%20no%20Polimento%20T%C3%A9cnico." target="_blank" class="card-cta">Agendar no WhatsApp</a>
     </div>
 
-    <!-- Vitrificação de Plásticos -->
     <div class="svc-card" data-cat="protecao">
       <div class="svc-num">08</div>
       <div class="svc-cat">Proteção Cerâmica</div>
@@ -2225,7 +2366,6 @@
       <a href="https://wa.me/5512992228205?text=Ol%C3%A1%2C%20tenho%20interesse%20na%20Vitrifica%C3%A7%C3%A3o%20de%20Pl%C3%A1sticos." target="_blank" class="card-cta">Agendar no WhatsApp</a>
     </div>
 
-    <!-- Revitalização de Plásticos -->
     <div class="svc-card" data-cat="protecao">
       <div class="svc-num">09</div>
       <div class="svc-cat">Acabamento</div>
@@ -2244,7 +2384,6 @@
       <a href="https://wa.me/5512992228205?text=Ol%C3%A1%2C%20tenho%20interesse%20na%20Revitaliza%C3%A7%C3%A3o%20de%20Pl%C3%A1sticos." target="_blank" class="card-cta">Agendar no WhatsApp</a>
     </div>
 
-    <!-- Impermeabilização de Vidros -->
     <div class="svc-card" data-cat="protecao">
       <div class="svc-num">10</div>
       <div class="svc-cat">Segurança na Chuva</div>
@@ -2268,7 +2407,6 @@
       <a href="https://wa.me/5512992228205?text=Ol%C3%A1%2C%20tenho%20interesse%20na%20Impermeabiliza%C3%A7%C3%A3o%20de%20Vidros." target="_blank" class="card-cta">Agendar no WhatsApp</a>
     </div>
 
-    <!-- Pacote JR Elite VIP -->
     <div class="svc-card featured-deal" data-cat="vip">
       <div class="svc-num">11</div>
       <div class="svc-badge">★ PACOTE SIGNATURE VIP</div>
@@ -2409,7 +2547,7 @@
   <h2 class="sec-title" style="text-align:center">RESULTADOS REAIS: <span class="highlight">ANTES & DEPOIS</span></h2>
   <p class="sec-sub" style="margin: 10px auto 0; text-align:center">Selecione o trabalho abaixo e arraste a barra central para conferir o padrão do acabamento JR.</p>
 
-  <!-- Abas de Seleção dos 3 Pares (Roda, Frontal e Traseira) com Ícones SVG -->
+  <!-- Abas de Seleção dos 3 Pares com Ícones SVG -->
   <div class="ba-nav-tabs">
     <button class="ba-tab-btn active" data-pair="roda">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/><line x1="12" y1="2" x2="12" y2="9"/><line x1="12" y1="15" x2="12" y2="22"/><line x1="2" y1="12" x2="9" y2="12"/><line x1="15" y1="12" x2="22" y2="12"/></svg>
@@ -2434,12 +2572,11 @@
     <p class="ba-info-desc" id="baInfoDesc">Remoção de fuligem pesada de freio incrustada nos aros e pinças, revitalizando o brilho original da liga leve.</p>
   </div>
 
-  <!-- Slider Principal 4:3 com Imagens Limpas e Sem Textos Sobrepostos -->
+  <!-- Slider Principal 4:3 -->
   <div class="ba-slider-container" id="baSlider">
     <!-- DEPOIS (Fundo Completo) -->
     <div class="ba-pane ba-after">
       <img id="baImgAfter" src="depois-rodas.jpg" alt="Depois do detalhamento" class="ba-img"/>
-      <!-- Placeholder exibido apenas se a foto ainda não estiver no GitHub -->
       <div class="ba-placeholder-box" id="baPlaceholderAfter" style="display:none;">
         <span class="ba-pill">Foto do Depois</span>
         <div class="ba-ph-title" id="baTitleAfter">DEPOIS DO DETALHAMENTO</div>
@@ -2451,7 +2588,6 @@
     <!-- ANTES (Sobreposição com recorte) -->
     <div class="ba-pane ba-before" id="baBefore">
       <img id="baImgBefore" src="antes-roda.jpg" alt="Antes do tratamento" class="ba-img"/>
-      <!-- Placeholder exibido apenas se a foto ainda não estiver no GitHub -->
       <div class="ba-placeholder-box" id="baPlaceholderBefore" style="display:none;">
         <span class="ba-pill">Foto do Antes</span>
         <div class="ba-ph-title" id="baTitleBefore">ANTES DO TRATAMENTO</div>
@@ -2638,14 +2774,14 @@
 
       <div style="margin-top:28px">
         <a href="https://wa.me/5512992228205?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20servi%C3%A7o%20com%20a%20JR%20New%20Concept%20Detail." target="_blank" class="contact-card wa">
-          <div class="cc-icon wa"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.555 4.126 1.528 5.858L.057 23.855c-.083.329.243.613.564.491l5.912-2.186A11.947 11.947 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.929 0-3.73-.52-5.27-1.425l-.376-.225-3.897 1.44 1.317-3.96-.244-.388A9.958 9.958 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg></div>
+          <div class="cc-icon wa"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z\"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.555 4.126 1.528 5.858L.057 23.855c-.083.329.243.613.564.491l5.912-2.186A11.947 11.947 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.929 0-3.73-.52-5.27-1.425l-.376-.225-3.897 1.44 1.317-3.96-.244-.388A9.958 9.958 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z\"/></svg></div>
           <div>
             <div class="cc-label wa">WhatsApp Oficial</div>
             <div class="cc-value">(12) 99222-8205</div>
           </div>
         </a>
         <a href="https://www.instagram.com/jrconcept_detail" target="_blank" class="contact-card ig">
-          <div class="cc-icon ig"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></div>
+          <div class="cc-icon ig"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z\"/></svg></div>
           <div>
             <div class="cc-label ig">Instagram</div>
             <div class="cc-value">@jrconcept_detail</div>
@@ -2686,7 +2822,7 @@
 
 <!-- Botão Flutuante WhatsApp -->
 <a href="https://wa.me/5512992228205?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20servi%C3%A7o%20com%20a%20JR%20New%20Concept%20Detail." target="_blank" class="fab-wa" aria-label="WhatsApp">
-  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.555 4.126 1.528 5.858L.057 23.855c-.083.329.243.613.564.491l5.912-2.186A11.947 11.947 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.929 0-3.73-.52-5.27-1.425l-.376-.225-3.897 1.44 1.317-3.96-.244-.388A9.958 9.958 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z\"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.555 4.126 1.528 5.858L.057 23.855c-.083.329.243.613.564.491l5.912-2.186A11.947 11.947 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.929 0-3.73-.52-5.27-1.425l-.376-.225-3.897 1.44 1.317-3.96-.244-.388A9.958 9.958 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z\"/></svg>
 </a>
 
 <!-- ── JAVASCRIPT COMPLETO ── -->
@@ -2707,7 +2843,7 @@
     link.addEventListener('click', () => navLinks.classList.remove('mobile-active'));
   });
 
-  // ── DADOS DO DASHBOARD TÉCNICO (4 CARDS DE ZONAS) ──
+  // ── DADOS DO DASHBOARD TÉCNICO ──
   const studioDashData = {
     ppf: {
       category: 'PROTEÇÃO • BRILHO • VALORIZAÇÃO',
@@ -2982,7 +3118,7 @@
   });
   updateStudioDashboard('ppf');
 
-  // ── FILTRO DE CATEGORIAS DE SERVIÇOS ──
+  // ── FILTRO DE SERVIÇOS ──
   const filterBtns = document.querySelectorAll('.svc-filter-btn');
   const svcCards = document.querySelectorAll('.svc-card');
 
@@ -3002,7 +3138,7 @@
     });
   });
 
-  // ── SIMULADOR DE ORÇAMENTO PARA WHATSAPP ──
+  // ── SIMULADOR DE ORÇAMENTO ──
   let selectedVehicle = "Hatch / Compacto";
   let vehicleMultiplier = 1.0;
   const vehicleCards = document.querySelectorAll('.v-type-card');
@@ -3033,7 +3169,6 @@
     let finalEstimate = 0;
     const selectedServices = [];
 
-    // Preço exato da Manutenção conforme porte selecionado
     const manutCostEl = document.getElementById('calc-manutencao-cost');
     let manutPriceForSelected = 85;
     if (selectedVehicle.includes('Sedan')) manutPriceForSelected = 100;
@@ -3068,7 +3203,7 @@
   }
   updateTotal();
 
-  // ── SLIDER ANTES E DEPOIS (3 CASOS REAIS: RODA, FRONTAL E TRASEIRA) ──
+  // ── SLIDER ANTES E DEPOIS (RODA, FRONTAL E TRASEIRA) ──
   const baPairsData = {
     roda: {
       title: "LIMPEZA TÉCNICA E DESCONTAMINAÇÃO DE RODAS",
@@ -3103,6 +3238,8 @@
   };
 
   const baContainer = document.getElementById('baSlider');
+  const baBefore = document.getElementById('baBefore');
+  const baHandle = document.getElementById('baHandle');
   const baImgBefore = document.getElementById('baImgBefore');
   const baImgAfter = document.getElementById('baImgAfter');
   const baPlaceholderBefore = document.getElementById('baPlaceholderBefore');
@@ -3115,7 +3252,6 @@
   const baDescAfter = document.getElementById('baDescAfter');
   const baTabBtns = document.querySelectorAll('.ba-tab-btn');
 
-  // Carrega imagem testando os nomes e extensões (.jpg, .png, .jpeg, etc.)
   function setImgWithFallbackList(imgEl, placeholderEl, nameList) {
     imgEl.style.opacity = '0';
     imgEl.style.display = 'block';
@@ -3133,7 +3269,6 @@
 
     function tryNext() {
       if (attemptIndex >= candidateUrls.length) {
-        // Se a foto não for encontrada, exibe placeholder limpo sem quebrar
         imgEl.style.display = 'none';
         if (placeholderEl) placeholderEl.style.display = 'flex';
         return;
@@ -3176,18 +3311,35 @@
     btn.addEventListener('click', () => switchBaPair(btn.dataset.pair));
   });
 
-  // Inicializa no primeiro par (Roda)
+  // Inicializa com o par Rodas
   switchBaPair('roda');
 
-  // Controle de Arraste Suave (Desktop Mouse + Mobile Touch)
+  // Posiciona a linha divisória exatamente no centro (50%)
+  if (baBefore) {
+    baBefore.style.clipPath = 'inset(0 50% 0 0)';
+    baBefore.style.webkitClipPath = 'inset(0 50% 0 0)';
+  }
+  if (baHandle) {
+    baHandle.style.left = '50%';
+  }
+
+  // Controle de arrasto suave
   let isDragging = false;
 
   function updateSlider(x) {
     const rect = baContainer.getBoundingClientRect();
     let pos = ((x - rect.left) / rect.width) * 100;
-    if (pos < 5) pos = 5;
-    if (pos > 95) pos = 95;
+    if (pos < 2) pos = 2;
+    if (pos > 98) pos = 98;
+    
     baContainer.style.setProperty('--pos', pos + '%');
+    if (baBefore) {
+      baBefore.style.clipPath = 'inset(0 ' + (100 - pos) + '% 0 0)';
+      baBefore.style.webkitClipPath = 'inset(0 ' + (100 - pos) + '% 0 0)';
+    }
+    if (baHandle) {
+      baHandle.style.left = pos + '%';
+    }
   }
 
   baContainer.addEventListener('mousedown', (e) => { isDragging = true; updateSlider(e.clientX); });
