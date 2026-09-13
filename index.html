@@ -1122,236 +1122,6 @@
       box-shadow: 0 6px 24px rgba(37, 211, 102, 0.45);
     }
 
-    /* ── SLIDER ANTES E DEPOIS (3 CASOS REAIS: RODA, FRONTAL E TRASEIRA) ── */
-    #comparador {
-      background: var(--blk);
-    }
-    .ba-nav-tabs {
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin: 34px auto 24px;
-      max-width: 860px;
-    }
-    .ba-tab-btn {
-      background: var(--dk2);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      color: #aaa;
-      font-family: var(--fc);
-      font-size: 0.88rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      font-weight: 700;
-      padding: 12px 22px;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: all 0.25s ease;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .ba-tab-btn:hover {
-      border-color: rgba(255, 107, 0, 0.4);
-      color: #fff;
-      background: rgba(255, 107, 0, 0.06);
-    }
-    .ba-tab-btn.active {
-      background: linear-gradient(135deg, var(--or), var(--or-lt));
-      color: #000;
-      border-color: var(--or);
-      box-shadow: 0 4px 18px rgba(255, 107, 0, 0.4);
-    }
-    .ba-tab-tag {
-      font-size: 0.7rem;
-      background: rgba(0, 0, 0, 0.25);
-      padding: 2px 7px;
-      border-radius: 3px;
-      font-weight: 800;
-    }
-    .ba-tab-btn.active .ba-tab-tag {
-      background: rgba(0, 0, 0, 0.4);
-      color: #fff;
-    }
-
-    .ba-info-banner {
-      max-width: 860px;
-      margin: 0 auto 20px;
-      background: linear-gradient(135deg, #181512 0%, #121212 100%);
-      border: 1px solid rgba(255, 107, 0, 0.25);
-      border-radius: 8px;
-      padding: 18px 24px;
-      text-align: center;
-    }
-    .ba-info-title {
-      font-family: var(--fc);
-      font-size: 1.15rem;
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--or);
-      margin-bottom: 4px;
-    }
-    .ba-info-desc {
-      font-size: 0.86rem;
-      color: #bbb;
-      line-height: 1.5;
-    }
-
-    .ba-slider-container {
-      --pos: 50%;
-      max-width: 860px;
-      margin: 0 auto;
-      border: 1.5px solid rgba(255, 107, 0, 0.35);
-      border-radius: 10px;
-      overflow: hidden;
-      position: relative;
-      background: #0d0d0d;
-      aspect-ratio: 4/3; /* Proporção ideal para fotos de celular, sem cortes agressivos */
-      box-shadow: 0 20px 50px rgba(0,0,0,0.8);
-      user-select: none;
-      touch-action: pan-y;
-    }
-    .ba-pane {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-    }
-    .ba-after {
-      background: radial-gradient(circle at center, #24160a 0%, #0a0a0a 80%);
-      z-index: 1;
-    }
-    .ba-before {
-      background: radial-gradient(circle at center, #1b1b1b 0%, #080808 80%);
-      clip-path: polygon(0 0, var(--pos) 0, var(--pos) 100%, 0 100%);
-      -webkit-clip-path: polygon(0 0, var(--pos) 0, var(--pos) 100%, 0 100%);
-      z-index: 2;
-    }
-    .ba-img {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-      pointer-events: none;
-      user-select: none;
-      transition: opacity 0.35s ease;
-    }
-    .ba-badge-tag {
-      position: absolute;
-      top: 18px;
-      z-index: 5;
-      font-family: var(--fc);
-      font-size: 0.75rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      font-weight: 800;
-      padding: 6px 14px;
-      border-radius: 4px;
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-    }
-    .ba-badge-tag.left {
-      left: 18px;
-      background: rgba(0, 0, 0, 0.75);
-      color: #bbb;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-    }
-    .ba-badge-tag.right {
-      right: 18px;
-      background: var(--or);
-      color: #000;
-      border: 1px solid var(--or);
-      box-shadow: 0 4px 14px rgba(255, 107, 0, 0.4);
-    }
-
-    .ba-visual-content {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 30px;
-      pointer-events: none;
-    }
-    .ba-pill {
-      font-family: var(--fc);
-      font-size: 0.8rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      font-weight: 700;
-      padding: 6px 16px;
-      border-radius: 999px;
-      margin-bottom: 14px;
-    }
-    .ba-before .ba-pill {
-      background: rgba(255, 255, 255, 0.1);
-      color: #bbb;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-    }
-    .ba-after .ba-pill {
-      background: var(--or);
-      color: #000;
-    }
-    .ba-title {
-      font-family: var(--fd);
-      font-size: clamp(1.8rem, 3.5vw, 3rem);
-      line-height: 1;
-    }
-    .ba-after .ba-title { color: var(--or); }
-    .ba-desc {
-      font-size: 0.88rem;
-      color: #888;
-      max-width: 320px;
-      margin-top: 8px;
-    }
-
-    .ba-handle {
-      position: absolute;
-      top: 0; bottom: 0;
-      left: var(--pos);
-      width: 3px;
-      background: var(--or);
-      cursor: ew-resize;
-      z-index: 10;
-      transform: translateX(-50%);
-      box-shadow: 0 0 10px rgba(255, 107, 0, 0.8);
-    }
-    .ba-handle-btn {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 46px; height: 46px;
-      border-radius: 50%;
-      background: var(--or);
-      border: 3px solid #000;
-      box-shadow: 0 0 18px rgba(255, 107, 0, 0.7);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #000;
-      font-weight: bold;
-      font-size: 1.1rem;
-    }
-    .ba-hint-bar {
-      display: flex;
-      justify-content: space-between;
-      max-width: 860px;
-      margin: 12px auto 0;
-      font-size: 0.78rem;
-      color: #777;
-      font-family: var(--fc);
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 0 6px;
-    }
-
     /* ── FAQ ── */
     #faq {
       background: var(--dk);
@@ -1393,6 +1163,8 @@
       font-size: 1.4rem;
       color: var(--or);
       transition: transform 0.3s ease;
+      flex-shrink: 0;
+      margin-left: 12px;
     }
     .faq-item.open .faq-icon { transform: rotate(45deg); }
     .faq-answer {
@@ -1550,6 +1322,13 @@
     .cc-label.wa { color: var(--wag); }
     .cc-label.ig { color: var(--igp); }
     .cc-value { font-family: var(--fc); font-size: 1.15rem; font-weight: 700; color: var(--wh); }
+    
+    .contact-schedule-card {
+      background: var(--dk2);
+      border: 1px solid rgba(255, 107, 0, 0.25);
+      padding: 38px 32px;
+      border-radius: 8px;
+    }
 
     /* ── FOOTER COM LOGO ── */
     footer {
@@ -1751,7 +1530,7 @@
 
     @media(max-width: 640px) {
       section {
-        padding: 55px 5vw !important;
+        padding: 50px 5vw !important;
       }
       nav#nav {
         padding: 10px 4vw !important;
@@ -1878,13 +1657,13 @@
         font-size: 2.2rem !important;
       }
 
-      /* Comparador Antes e Depois no Celular */
+      /* ── COMPARADOR ANTES E DEPOIS NO CELULAR (ORGANIZADO E SEM SOBREPOSIÇÃO) ── */
       .ba-nav-tabs {
         display: flex !important;
         flex-direction: column !important;
         gap: 8px !important;
         width: 100% !important;
-        margin: 20px 0 14px !important;
+        margin: 18px 0 14px !important;
       }
       .ba-tab-btn {
         width: 100% !important;
@@ -1901,15 +1680,17 @@
       }
       .ba-info-desc {
         font-size: 0.78rem !important;
+        line-height: 1.4 !important;
       }
       .ba-slider-container {
         aspect-ratio: 4/3 !important;
         border-radius: 8px !important;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.7) !important;
       }
       .ba-badge-tag {
         top: 10px !important;
         font-size: 0.65rem !important;
-        padding: 4px 10px !important;
+        padding: 3px 9px !important;
       }
       .ba-badge-tag.left { left: 10px !important; }
       .ba-badge-tag.right { right: 10px !important; }
@@ -1920,25 +1701,102 @@
       }
       .ba-hint-bar {
         font-size: 0.7rem !important;
-        padding: 0 4px !important;
+        padding: 0 2px !important;
+        margin-top: 8px !important;
       }
 
-      .why-banner-title {
-        font-size: 2.1rem !important;
+      /* ── FAQ NO CELULAR ── */
+      .faq-container {
+        margin-top: 24px !important;
+        gap: 10px !important;
+      }
+      .faq-question {
+        padding: 16px 18px !important;
+        font-size: 0.92rem !important;
+        line-height: 1.35 !important;
+      }
+      .faq-icon {
+        font-size: 1.25rem !important;
+        flex-shrink: 0 !important;
+        margin-left: 10px !important;
+      }
+      .faq-answer {
+        padding: 0 18px 18px !important;
+        font-size: 0.85rem !important;
+        line-height: 1.6 !important;
+      }
+
+      /* ── REGIÕES NO CELULAR ── */
+      .bairros-wrap {
+        gap: 6px !important;
+        margin-top: 22px !important;
+      }
+      .bairro-tag {
+        padding: 8px 12px !important;
+        font-size: 0.76rem !important;
+      }
+
+      /* ── DIFERENCIAIS NO CELULAR ── */
+      .why-grid {
+        gap: 28px !important;
+        margin-top: 24px !important;
+      }
+      .why-item {
+        gap: 14px !important;
+        padding-bottom: 16px !important;
+      }
+      .why-item h3 {
+        font-size: 0.95rem !important;
+      }
+      .why-item p {
+        font-size: 0.82rem !important;
+      }
+      .why-ico {
+        width: 38px !important;
+        height: 38px !important;
+        font-size: 1rem !important;
       }
       .why-banner-card {
-        padding: 26px 16px !important;
+        padding: 24px 18px !important;
+      }
+      .why-banner-title {
+        font-size: 2rem !important;
+      }
+      .why-banner-p {
+        font-size: 0.85rem !important;
+        margin-bottom: 20px !important;
+      }
+
+      /* ── CONTATO NO CELULAR ── */
+      .contact-grid {
+        gap: 24px !important;
+        margin-top: 24px !important;
       }
       .contact-card {
         padding: 16px !important;
+        margin-bottom: 10px !important;
+      }
+      .cc-value {
+        font-size: 1rem !important;
+      }
+      .contact-schedule-card {
+        padding: 24px 18px !important;
+      }
+      .contact-schedule-card h3 {
+        font-size: 1.9rem !important;
+      }
+      .contact-schedule-card p {
+        font-size: 0.85rem !important;
+        margin-bottom: 18px !important;
       }
 
+      /* ── RODAPÉ NO CELULAR ── */
       footer {
         flex-direction: column !important;
         align-items: center !important;
         text-align: center !important;
-        gap: 18px !important;
-        padding: 28px 5vw !important;
+        gap: 16px !important;
+        padding: 28px 5vw 85px !important; /* 85px de margem inferior para o botão WhatsApp não cobrir nada */
       }
       .footer-brand-wrap {
         flex-direction: column !important;
@@ -1949,6 +1807,16 @@
         justify-content: center !important;
         flex-wrap: wrap !important;
         gap: 14px !important;
+      }
+      .fab-wa {
+        bottom: 16px !important;
+        right: 16px !important;
+        width: 50px !important;
+        height: 50px !important;
+      }
+      .fab-wa svg {
+        width: 26px !important;
+        height: 26px !important;
       }
     }
   </style>
@@ -2535,11 +2403,11 @@
   </div>
 </section>
 
-<!-- ── SLIDER INTERATIVO ANTES E DEPOIS (3 CASOS REAIS: RODA, FRONTAL E TRASEIRA) ── -->
+<!-- ── SLIDER INTERATIVO ANTES E DEPOIS (3 CASOS REAIS) ── -->
 <section id="comparador">
   <div class="sec-label" style="text-align:center">Transformação Visual em Detalhes</div>
   <h2 class="sec-title" style="text-align:center">RESULTADOS REAIS: <span class="highlight">ANTES & DEPOIS</span></h2>
-  <p class="sec-sub" style="margin: 12px auto 0; text-align:center">Selecione o procedimento abaixo e arraste a barra central para conferir a transformação técnica nos mínimos detalhes.</p>
+  <p class="sec-sub" style="margin: 10px auto 0; text-align:center">Selecione o trabalho abaixo e arraste a barra central para conferir o padrão do acabamento JR.</p>
 
   <!-- Abas de Seleção dos 3 Pares (Roda, Frontal e Traseira) com Ícones SVG -->
   <div class="ba-nav-tabs">
@@ -2563,18 +2431,19 @@
   <!-- Banner com Descrição do Procedimento Ativo -->
   <div class="ba-info-banner">
     <div class="ba-info-title" id="baInfoTitle">LIMPEZA TÉCNICA E DESCONTAMINAÇÃO DE RODAS</div>
-    <p class="ba-info-desc" id="baInfoDesc">Remoção de fuligem pesada de pastilhas de freio, terra acumulada e descontaminação ferrosa de pinças e aros de liga leve.</p>
+    <p class="ba-info-desc" id="baInfoDesc">Remoção de fuligem pesada de freio incrustada nos aros e pinças, revitalizando o brilho original da liga leve.</p>
   </div>
 
-  <!-- Slider Principal 4:3 -->
+  <!-- Slider Principal 4:3 com Imagens Limpas e Sem Textos Sobrepostos -->
   <div class="ba-slider-container" id="baSlider">
     <!-- DEPOIS (Fundo Completo) -->
     <div class="ba-pane ba-after">
       <img id="baImgAfter" src="depois-rodas.jpg" alt="Depois do detalhamento" class="ba-img"/>
-      <div class="ba-visual-content" id="baFallbackAfter">
-        <span class="ba-pill">Depois do Detalhamento</span>
-        <h3 class="ba-title" id="baTitleAfter">RODA DESCONTAMINADA & BRILHO</h3>
-        <p class="ba-desc" id="baDescAfter">Liga leve 100% restaurada, pinças limpas e pneu acetinado seco.</p>
+      <!-- Placeholder exibido apenas se a foto ainda não estiver no GitHub -->
+      <div class="ba-placeholder-box" id="baPlaceholderAfter" style="display:none;">
+        <span class="ba-pill">Foto do Depois</span>
+        <div class="ba-ph-title" id="baTitleAfter">DEPOIS DO DETALHAMENTO</div>
+        <p class="ba-ph-desc" id="baDescAfter">Acabamento brilhante, limpo e protegido.</p>
       </div>
       <span class="ba-badge-tag right">DEPOIS ✓</span>
     </div>
@@ -2582,2754 +2451,11 @@
     <!-- ANTES (Sobreposição com recorte) -->
     <div class="ba-pane ba-before" id="baBefore">
       <img id="baImgBefore" src="antes-roda.jpg" alt="Antes do tratamento" class="ba-img"/>
-      <div class="ba-visual-content" id="baFallbackBefore">
-        <span class="ba-pill">Antes do Tratamento</span>
-        <h3 class="ba-title" id="baTitleBefore">FULIGEM PESADA & ÓXIDO</h3>
-        <p class="ba-desc" id="baDescBefore">Poeira de freio incrustada, caixas sujas e aspecto sem brilho.</p>
-      </div>
-      <span class="ba-badge-tag left">ANTES</span>
-    </div>
-
-    <!-- Puxador Central -->
-    <div class="ba-handle" id="baHandle">
-      <div class="ba-handle-btn">⇄</div>
-    </div>
-  </div>
-
-  <div class="ba-hint-bar">
-    <span>◀ Deslize para ver o Antes</span>
-    <span>Deslize para ver o Depois ▶</span>
-  </div>
-</section>
-
-<!-- ── PERGUNTAS FREQUENTES (FAQ DELIVERY) ── -->
-<section id="faq">
-  <div class="sec-label" style="text-align:center">Tire Suas Dúvidas</div>
-  <h2 class="sec-title" style="text-align:center">COMO FUNCIONA O <span class="highlight">DELIVERY?</span></h2>
-  <p class="sec-sub" style="margin: 12px auto 0; text-align:center">Tudo o que você precisa saber sobre o atendimento na sua casa ou condomínio.</p>
-
-  <div class="faq-container">
-    <div class="faq-item open">
-      <div class="faq-question">
-        <span>1. Vocês precisam de água e tomada de energia no local?</span>
-        <span class="faq-icon">+</span>
-      </div>
-      <div class="faq-answer">
-        Sim! Levamos todas as máquinas profissionais, mangueiras especiais e extensões de alta metragem. Precisamos apenas de uma <strong>torneira convencional de água</strong> e uma <strong>tomada (110V ou 220V)</strong> próxima à vaga do veículo.
-      </div>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>2. Atendem em garagens de condomínio e prédios?</span>
-        <span class="faq-icon">+</span>
-      </div>
-      <div class="faq-answer">
-        Com certeza! Se o seu condomínio possui espaço de lava-rápido ou permite lavagem na sua própria vaga, levamos os equipamentos e realizamos o trabalho sem sujar nem molhar as vagas vizinhas.
-      </div>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>3. Por que carros com Vitrificação ou PPF precisam de manutenção especial?</span>
-        <span class="faq-icon">+</span>
-      </div>
-      <div class="faq-answer">
-        Lava-rápidos comuns utilizam químicos altamente ácidos ou alcalinos que atacam a camada cerâmica da vitrificação e deixam a película de PPF amarelada ou ressecada. Nossa lavagem utiliza <strong>shampoo de pH neutro</strong>, descontaminação química leve e <strong>reforço da camada de hidrorrepelência</strong>, preservando a garantia do tratamento.
-      </div>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>4. Quanto tempo costuma durar o serviço?</span>
-        <span class="faq-icon">+</span>
-      </div>
-      <div class="faq-answer">
-        Depende do pacote e das condições do carro:
-        <ul style="margin-top:8px; padding-left:18px; display:flex; flex-direction:column; gap:6px;">
-          <li><strong>Limpeza de Manutenção:</strong> dura em média de 2 a 3 horas, tudo depende do modelo do veículo e nível de sujidade.</li>
-          <li><strong>Higienização Interna:</strong> leva cerca de 6 horas para finalizar todo o processo de extração e desinfecção.</li>
-          <li><strong>Polimento Técnico:</strong> leva em torno de 12 horas, devido à preparação minuciosa da superfície, descontaminação da pintura e nivelamento caso haja necessidade de lixamento.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>5. Quais são as formas="faq-answer">
-        Aceitamos <strong>Pix</strong>, <strong>Cartão de Débito</strong> e <strong>Cartão de Crédito</strong> (com possibilidade de parcelamento). O acerto é feito após a conclusão do serviço e a sua conferência.
-      </div>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>6. E se chover no dia do agendamento?</span>
-        <span class="faq-icon">+</span>
-      </div>
-      <div class="faq-answer">
-        Se o veículo estiver em garagem coberta, o atendimento ocorre normalmente. Caso a vaga seja descoberta e o tempo fique instável, remarcamos imediatamente para o próximo horário disponível sem custo extra.
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── REGIÕES ATENDIDAS EM SJC ── -->
-<section id="regioes">
-  <div class="sec-label">Onde Atendemos</div>
-  <h2 class="sec-title">ATENDIMENTO EM TODA <span class="highlight">SÃO JOSÉ DOS CAMPOS</span></h2>
-  <p class="sec-sub" style="margin: 10px auto 0;">Levamos o serviço até sua casa, condomínio fechado ou local de trabalho nas seguintes regiões:</p>
-
-  <div class="bairros-wrap">
-    <div class="bairro-tag accent">Urbanova</div>
-    <div class="bairro-tag accent">Jardim Aquarius</div>
-    <div class="bairro-tag accent">Vila Ema</div>
-    <div class="bairro-tag accent">Jardim Esplanada</div>
-    <div class="bairro-tag accent">Jardim das Colinas</div>
-    <div class="bairro-tag">Vila Adyana</div>
-    <div class="bairro-tag">Jardim Satélite</div>
-    <div class="bairro-tag">Bosque dos Eucaliptos</div>
-    <div class="bairro-tag">Parque Industrial</div>
-    <div class="bairro-tag">Santana / Zona Norte</div>
-    <div class="bairro-tag">Condomínios Fechados de SJC</div>
-    <div class="bairro-tag">Jacareí (sob consulta)</div>
-  </div>
-</section>
-
-<!-- ── DIFERENCIAIS JR ── -->
-<section id="porque">
-  <div class="why-grid">
-    <div>
-      <div class="sec-label">Nosso Compromisso</div>
-      <h2 class="sec-title">POR QUE ESCOLHER A <span class="highlight">JR NEW CONCEPT?</span></h2>
-      <div class="why-list" style="margin-top: 30px">
-        <div class="why-item">
-          <div class="why-ico" title="Comodidade">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-          </div>
-          <div>
-            <h3>Comodidade Total</h3>
-            <p>Você não perde tempo em trânsito nem esperando em sala de espera. Seu carro é cuidado enquanto você trabalha ou descansa.</p>
-          </div>
-        </div>
-        <div class="why-item">
-          <div class="why-ico" title="Pontualidade">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          </div>
-          <div>
-            <h3>Pontualidade com Hora Marcada</h3>
-            <p>Trabalhamos com agendamentos pontuais. Você sabe exatamente a hora de início e o prazo de entrega do seu carro.</p>
-          </div>
-        </div>
-        <div class="why-item">
-          <div class="why-ico" title="Padrão Internacional">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.0### O que estava acontecendo no celular:
-
-1. **O topo ficava espremido em duas colunas:** Quando a logo oficial carregava, uma regra de código antiga forçava o texto e a logo a ficarem lado a lado (em 2 colunas) mesmo na tela estreita do celular. O título *"O PADRÃO MÁXIMO..."* não cabia e vazava mais de 100 pixels para a direita, criando uma rolagem lateral invisível que cortava os textos pela metade.
-2. **Preço esticando a tela:** Ao selecionar a *Limpeza de Manutenção*, a linha com os 4 portes ficava em tamanho gigante, duplicando a largura da página no celular.
-3. **Abas e botões quebrando:** As abas do comparador e do catálogo ficavam amontoadas em linhas estranhas.
-
----
-
-### O que foi corrigido:
-
-* **Ordem 100% vertical e alinhada no celular:** Título, badge, subtítulo, botões e logo ficam organizados de cima para baixo, sem nada espremido.
-* **Tipografia responsiva:** O tamanho das fontes agora se adapta suavemente a qualquer modelo de celular (iPhone, Samsung Galaxy, Motorola, etc.).
-* **Fim dos cortes:** Bloqueamos qualquer vazamento lateral (`overflow-x: hidden`). Nada mais sai da tela.
-* **Abas com toque suave:** As abas de categorias e do estúdio agora deslizam suavemente com o dedo, estilo carrossel mobile.
-
----
-
-### Código Completo Atualizado (`index.html`):
-
-```html
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>JR New Concept Detail — Estética Automotiva Delivery | São José dos Campos</title>
-  <meta name="description" content="Estética automotiva premium delivery em São José dos Campos. Cuidados especializados para veículos vitrificados e com PPF, polimento técnico e higienização no conforto da sua casa ou trabalho."/>
-  
-  <link rel="icon" type="image/png" href="logo.png" onerror="this.href='JR New Concept Detail.png'"/>
-  <link rel="preconnect" href="[https://fonts.googleapis.com](https://fonts.googleapis.com)"/>
-  <link rel="preconnect" href="[https://fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin/>
-  <link href="[https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@400;600;700;800&display=swap](https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@400;600;700;800&display=swap)" rel="stylesheet"/>
-
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    
-    :root {
-      --or: #FF6B00; /* Laranja esportivo vibrante exato da logo JR */
-      --or-lt: #FF8A22; /* Tom iluminado da pintura da logo */
-      --or-glow: rgba(255, 107, 0, 0.45);
-      --blk: #080808; /* Preto profundo de fundo */
-      --dk: #0F0F0F;
-      --dk2: #151515;
-      --dk3: #1C1C1C;
-      --wh: #FFFFFF; /* Branco puro de alto contraste */
-      --gy: #A0A0A0;
-      --lgy: #555;
-      --wag: #25D366;
-      --wag-dk: #1ea952;
-      --igp: #E1306C;
-      --fd: 'Bebas Neue', sans-serif;
-      --fc: 'Barlow Condensed', sans-serif;
-      --fb: 'Barlow', sans-serif;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      overflow-x: hidden;
-      width: 100%;
-    }
-    body {
-      background: var(--blk);
-      color: var(--wh);
-      font-family: var(--fb);
-      overflow-x: hidden;
-      width: 100%;
-      position: relative;
-      line-height: 1.5;
-    }
-
-    body::before {
-      content: '';
-      position: fixed;
-      inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='[http://www.w3.org/2000/svg'%3E%3Cfilter](http://www.w3.org/2000/svg'%3E%3Cfilter) id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.032'/%3E%3C/svg%3E");
-      background-size: 220px;
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    /* ── NAVEGAÇÃO ── */
-    nav#nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 1000;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 14px 5vw;
-      background: rgba(8, 8, 8, 0.90);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-      transition: all 0.3s ease;
-    }
-    nav#nav.scrolled {
-      background: rgba(8, 8, 8, 0.98);
-      border-bottom-color: rgba(255, 107, 0, 0.3);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.85);
-    }
-    
-    /* Logo na Navbar */
-    .nav-logo {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      text-decoration: none;
-      color: var(--wh);
-    }
-    .nav-logo-img {
-      width: 46px;
-      height: 46px;
-      object-fit: contain;
-      border-radius: 50%;
-      background: #000;
-      border: 1.5px solid var(--or);
-      padding: 1px;
-      box-shadow: 0 0 14px rgba(255, 107, 0, 0.4);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      flex-shrink: 0;
-    }
-    .nav-logo:hover .nav-logo-img {
-      transform: scale(1.08) rotate(4deg);
-      box-shadow: 0 0 20px rgba(255, 107, 0, 0.7);
-    }
-    .nav-logo-text {
-      display: flex;
-      flex-direction: column;
-    }
-    .logo-title {
-      font-family: var(--fd);
-      font-size: clamp(1.4rem, 2.2vw, 2.1rem);
-      letter-spacing: 0.08em;
-      line-height: 1;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-    .logo-title .orange { color: var(--or); }
-    .logo-sub {
-      font-family: var(--fc);
-      font-size: 0.7rem;
-      letter-spacing: 0.24em;
-      color: var(--or);
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      margin-top: 3px;
-      text-transform: uppercase;
-      font-weight: 700;
-    }
-    .logo-dot {
-      width: 6px; height: 6px;
-      border-radius: 50%;
-      background: var(--or);
-      box-shadow: 0 0 10px var(--or);
-      animation: pulseDot 2s infinite;
-    }
-    @keyframes pulseDot { 0%,100%{opacity:1} 50%{opacity:0.3} }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 28px;
-      list-style: none;
-    }
-    .nav-links a {
-      font-family: var(--fc);
-      font-size: 0.88rem;
-      letter-spacing: 0.12em;
-      color: var(--gy);
-      text-decoration: none;
-      text-transform: uppercase;
-      font-weight: 600;
-      transition: color 0.2s;
-      position: relative;
-      padding: 4px 0;
-    }
-    .nav-links a::after {
-      content: '';
-      position: absolute;
-      bottom: 0; left: 0;
-      width: 0; height: 2px;
-      background: var(--or);
-      transition: width 0.25s ease;
-    }
-    .nav-links a:hover { color: var(--wh); }
-    .nav-links a:hover::after { width: 100%; }
-
-    .nav-cta {
-      background: linear-gradient(135deg, var(--or), var(--or-lt));
-      color: #000 !important;
-      font-family: var(--fc);
-      font-weight: 800;
-      font-size: 0.85rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      text-decoration: none;
-      padding: 10px 20px;
-      border-radius: 4px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .nav-cta:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(255, 107, 0, 0.45);
-    }
-    .ham {
-      display: none;
-      flex-direction: column;
-      gap: 5px;
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 6px;
-    }
-    .ham span {
-      width: 26px; height: 2.5px;
-      border-radius: 2px;
-      background: var(--wh);
-      transition: 0.3s;
-    }
-
-    /* ── HERO COM DESTAQUE DA LOGO ── */
-    #hero {
-      position: relative;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      padding: 130px 5vw 80px;
-      overflow: hidden;
-      background: radial-gradient(circle at 85% 45%, rgba(255, 107, 0, 0.15) 0%, transparent 65%);
-    }
-    .hero-grid {
-      display: block;
-      width: 100%;
-      max-width: 760px;
-      position: relative;
-      z-index: 5;
-    }
-    .hero-grid.has-emblem {
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      align-items: center;
-      gap: 40px;
-      max-width: 100%;
-    }
-    .hero-content {
-      position: relative;
-      z-index: 5;
-      max-width: 680px;
-    }
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-family: var(--fc);
-      font-size: 0.78rem;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--or);
-      background: rgba(255, 107, 0, 0.08);
-      border: 1px solid rgba(255, 107, 0, 0.3);
-      padding: 6px 14px;
-      border-radius: 2px;
-      margin-bottom: 24px;
-    }
-    .hero-h1 {
-      font-family: var(--fd);
-      font-size: clamp(3.8rem, 7.5vw, 7.2rem);
-      line-height: 0.92;
-      letter-spacing: 0.02em;
-      margin-bottom: 22px;
-    }
-    .hero-h1 .highlight {
-      color: var(--or);
-      display: inline-block;
-      text-shadow: 0 0 35px rgba(255, 107, 0, 0.45);
-    }
-    .hero-sub {
-      font-size: clamp(1rem, 1.3vw, 1.15rem);
-      color: #bbb;
-      font-weight: 300;
-      line-height: 1.7;
-      margin-bottom: 34px;
-      max-width: 600px;
-    }
-    .hero-sub strong { color: var(--wh); font-weight: 600; }
-    .hero-actions {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-    .btn-primary {
-      background: linear-gradient(135deg, var(--or), var(--or-lt));
-      color: #000;
-      font-family: var(--fc);
-      font-weight: 800;
-      font-size: 0.95rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      text-decoration: none;
-      padding: 16px 34px;
-      border-radius: 4px;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      transition: all 0.25s ease;
-      box-shadow: 0 4px 18px rgba(255, 107, 0, 0.35);
-    }
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 30px rgba(255, 107, 0, 0.55);
-    }
-    .btn-outline {
-      border: 1.5px solid rgba(255, 255, 255, 0.2);
-      color: var(--wh);
-      font-family: var(--fc);
-      font-weight: 700;
-      font-size: 0.95rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      text-decoration: none;
-      padding: 15px 30px;
-      border-radius: 4px;
-      transition: all 0.25s ease;
-      background: rgba(255, 255, 255, 0.02);
-    }
-    .btn-outline:hover {
-      border-color: var(--or);
-      color: var(--or);
-      background: rgba(255, 107, 0, 0.05);
-      transform: translateY(-2px);
-    }
-
-    .fast-perks {
-      display: flex;
-      align-items: center;
-      gap: 24px;
-      margin-top: 45px;
-      padding-top: 24px;
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
-      flex-wrap: wrap;
-    }
-    .f-perk {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 0.82rem;
-      color: #aaa;
-      font-family: var(--fc);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-    .f-perk svg { color: var(--or); flex-shrink: 0; }
-
-    /* Showcase da Logo Oficial */
-    .hero-emblem-wrap {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-    }
-    .hero-emblem-halo {
-      position: absolute;
-      width: 380px;
-      height: 380px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(255, 107, 0, 0.28) 0%, rgba(255, 107, 0, 0.05) 55%, transparent 75%);
-      filter: blur(28px);
-      pointer-events: none;
-      z-index: 0;
-      animation: pulseHalo 4s ease-in-out infinite alternate;
-    }
-    @keyframes pulseHalo {
-      0% { transform: scale(0.92); opacity: 0.7; }
-      100% { transform: scale(1.08); opacity: 1; }
-    }
-    .hero-emblem-card {
-      position: relative;
-      z-index: 1;
-      background: linear-gradient(145deg, rgba(26, 26, 26, 0.75) 0%, rgba(14, 14, 14, 0.95) 100%);
-      border: 1.5px solid rgba(255, 107, 0, 0.35);
-      border-radius: 16px;
-      padding: 34px 28px 24px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), inset 0 0 30px rgba(255, 107, 0, 0.08);
-      max-width: 420px;
-      width: 100%;
-      transition: transform 0.3s ease, border-color 0.3s ease;
-    }
-    .hero-emblem-card:hover {
-      transform: translateY(-4px);
-      border-color: rgba(255, 107, 0, 0.6);
-    }
-    .hero-emblem-img {
-      width: clamp(200px, 22vw, 290px);
-      height: clamp(200px, 22vw, 290px);
-      object-fit: contain;
-      filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.8)) drop-shadow(0 0 20px rgba(255, 107, 0, 0.3));
-      transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    }
-    .hero-emblem-card:hover .hero-emblem-img {
-      transform: scale(1.03);
-    }
-    .hero-emblem-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      margin-top: 18px;
-      font-family: var(--fc);
-      font-size: 0.82rem;
-      letter-spacing: 0.16em;
-      font-weight: 800;
-      color: var(--or);
-      background: rgba(255, 107, 0, 0.08);
-      border: 1px solid rgba(255, 107, 0, 0.3);
-      padding: 6px 16px;
-      border-radius: 999px;
-      text-transform: uppercase;
-    }
-    .emblem-sparkle { color: #FFF; }
-    .hero-emblem-caption {
-      font-size: 0.78rem;
-      color: #888;
-      margin-top: 8px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      font-weight: 500;
-    }
-
-    /* ── TICKER ── */
-    .ticker-wrap {
-      background: var(--or);
-      padding: 14px 0;
-      overflow: hidden;
-      white-space: nowrap;
-    }
-    .ticker-inner {
-      display: inline-flex;
-      gap: 40px;
-      animation: ticker 25s linear infinite;
-    }
-    .ticker-inner span {
-      font-family: var(--fd);
-      font-size: 1.1rem;
-      letter-spacing: 0.14em;
-      color: #000;
-    }
-    .ticker-inner .dot { opacity: 0.4; }
-    @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-
-    /* ── SEÇÃO PADRÃO ── */
-    section { padding: 90px 5vw; position: relative; }
-    .sec-label {
-      font-family: var(--fc);
-      font-size: 0.78rem;
-      letter-spacing: 0.28em;
-      text-transform: uppercase;
-      color: var(--or);
-      margin-bottom: 10px;
-      font-weight: 700;
-    }
-    .sec-title {
-      font-family: var(--fd);
-      font-size: clamp(2.6rem, 5vw, 4.4rem);
-      line-height: 0.96;
-      letter-spacing: 0.03em;
-    }
-    .sec-title .highlight { color: var(--or); }
-    .sec-sub {
-      color: var(--gy);
-      font-size: 0.95rem;
-      line-height: 1.7;
-      max-width: 560px;
-      margin-top: 14px;
-      font-weight: 300;
-    }
-
-    /* ── DASHBOARD TÉCNICO DE ESTÚDIO (4 CARDS DE ZONAS) ── */
-    #dashboard-zonas {
-      background: var(--dk);
-      border-top: 1px solid rgba(255, 255, 255, 0.04);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
-    }
-    .dash-header { text-align: center; margin-bottom: 40px; }
-
-    .dash-tabs {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      flex-wrap: wrap;
-      max-width: 1100px;
-      margin: 0 auto 34px;
-    }
-    .dtab {
-      background: var(--dk2);
-      border: 1px solid rgba(255, 255, 255, 0.07);
-      color: #999;
-      font-family: var(--fc);
-      font-size: 0.88rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      font-weight: 700;
-      padding: 12px 20px;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: all 0.25s ease;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .dtab:hover {
-      border-color: rgba(255, 107, 0, 0.4);
-      color: #fff;
-      background: rgba(255, 107, 0, 0.06);
-    }
-    .dtab.active {
-      background: linear-gradient(135deg, var(--or), var(--or-lt));
-      color: #000;
-      border-color: var(--or);
-      box-shadow: 0 4px 18px rgba(255, 107, 0, 0.4);
-    }
-    .dtab-tag {
-      font-size: 0.68rem;
-      background: rgba(0, 0, 0, 0.2);
-      padding: 2px 6px;
-      border-radius: 3px;
-    }
-    .dtab.active .dtab-tag {
-      background: rgba(0, 0, 0, 0.35);
-      color: #fff;
-    }
-
-    .dash-banner {
-      max-width: 1180px;
-      margin: 0 auto 28px;
-      background: linear-gradient(135deg, #181512 0%, #121212 100%);
-      border: 1.5px solid rgba(255, 107, 0, 0.35);
-      border-radius: 8px;
-      padding: 24px 30px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      flex-wrap: wrap;
-      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6);
-    }
-    .dash-banner-info { flex: 1; min-width: 280px; }
-    .dash-banner-eyebrow {
-      font-family: var(--fc);
-      font-size: 0.75rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--or);
-      font-weight: 700;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 4px;
-    }
-    .dash-banner-title {
-      font-family: var(--fd);
-      font-size: 2.2rem;
-      line-height: 1;
-      color: #fff;
-      margin-bottom: 6px;
-    }
-    .dash-banner-desc {
-      font-size: 0.88rem;
-      color: #aaa;
-      line-height: 1.5;
-    }
-    .dash-banner-cta {
-      display: flex;
-      align-items: center;
-      gap: 22px;
-      flex-wrap: wrap;
-    }
-    .dash-banner-price {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-    }
-    .dash-banner-price-lbl {
-      font-family: var(--fc);
-      font-size: 0.68rem;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: #777;
-    }
-    .dash-banner-price-val {
-      font-family: var(--fd);
-      font-size: 2.3rem;
-      color: var(--or);
-      line-height: 1.1;
-      text-align: right;
-    }
-
-    .dash-zones-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
-      max-width: 1180px;
-      margin: 0 auto;
-    }
-    .dash-zone-card {
-      background: var(--dk2);
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      border-radius: 8px;
-      padding: 26px 24px;
-      display: flex;
-      flex-direction: column;
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
-    }
-    .dash-zone-card.included {
-      border-color: rgba(255, 107, 0, 0.45);
-      background: linear-gradient(160deg, #1c1510 0%, #131313 100%);
-      box-shadow: 0 10px 30px rgba(255, 107, 0, 0.14);
-    }
-    .dash-zone-card.excluded {
-      opacity: 0.42;
-      border-color: rgba(255, 255, 255, 0.03);
-    }
-    .dz-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 16px;
-    }
-    .dz-icon-wrap {
-      width: 48px; height: 48px;
-      border-radius: 8px;
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #777;
-      transition: all 0.3s ease;
-    }
-    .dash-zone-card.included .dz-icon-wrap {
-      background: rgba(255, 107, 0, 0.12);
-      border-color: rgba(255, 107, 0, 0.4);
-      color: var(--or);
-      box-shadow: 0 0 16px rgba(255, 107, 0, 0.25);
-    }
-    .dash-zone-card.excluded .dz-icon-wrap {
-      color: #444;
-    }
-    .dz-badge {
-      font-family: var(--fc);
-      font-size: 0.7rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      font-weight: 800;
-      padding: 4px 10px;
-      border-radius: 3px;
-    }
-    .dash-zone-card.included .dz-badge {
-      background: var(--or);
-      color: #000;
-    }
-    .dash-zone-card.excluded .dz-badge {
-      background: #252525;
-      color: #777;
-    }
-    .dz-title {
-      font-family: var(--fc);
-      font-size: 1.22rem;
-      font-weight: 800;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: #fff;
-      margin-bottom: 8px;
-    }
-    .dz-desc {
-      font-size: 0.84rem;
-      color: #888;
-      line-height: 1.5;
-      margin-bottom: 16px;
-    }
-    .dz-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      margin-top: auto;
-      padding-top: 14px;
-      border-top: 1px solid rgba(255, 255, 255, 0.05);
-    }
-    .dz-list li {
-      font-size: 0.84rem;
-      color: #bbb;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .dash-zone-card.included .dz-list li::before {
-      content: '✓';
-      color: var(--or);
-      font-weight: bold;
-    }
-    .dash-zone-card.excluded .dz-list li::before {
-      content: '—';
-      color: #555;
-    }
-
-    /* ── CATÁLOGO DE SERVIÇOS EM ABAS ── */
-    #servicos { background: var(--blk); }
-    .svc-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      margin-bottom: 36px;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-    .svc-filters {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      margin-bottom: 38px;
-    }
-    .svc-filter-btn {
-      background: var(--dk2);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      color: #aaa;
-      font-family: var(--fc);
-      font-size: 0.85rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      font-weight: 700;
-      padding: 10px 20px;
-      border-radius: 999px;
-      cursor: pointer;
-      transition: all 0.25s ease;
-    }
-    .svc-filter-btn:hover {
-      border-color: rgba(255, 107, 0, 0.4);
-      color: var(--wh);
-      background: rgba(255, 107, 0, 0.06);
-    }
-    .svc-filter-btn.active {
-      background: var(--or);
-      color: #000;
-      border-color: var(--or);
-      box-shadow: 0 4px 16px rgba(255, 107, 0, 0.35);
-    }
-
-    .svc-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 22px;
-    }
-    .svc-card {
-      background: var(--dk2);
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      padding: 34px 28px;
-      position: relative;
-      overflow: hidden;
-      border-radius: 6px;
-      display: flex;
-      flex-direction: column;
-      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-    }
-    .svc-card:hover {
-      transform: translateY(-5px);
-      border-color: rgba(255, 107, 0, 0.38);
-      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6);
-    }
-    .svc-card.featured-deal {
-      background: linear-gradient(145deg, #1a1510, #141414);
-      border: 1.5px solid rgba(255, 107, 0, 0.45);
-    }
-    .svc-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: var(--or);
-      color: #000;
-      font-family: var(--fc);
-      font-weight: 800;
-      font-size: 0.68rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      padding: 4px 10px;
-      border-radius: 3px;
-      margin-bottom: 12px;
-      width: fit-content;
-    }
-    .svc-num {
-      position: absolute;
-      top: 18px; right: 22px;
-      font-family: var(--fd);
-      font-size: 3.5rem;
-      color: rgba(255, 255, 255, 0.04);
-      line-height: 1;
-      user-select: none;
-    }
-    .svc-cat {
-      font-family: var(--fc);
-      font-size: 0.72rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--or);
-      margin-bottom: 6px;
-      font-weight: 600;
-    }
-    .svc-name {
-      font-family: var(--fd);
-      font-size: 2.1rem;
-      line-height: 1.05;
-      margin-bottom: 12px;
-      color: var(--wh);
-    }
-    .svc-desc {
-      font-size: 0.86rem;
-      color: #999;
-      line-height: 1.6;
-      margin-bottom: 22px;
-      font-weight: 300;
-    }
-    .svc-items {
-      list-style: none;
-      margin-bottom: 26px;
-      display: flex;
-      flex-direction: column;
-      gap: 7px;
-    }
-    .svc-items li {
-      font-size: 0.84rem;
-      color: #ccc;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .svc-items li::before {
-      content: '✓';
-      color: var(--or);
-      font-weight: bold;
-    }
-    
-    .price-wrap {
-      margin-top: auto;
-      padding-top: 18px;
-      border-top: 1px solid rgba(255, 255, 255, 0.05);
-      margin-bottom: 20px;
-    }
-    .price-lbl {
-      font-family: var(--fc);
-      font-size: 0.7rem;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--lgy);
-    }
-    .price-val {
-      font-family: var(--fd);
-      font-size: 2.3rem;
-      color: var(--or);
-      line-height: 1;
-      margin-top: 2px;
-    }
-    .price-note {
-      font-size: 0.74rem;
-      color: #777;
-      margin-top: 4px;
-    }
-    .price-grid-4 {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 8px;
-      margin-top: auto;
-      padding-top: 18px;
-      border-top: 1px solid rgba(255, 255, 255, 0.05);
-      margin-bottom: 20px;
-    }
-    .price-2col {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-      margin-top: auto;
-      padding-top: 18px;
-      border-top: 1px solid rgba(255, 255, 255, 0.05);
-      margin-bottom: 20px;
-    }
-    .price-cell {
-      background: rgba(255, 255, 255, 0.02);
-      border: 1px solid rgba(255, 107, 0, 0.22);
-      padding: 10px;
-      border-radius: 6px;
-      text-align: center;
-    }
-    .price-cell-l {
-      font-family: var(--fc);
-      font-size: 0.65rem;
-      letter-spacing: 0.1em;
-      color: #888;
-      text-transform: uppercase;
-    }
-    .price-cell-v {
-      font-family: var(--fd);
-      font-size: 1.5rem;
-      color: var(--or);
-      line-height: 1.1;
-    }
-
-    .card-cta {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      background: rgba(255, 107, 0, 0.1);
-      border: 1px solid rgba(255, 107, 0, 0.35);
-      color: var(--wh);
-      text-decoration: none;
-      font-family: var(--fc);
-      font-weight: 700;
-      font-size: 0.85rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      padding: 12px;
-      border-radius: 4px;
-      transition: all 0.25s ease;
-    }
-    .card-cta:hover {
-      background: var(--or);
-      color: #000;
-      border-color: var(--or);
-      box-shadow: 0 4px 16px rgba(255, 107, 0, 0.45);
-    }
-    .svc-card.featured-deal .card-cta {
-      background: var(--or);
-      color: #000;
-    }
-    .svc-card.featured-deal .card-cta:hover {
-      background: var(--or-lt);
-    }
-
-    /* ── SIMULADOR DE ORÇAMENTO WHATSAPP ── */
-    #simulador {
-      background: linear-gradient(180deg, var(--dk) 0%, var(--blk) 100%);
-      border-top: 1px solid rgba(255, 255, 255, 0.04);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
-    }
-    .calc-container {
-      max-width: 980px;
-      margin: 40px auto 0;
-      background: var(--dk2);
-      border: 1px solid rgba(255, 107, 0, 0.25);
-      border-radius: 8px;
-      padding: clamp(24px, 4vw, 46px);
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
-    }
-    .calc-step-title {
-      font-family: var(--fc);
-      font-size: 0.82rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--or);
-      margin-bottom: 14px;
-      font-weight: 700;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .calc-step-title span {
-      background: var(--or);
-      color: #000;
-      width: 20px; height: 20px;
-      border-radius: 50%;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.72rem;
-    }
-
-    .vehicle-types {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-      gap: 12px;
-      margin-bottom: 34px;
-    }
-    .v-type-card {
-      background: var(--dk);
-      border: 1.5px solid rgba(255, 255, 255, 0.07);
-      padding: 18px 16px;
-      border-radius: 6px;
-      cursor: pointer;
-      text-align: center;
-      transition: all 0.2s ease;
-    }
-    .v-type-card:hover {
-      border-color: rgba(255, 107, 0, 0.4);
-      background: rgba(255, 107, 0, 0.03);
-    }
-    .v-type-card.selected {
-      border-color: var(--or);
-      background: rgba(255, 107, 0, 0.1);
-      box-shadow: 0 0 18px rgba(255, 107, 0, 0.25);
-    }
-    .v-type-icon-wrap {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 38px;
-      color: #aaa;
-      transition: color 0.2s ease, transform 0.2s ease;
-    }
-    .v-type-card.selected .v-type-icon-wrap {
-      color: var(--or);
-      transform: scale(1.08);
-    }
-    .v-type-name {
-      font-family: var(--fc);
-      font-weight: 700;
-      font-size: 1rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      margin-top: 6px;
-      color: var(--wh);
-    }
-    .v-type-sub {
-      font-size: 0.72rem;
-      color: #888;
-      margin-top: 2px;
-    }
-
-    .calc-services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 12px;
-      margin-bottom: 36px;
-    }
-    .calc-svc-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      background: var(--dk);
-      border: 1px solid rgba(255, 255, 255, 0.05);
-      padding: 14px 16px;
-      border-radius: 6px;
-      cursor: pointer;
-      user-select: none;
-      transition: all 0.2s;
-    }
-    .calc-svc-item:hover {
-      border-color: rgba(255, 107, 0, 0.3);
-    }
-    .calc-svc-item.checked {
-      background: rgba(255, 107, 0, 0.07);
-      border-color: rgba(255, 107, 0, 0.5);
-    }
-    .calc-checkbox {
-      width: 18px; height: 18px;
-      border: 1.5px solid #666;
-      border-radius: 3px;
-      flex-shrink: 0;
-      margin-top: 2px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.75rem;
-      color: #000;
-      font-weight: bold;
-    }
-    .calc-svc-item.checked .calc-checkbox {
-      background: var(--or);
-      border-color: var(--or);
-    }
-    .calc-svc-info { flex: 1; }
-    .calc-svc-title {
-      font-family: var(--fc);
-      font-weight: 700;
-      font-size: 0.92rem;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--wh);
-    }
-    .calc-svc-cost {
-      font-size: 0.8rem;
-      color: var(--or);
-      font-weight: 600;
-    }
-
-    .calc-summary-bar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      flex-wrap: wrap;
-      background: #111;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      padding: 22px 26px;
-      border-radius: 6px;
-    }
-    .calc-total-box { display: flex; flex-direction: column; }
-    .calc-total-lbl {
-      font-family: var(--fc);
-      font-size: 0.72rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: #888;
-    }
-    .calc-total-val {
-      font-family: var(--fd);
-      font-size: 2.8rem;
-      color: var(--or);
-      line-height: 1;
-    }
-    .calc-send-btn {
-      background: var(--wag);
-      color: #fff;
-      font-family: var(--fc);
-      font-weight: 800;
-      font-size: 1rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      text-decoration: none;
-      padding: 16px 28px;
-      border-radius: 4px;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      transition: all 0.25s ease;
-      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
-    }
-    .calc-send-btn:hover {
-      background: var(--wag-dk);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 24px rgba(37, 211, 102, 0.45);
-    }
-
-    /* ── SLIDER ANTES E DEPOIS (3 CASOS REAIS: RODA, FRONTAL E TRASEIRA) ── */
-    #comparador {
-      background: var(--blk);
-    }
-    .ba-nav-tabs {
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin: 34px auto 24px;
-      max-width: 860px;
-    }
-    .ba-tab-btn {
-      background: var(--dk2);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      color: #aaa;
-      font-family: var(--fc);
-      font-size: 0.88rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      font-weight: 700;
-      padding: 12px 22px;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: all 0.25s ease;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .ba-tab-btn:hover {
-      border-color: rgba(255, 107, 0, 0.4);
-      color: #fff;
-      background: rgba(255, 107, 0, 0.06);
-    }
-    .ba-tab-btn.active {
-      background: linear-gradient(135deg, var(--or), var(--or-lt));
-      color: #000;
-      border-color: var(--or);
-      box-shadow: 0 4px 18px rgba(255, 107, 0, 0.4);
-    }
-    .ba-tab-tag {
-      font-size: 0.7rem;
-      background: rgba(0, 0, 0, 0.25);
-      padding: 2px 7px;
-      border-radius: 3px;
-      font-weight: 800;
-    }
-    .ba-tab-btn.active .ba-tab-tag {
-      background: rgba(0, 0, 0, 0.4);
-      color: #fff;
-    }
-
-    .ba-info-banner {
-      max-width: 860px;
-      margin: 0 auto 20px;
-      background: linear-gradient(135deg, #181512 0%, #121212 100%);
-      border: 1px solid rgba(255, 107, 0, 0.25);
-      border-radius: 8px;
-      padding: 18px 24px;
-      text-align: center;
-    }
-    .ba-info-title {
-      font-family: var(--fc);
-      font-size: 1.15rem;
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--or);
-      margin-bottom: 4px;
-    }
-    .ba-info-desc {
-      font-size: 0.86rem;
-      color: #bbb;
-      line-height: 1.5;
-    }
-
-    .ba-slider-container {
-      --pos: 50%;
-      max-width: 860px;
-      margin: 0 auto;
-      border: 1.5px solid rgba(255, 107, 0, 0.35);
-      border-radius: 10px;
-      overflow: hidden;
-      position: relative;
-      background: #0d0d0d;
-      aspect-ratio: 4/3; /* Proporção ideal para fotos de celular, sem cortes agressivos */
-      box-shadow: 0 20px 50px rgba(0,0,0,0.8);
-      user-select: none;
-      touch-action: pan-y;
-    }
-    .ba-pane {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-    }
-    .ba-after {
-      background: radial-gradient(circle at center, #24160a 0%, #0a0a0a 80%);
-      z-index: 1;
-    }
-    .ba-before {
-      background: radial-gradient(circle at center, #1b1b1b 0%, #080808 80%);
-      clip-path: polygon(0 0, var(--pos) 0, var(--pos) 100%, 0 100%);
-      -webkit-clip-path: polygon(0 0, var(--pos) 0, var(--pos) 100%, 0 100%);
-      z-index: 2;
-    }
-    .ba-img {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-      pointer-events: none;
-      user-select: none;
-      transition: opacity 0.35s ease;
-    }
-    .ba-badge-tag {
-      position: absolute;
-      top: 18px;
-      z-index: 5;
-      font-family: var(--fc);
-      font-size: 0.75rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      font-weight: 800;
-      padding: 6px 14px;
-      border-radius: 4px;
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-    }
-    .ba-badge-tag.left {
-      left: 18px;
-      background: rgba(0, 0, 0, 0.75);
-      color: #bbb;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-    }
-    .ba-badge-tag.right {
-      right: 18px;
-      background: var(--or);
-      color: #000;
-      border: 1px solid var(--or);
-      box-shadow: 0 4px 14px rgba(255, 107, 0, 0.4);
-    }
-
-    .ba-visual-content {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 30px;
-      pointer-events: none;
-    }
-    .ba-pill {
-      font-family: var(--fc);
-      font-size: 0.8rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      font-weight: 700;
-      padding: 6px 16px;
-      border-radius: 999px;
-      margin-bottom: 14px;
-    }
-    .ba-before .ba-pill {
-      background: rgba(255, 255, 255, 0.1);
-      color: #bbb;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-    }
-    .ba-after .ba-pill {
-      background: var(--or);
-      color: #000;
-    }
-    .ba-title {
-      font-family: var(--fd);
-      font-size: clamp(1.8rem, 3.5vw, 3rem);
-      line-height: 1;
-    }
-    .ba-after .ba-title { color: var(--or); }
-    .ba-desc {
-      font-size: 0.88rem;
-      color: #888;
-      max-width: 320px;
-      margin-top: 8px;
-    }
-
-    .ba-handle {
-      position: absolute;
-      top: 0; bottom: 0;
-      left: var(--pos);
-      width: 3px;
-      background: var(--or);
-      cursor: ew-resize;
-      z-index: 10;
-      transform: translateX(-50%);
-      box-shadow: 0 0 10px rgba(255, 107, 0, 0.8);
-    }
-    .ba-handle-btn {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 46px; height: 46px;
-      border-radius: 50%;
-      background: var(--or);
-      border: 3px solid #000;
-      box-shadow: 0 0 18px rgba(255, 107, 0, 0.7);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #000;
-      font-weight: bold;
-      font-size: 1.1rem;
-    }
-    .ba-hint-bar {
-      display: flex;
-      justify-content: space-between;
-      max-width: 860px;
-      margin: 12px auto 0;
-      font-size: 0.78rem;
-      color: #777;
-      font-family: var(--fc);
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 0 6px;
-    }
-
-    /* ── FAQ ── */
-    #faq {
-      background: var(--dk);
-      border-top: 1px solid rgba(255, 255, 255, 0.04);
-    }
-    .faq-container {
-      max-width: 840px;
-      margin: 40px auto 0;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-    .faq-item {
-      background: var(--dk2);
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      border-radius: 6px;
-      overflow: hidden;
-      transition: border-color 0.25s;
-    }
-    .faq-item.open {
-      border-color: rgba(255, 107, 0, 0.35);
-    }
-    .faq-question {
-      padding: 20px 24px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      cursor: pointer;
-      font-family: var(--fc);
-      font-size: 1.05rem;
-      letter-spacing: 0.06em;
-      font-weight: 700;
-      text-transform: uppercase;
-      color: var(--wh);
-    }
-    .faq-question:hover { color: var(--or); }
-    .faq-icon {
-      font-family: var(--fb);
-      font-size: 1.4rem;
-      color: var(--or);
-      transition: transform 0.3s ease;
-    }
-    .faq-item.open .faq-icon { transform: rotate(45deg); }
-    .faq-answer {
-      padding: 0 24px 22px;
-      font-size: 0.92rem;
-      color: #aaa;
-      line-height: 1.7;
-      display: none;
-    }
-    .faq-item.open .faq-answer { display: block; }
-
-    /* ── REGIÕES SJC ── */
-    #regioes {
-      background: var(--blk);
-      text-align: center;
-    }
-    .bairros-wrap {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-      max-width: 880px;
-      margin: 32px auto 0;
-    }
-    .bairro-tag {
-      background: var(--dk2);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      padding: 10px 18px;
-      border-radius: 4px;
-      font-family: var(--fc);
-      font-size: 0.85rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: #ccc;
-    }
-    .bairro-tag.accent {
-      border-color: rgba(255, 107, 0, 0.35);
-      color: var(--or);
-      background: rgba(255, 107, 0, 0.05);
-    }
-
-    /* ── POR QUE JR ── */
-    #porque {
-      background: var(--dk);
-    }
-    .why-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: center;
-      margin-top: 40px;
-    }
-    .why-list {
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-    }
-    .why-item {
-      display: flex;
-      gap: 18px;
-      padding-bottom: 22px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    }
-    .why-item:last-child { border-bottom: none; }
-    .why-ico {
-      color: var(--or);
-      width: 44px; height: 44px;
-      border-radius: 50%;
-      border: 1.5px solid var(--or);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      background: rgba(255, 107, 0, 0.05);
-    }
-    .why-item h3 {
-      font-family: var(--fc);
-      font-size: 1.05rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      margin-bottom: 4px;
-      color: var(--wh);
-    }
-    .why-item p {
-      font-size: 0.88rem;
-      color: var(--gy);
-      line-height: 1.6;
-    }
-    .why-banner-card {
-      background: linear-gradient(135deg, var(--dk2), #201610);
-      border: 1px solid rgba(255, 107, 0, 0.25);
-      border-radius: 8px;
-      padding: 40px 32px;
-      text-align: center;
-    }
-    .why-banner-title {
-      font-family: var(--fd);
-      font-size: 3.2rem;
-      line-height: 0.95;
-      color: var(--wh);
-      margin-bottom: 16px;
-    }
-    .why-banner-title span { color: var(--or); }
-    .why-banner-p {
-      color: #aaa;
-      font-size: 0.92rem;
-      line-height: 1.7;
-      margin-bottom: 28px;
-    }
-
-    /* ── CONTATO ── */
-    #contato {
-      background: var(--blk);
-    }
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 50px;
-      align-items: center;
-      margin-top: 40px;
-    }
-    .contact-card {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      background: var(--dk2);
-      padding: 22px 24px;
-      border-radius: 6px;
-      text-decoration: none;
-      color: inherit;
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      transition: all 0.25s ease;
-      margin-bottom: 14px;
-    }
-    .contact-card:hover {
-      border-color: var(--or);
-      transform: translateX(6px);
-      background: rgba(255, 107, 0, 0.04);
-    }
-    .contact-card.wa { border-left: 4px solid var(--wag); }
-    .contact-card.ig { border-left: 4px solid var(--igp); }
-    .cc-icon {
-      width: 44px; height: 44px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-    .cc-icon.wa { background: var(--wag); }
-    .cc-icon.ig { background: linear-gradient(135deg, #f09433, #dc2743, #cc2366, #bc1888); }
-    .cc-icon svg { width: 22px; height: 22px; fill: white; }
-    .cc-label { font-family: var(--fc); font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; }
-    .cc-label.wa { color: var(--wag); }
-    .cc-label.ig { color: var(--igp); }
-    .cc-value { font-family: var(--fc); font-size: 1.15rem; font-weight: 700; color: var(--wh); }
-
-    /* ── FOOTER COM LOGO ── */
-    footer {
-      background: #040404;
-      border-top: 1px solid rgba(255, 255, 255, 0.06);
-      padding: 38px 5vw;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-    .footer-brand-wrap {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-    .footer-logo-img {
-      width: 48px;
-      height: 48px;
-      object-fit: contain;
-      border-radius: 50%;
-      border: 1px solid var(--or);
-      background: #000;
-      padding: 1px;
-    }
-    .footer-brand { font-family: var(--fd); font-size: 1.3rem; letter-spacing: 0.08em; }
-    .footer-brand span { color: var(--or); }
-    .footer-sub { font-size: 0.78rem; color: #777; margin-top: 4px; }
-    .footer-links { display: flex; gap: 24px; list-style: none; }
-    .footer-links a {
-      font-family: var(--fc);
-      font-size: 0.8rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: #888;
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-    .footer-links a:hover { color: var(--or); }
-    .footer-copy { font-size: 0.75rem; color: #666; }
-
-    /* Botão flutuante WhatsApp */
-    .fab-wa {
-      position: fixed;
-      bottom: 24px;
-      right: 24px;
-      z-index: 999;
-      width: 58px; height: 58px;
-      background: var(--wag);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 6px 24px rgba(37, 211, 102, 0.45);
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .fab-wa:hover {
-      transform: scale(1.08) translateY(-2px);
-      box-shadow: 0 10px 30px rgba(37, 211, 102, 0.6);
-    }
-    .fab-wa svg { width: 30px; height: 30px; fill: #fff; }
-
-    /* ── RESPONSIVIDADE COMPLETA E IMPECÁVEL PARA CELULARES ── */
-    @media(max-width: 992px) {
-      .hero-grid,
-      .hero-grid.has-emblem {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        text-align: center !important;
-        gap: 36px !important;
-        width: 100% !important;
-        max-width: 100% !important;
-      }
-      .hero-content {
-        margin: 0 auto !important;
-        max-width: 100% !important;
-      }
-      .hero-actions { justify-content: center !important; }
-      .fast-perks { justify-content: center !important; }
-      
-      .hero-emblem-wrap {
-        width: 100% !important;
-      }
-      .hero-emblem-halo {
-        width: 260px !important;
-        height: 260px !important;
-      }
-      .hero-emblem-card {
-        max-width: 320px !important;
-        padding: 24px 18px !important;
-      }
-      .hero-emblem-img {
-        width: 200px !important;
-        height: 200px !important;
-      }
-
-      .dash-zones-grid {
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 16px !important;
-      }
-      .why-grid, .contact-grid {
-        grid-template-columns: 1fr !important;
-        gap: 36px !important;
-      }
-    }
-
-    @media(max-width: 860px) {
-      .nav-links, .nav-cta { display: none !important; }
-      .ham { display: flex !important; }
-      .nav-links.mobile-active {
-        display: flex !important;
-        flex-direction: column !important;
-        position: absolute !important;
-        top: 100% !important; left: 0 !important; right: 0 !important;
-        background: rgba(8, 8, 8, 0.98) !important;
-        padding: 24px 5vw !important;
-        gap: 18px !important;
-        border-bottom: 1px solid rgba(255, 107, 0, 0.3) !important;
-        backdrop-filter: blur(20px) !important;
-      }
-
-      /* Barra de Navegação de Abas do Estúdio (Scroll horizontal suave) */
-      .dash-tabs {
-        display: flex !important;
-        overflow-x: auto !important;
-        flex-wrap: nowrap !important;
-        justify-content: flex-start !important;
-        gap: 8px !important;
-        padding: 0 5vw 10px !important;
-        margin: 0 -5vw 24px !important;
-        -webkit-overflow-scrolling: touch !important;
-        scrollbar-width: none;
-      }
-      .dash-tabs::-webkit-scrollbar { display: none; }
-      .dtab {
-        flex-shrink: 0 !important;
-        padding: 10px 16px !important;
-        font-size: 0.82rem !important;
-      }
-
-      .dash-banner {
-        flex-direction: column !important;
-        align-items: stretch !important;
-        padding: 20px 16px !important;
-        gap: 16px !important;
-      }
-      .dash-banner-price {
-        align-items: flex-start !important;
-      }
-      .dash-banner-price-val {
-        font-size: 2rem !important;
-        text-align: left !important;
-      }
-      .dash-banner-cta {
-        flex-direction: column !important;
-        align-items: stretch !important;
-        width: 100% !important;
-        gap: 12px !important;
-      }
-      .dash-banner-cta a {
-        width: 100% !important;
-        justify-content: center !important;
-        text-align: center !important;
-      }
-
-      /* Filtros do Catálogo com scroll suave */
-      .svc-filters {
-        display: flex !important;
-        overflow-x: auto !important;
-        flex-wrap: nowrap !important;
-        justify-content: flex-start !important;
-        gap: 8px !important;
-        padding: 0 5vw 10px !important;
-        margin: 0 -5vw 28px !important;
-        -webkit-overflow-scrolling: touch !important;
-        scrollbar-width: none;
-      }
-      .svc-filters::-webkit-scrollbar { display: none; }
-      .svc-filter-btn {
-        flex-shrink: 0 !important;
-        padding: 8px 16px !important;
-        font-size: 0.8rem !important;
-      }
-
-      .calc-summary-bar {
-        flex-direction: column !important;
-        align-items: stretch !important;
-        text-align: center !important;
-        padding: 18px !important;
-        gap: 14px !important;
-      }
-      .calc-send-btn {
-        width: 100% !important;
-        justify-content: center !important;
-      }
-    }
-
-    @media(max-width: 640px) {
-      section {
-        padding: 55px 5vw !important;
-      }
-      nav#nav {
-        padding: 10px 4vw !important;
-      }
-      .nav-logo {
-        gap: 8px !important;
-      }
-      .nav-logo-img {
-        width: 36px !important;
-        height: 36px !important;
-      }
-      .logo-title {
-        font-size: 1.15rem !important;
-        letter-spacing: 0.04em !important;
-      }
-      .logo-sub {
-        font-size: 0.58rem !important;
-        letter-spacing: 0.1em !important;
-      }
-
-      #hero {
-        padding-top: 95px !important;
-        padding-bottom: 50px !important;
-        min-height: auto !important;
-      }
-      .hero-badge {
-        font-size: 0.68rem !important;
-        padding: 5px 10px !important;
-        white-space: normal !important;
-        text-align: center !important;
-        margin-bottom: 16px !important;
-      }
-      .hero-h1 {
-        font-size: clamp(2.3rem, 11vw, 3.4rem) !important;
-        line-height: 0.98 !important;
-        margin-bottom: 16px !important;
-        word-break: break-word !important;
-      }
-      .hero-sub {
-        font-size: 0.92rem !important;
-        line-height: 1.6 !important;
-        margin-bottom: 24px !important;
-      }
-      .hero-actions {
-        flex-direction: column !important;
-        width: 100% !important;
-        gap: 12px !important;
-      }
-      .hero-actions a {
-        width: 100% !important;
-        justify-content: center !important;
-        text-align: center !important;
-        padding: 14px 20px !important;
-      }
-      .fast-perks {
-        flex-direction: column !important;
-        align-items: center !important;
-        gap: 10px !important;
-        margin-top: 26px !important;
-        padding-top: 18px !important;
-      }
-
-      .sec-title {
-        font-size: clamp(2.0rem, 8.5vw, 3.0rem) !important;
-        line-height: 1.0 !important;
-        word-break: break-word !important;
-      }
-      .sec-sub {
-        font-size: 0.88rem !important;
-        margin-top: 10px !important;
-      }
-
-      .dash-banner-title {
-        font-size: 1.6rem !important;
-        word-break: break-word !important;
-      }
-      .dash-zones-grid {
-        grid-template-columns: 1fr !important;
-        gap: 14px !important;
-      }
-      .dash-zone-card {
-        padding: 20px 16px !important;
-      }
-      .dz-title {
-        font-size: 1.1rem !important;
-      }
-
-      .svc-grid {
-        grid-template-columns: 1fr !important;
-        gap: 16px !important;
-      }
-      .svc-card {
-        padding: 24px 18px !important;
-      }
-      .svc-name {
-        font-size: 1.8rem !important;
-      }
-      .price-grid-4 {
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 6px !important;
-      }
-
-      .calc-container {
-        padding: 20px 14px !important;
-      }
-      .vehicle-types {
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 8px !important;
-      }
-      .v-type-card {
-        padding: 12px 6px !important;
-      }
-      .v-type-name {
-        font-size: 0.8rem !important;
-      }
-      .v-type-sub {
-        font-size: 0.64rem !important;
-      }
-      .calc-services-grid {
-        grid-template-columns: 1fr !important;
-        gap: 8px !important;
-      }
-      .calc-total-val {
-        font-size: 2.2rem !important;
-      }
-
-      /* Comparador Antes e Depois no Celular */
-      .ba-nav-tabs {
-        display: flex !important;
-        flex-direction: column !important;
-        gap: 8px !important;
-        width: 100% !important;
-        margin: 20px 0 14px !important;
-      }
-      .ba-tab-btn {
-        width: 100% !important;
-        justify-content: space-between !important;
-        padding: 10px 14px !important;
-        font-size: 0.82rem !important;
-      }
-      .ba-info-banner {
-        padding: 12px 14px !important;
-        margin-bottom: 12px !important;
-      }
-      .ba-info-title {
-        font-size: 0.95rem !important;
-      }
-      .ba-info-desc {
-        font-size: 0.78rem !important;
-      }
-      .ba-slider-container {
-        aspect-ratio: 4/3 !important;
-        border-radius: 8px !important;
-      }
-      .ba-badge-tag {
-        top: 10px !important;
-        font-size: 0.65rem !important;
-        padding: 4px 10px !important;
-      }
-      .ba-badge-tag.left { left: 10px !important; }
-      .ba-badge-tag.right { right: 10px !important; }
-      .ba-handle-btn {
-        width: 38px !important;
-        height: 38px !important;
-        font-size: 0.95rem !important;
-      }
-      .ba-hint-bar {
-        font-size: 0.7rem !important;
-        padding: 0 4px !important;
-      }
-
-      .why-banner-title {
-        font-size: 2.1rem !important;
-      }
-      .why-banner-card {
-        padding: 26px 16px !important;
-      }
-      .contact-card {
-        padding: 16px !important;
-      }
-
-      footer {
-        flex-direction: column !important;
-        align-items: center !important;
-        text-align: center !important;
-        gap: 18px !important;
-        padding: 28px 5vw !important;
-      }
-      .footer-brand-wrap {
-        flex-direction: column !important;
-        text-align: center !important;
-        gap: 8px !important;
-      }
-      .footer-links {
-        justify-content: center !important;
-        flex-wrap: wrap !important;
-        gap: 14px !important;
-      }
-    }
-  </style>
-</head>
-<body>
-
-<!-- ── HEADER / NAVEGAÇÃO ── -->
-<nav id="nav">
-  <a href="#hero" class="nav-logo" aria-label="JR New Concept Detail">
-    <img src="logo.png" onerror="if(this.src.indexOf('JR')===-1){this.src='JR New Concept Detail.png';}else{this.remove();}" alt="" class="nav-logo-img"/>
-    <div class="nav-logo-text">
-      <div class="logo-title"><span>JR</span><span class="orange">NEW CONCEPT</span><span>DETAIL</span></div>
-      <div class="logo-sub"><span class="logo-dot"></span>Estética Automotiva Delivery · SJC</div>
-    </div>
-  </a>
-  <ul class="nav-links" id="navLinks">
-    <li><a href="#servicos">Serviços</a></li>
-    <li><a href="#dashboard-zonas">Zonas do Carro</a></li>
-    <li><a href="#simulador">Orçamento Rápido</a></li>
-    <li><a href="#comparador">Antes & Depois</a></li>
-    <li><a href="#faq">Dúvidas (FAQ)</a></li>
-    <li><a href="#contato">Contato</a></li>
-  </ul>
-  <a href="[https://wa.me/5512992228205?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20servi%C3%A7o%20com%20a%20JR%20New%20Concept%20Detail](https://wa.me/5512992228205?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20servi%C3%A7o%20com%20a%20JR%20New%20Concept%20Detail)." target="_blank" class="nav-cta">
-    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.555 4.126 1.528 5.858L.057 23.855c-.083.329.243.613.564.491l5.912-2.186A11.947 11.947 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.929 0-3.73-.52-5.27-1.425l-.376-.225-3.897 1.44 1.317-3.96-.244-.388A9.958 9.958 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-    Agendar Horário
-  </a>
-  <button class="ham" id="hamBtn" aria-label="Abrir Menu"><span></span><span></span><span></span></button>
-</nav>
-
-<!-- ── HERO ── -->
-<section id="hero">
-  <div class="hero-grid" id="heroGrid">
-    <div class="hero-content">
-      <div class="hero-badge"><span class="logo-dot"></span> Atendimento Delivery · São José dos Campos e Região</div>
-      <h1 class="hero-h1">
-        O PADRÃO MÁXIMO<br/>
-        DE ESTÉTICA,<br/>
-        <span class="highlight">NA SUA PORTA.</span>
-      </h1>
-      <p class="hero-sub">
-        Cuidado técnico minucioso na sua <strong>casa ou empresa</strong>. Especialistas em <strong>veículos vitrificados e com PPF</strong>, polimento técnico e higienização profunda. Sem filas, com hora marcada e produtos de alta tecnologia.
-      </p>
-      <div class="hero-actions">
-        <a href="[https://wa.me/5512992228205?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20servi%C3%A7o%20com%20a%20JR%20New%20Concept%20Detail](https://wa.me/5512992228205?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20servi%C3%A7o%20com%20a%20JR%20New%20Concept%20Detail)." target="_blank" class="btn-primary">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.555 4.126 1.528 5.858L.057 23.855c-.083.329.243.613.564.491l5.912-2.186A11.947 11.947 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.929 0-3.73-.52-5.27-1.425l-.376-.225-3.897 1.44 1.317-3.96-.244-.388A9.958 9.958 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-          Falar no WhatsApp
-        </a>
-        <a href="#simulador" class="btn-outline">Simular Orçamento</a>
-      </div>
-      <div class="fast-perks">
-        <div class="f-perk"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Especialistas em PPF & Vitrificação</div>
-        <div class="f-perk"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Delivery na sua Porta</div>
-        <div class="f-perk"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Hora Marcada</div>
-      </div>
-    </div>
-
-    <!-- Destaque da Logo Oficial JR -->
-    <div class="hero-emblem-wrap" id="heroEmblemWrap" style="display: none;">
-      <div class="hero-emblem-halo"></div>
-      <div class="hero-emblem-card">
-        <img src="logo.png" id="heroLogoImg" onload="document.getElementById('heroEmblemWrap').style.display='flex'; document.getElementById('heroGrid').classList.add('has-emblem');" onerror="if(this.src.indexOf('JR')===-1){this.src='JR New Concept Detail.png';}else{this.remove();}" alt="JR New Concept Detail" class="hero-emblem-img"/>
-        <div class="hero-emblem-badge">
-          <span class="emblem-sparkle">✦</span>
-          <span>EXCELÊNCIA EM CADA DETALHE</span>
-          <span class="emblem-sparkle">✦</span>
-        </div>
-        <div class="hero-emblem-caption">Estética Automotiva Delivery · Desde 2026</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── TICKER ── -->
-<div class="ticker-wrap">
-  <div class="ticker-inner">
-    <span>Delivery em São José dos Campos</span><span class="dot">◆</span>
-    <span>Manutenção para Vitrificados e PPF</span><span class="dot">◆</span>
-    <span>Shampoo de pH Neutro</span><span class="dot">◆</span>
-    <span>Vitrificação Cerâmica de Pinturas e Plásticos</span><span class="dot">◆</span>
-    <span>Higienização Profunda & Hidratação de Couro</span><span class="dot">◆</span>
-    <span>Polimento Técnico Profissional</span><span class="dot">◆</span>
-    <span>Delivery em São José dos Campos</span><span class="dot">◆</span>
-    <span>Manutenção para Vitrificados e PPF</span><span class="dot">◆</span>
-    <span>Shampoo de pH Neutro</span><span class="dot">◆</span>
-    <span>Vitrificação Cerâmica de Pinturas e Plásticos</span><span class="dot">◆</span>
-    <span>Higienização Profunda & Hidratação de Couro</span><span class="dot">◆</span>
-    <span>Polimento Técnico Profissional</span><span class="dot">◆</span>
-  </div>
-</div>
-
-<!-- ── DASHBOARD TÉCNICO DE ESTÚDIO (4 CARDS DE ZONAS) ── -->
-<section id="dashboard-zonas">
-  <div class="dash-header">
-    <div class="sec-label">Transparência & Engenharia de Detalhe</div>
-    <h2 class="sec-title">O QUE ESTÁ <span class="highlight">INCLUÍDO NO SEU SERVIÇO?</span></h2>
-    <p class="sec-sub" style="margin: 10px auto 0; text-align:center">Selecione o serviço abaixo para conferir em tempo real a cobertura exata em cada uma das 4 zonas técnicas do seu veículo.</p>
-  </div>
-
-  <!-- Seletor Superior de Pacotes -->
-  <div class="dash-tabs">
-    <button class="dtab active" data-svc="ppf">
-      <span>01. Vitrificados & PPF</span>
-      <span class="dtab-tag">Especialidade</span>
-    </button>
-    <button class="dtab" data-svc="basic">
-      <span>02. Manutenção Regular</span>
-    </button>
-    <button class="dtab" data-svc="externa">
-      <span>03. Detalhada Externa</span>
-    </button>
-    <button class="dtab" data-svc="interna">
-      <span>04. Detalhada Interna</span>
-    </button>
-    <button class="dtab" data-svc="higie">
-      <span>05. Higienização Profunda</span>
-    </button>
-    <button class="dtab" data-svc="elite">
-      <span>06. Pacote JR Elite</span>
-      <span class="dtab-tag">VIP 360°</span>
-    </button>
-  </div>
-
-  <!-- Banner de Destaque do Pacote Selecionado -->
-  <div class="dash-banner">
-    <div class="dash-banner-info">
-      <div class="dash-banner-eyebrow">
-        <span class="logo-dot"></span>
-        <span id="dashSvcCategory">PROTEÇÃO • BRILHO • VALORIZAÇÃO</span>
-      </div>
-      <h3 class="dash-banner-title" id="dashSvcTitle">MANUTENÇÃO P/ VEÍCULOS VITRIFICADOS OU COM PPF</h3>
-      <p class="dash-banner-desc" id="dashSvcDesc">
-        O cuidado certo para manter a proteção e o brilho do seu veículo por muito mais tempo. Preserva a película e o revestimento cerâmico sem agredir o verniz.
-      </p>
-    </div>
-    <div class="dash-banner-cta">
-      <div class="dash-banner-price">
-        <span class="dash-banner-price-lbl">Valor Estimado</span>
-        <span class="dash-banner-price-val" id="dashSvcPrice">R$ 150</span>
-      </div>
-      <a href="[https://wa.me/5512992228205?text=Ol%C3%A1%2C%20tenho%20interesse%20na%20Manuten%C3%A7%C3%A3o%20para%20Ve%C3%ADculos%20Vitrificados%20ou%20com%20PPF](https://wa.me/5512992228205?text=Ol%C3%A1%2C%20tenho%20interesse%20na%20Manuten%C3%A7%C3%A3o%20para%20Ve%C3%ADculos%20Vitrificados%20ou%20com%20PPF)." target="_blank" class="btn-primary" id="dashWhatsBtn" style="padding:14px 26px;">
-        Agendar Agora
-      </a>
-    </div>
-  </div>
-
-  <!-- Os 4 Cards de Zonas Técnicas (Com Ícones Vetoriais SVG) -->
-  <div class="dash-zones-grid">
-    <!-- Zona 1: Pintura & PPF -->
-    <div class="dash-zone-card included" id="dz-paint">
-      <div class="dz-header">
-        <div class="dz-icon-wrap" title="Pintura, PPF & Verniz">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polygon points="12 6 13.5 9.5 17 11 13.5 12.5 12 16 10.5 12.5 7 11 10.5 9.5 12 6" fill="currentColor"/></svg>
-        </div>
-        <span class="dz-badge" id="dz-paint-status">INCLUÍDO</span>
-      </div>
-      <div class="dz-title">01. Pintura, PPF & Verniz</div>
-      <p class="dz-desc">Tratamento minucioso de lataria, proteção contra microrriscos e manutenção de películas de proteção.</p>
-      <ul class="dz-list" id="dz-paint-list">
-        <li>Lavagem técnica com shampoo de pH neutro</li>
-        <li>Descontaminação química leve eliminando resíduos opacos</li>
-        <li>Reforço da camada hidrofóbica com booster cerâmico</li>
-      </ul>
-    </div>
-
-    <!-- Zona 2: Rodas & Caixas -->
-    <div class="dash-zone-card included" id="dz-wheels">
-      <div class="dz-header">
-        <div class="dz-icon-wrap" title="Rodas, Freios & Caixas">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3.5"/><line x1="12" y1="2" x2="12" y2="8.5"/><line x1="12" y1="15.5" x2="12" y2="22"/><line x1="2" y1="12" x2="8.5" y2="12"/><line x1="15.5" y1="12" x2="22" y2="12"/><line x1="4.93" y1="4.93" x2="9.5" y2="9.5"/><line x1="14.5" y1="14.5" x2="19.07" y2="19.07"/><line x1="19.07" y1="4.93" x2="14.5" y2="9.5"/><line x1="9.5" y1="14.5" x2="4.93" y2="19.07"/></svg>
-        </div>
-        <span class="dz-badge" id="dz-wheels-status">INCLUÍDO</span>
-      </div>
-      <div class="dz-title">02. Rodas, Freios & Caixas</div>
-      <p class="dz-desc">Limpeza técnica profunda das caixas de rodas, pinças de freio e descontaminação ferrosa de fuligem.</p>
-      <ul class="dz-list" id="dz-wheels-list">
-        <li>Limpeza detalhada de caixas de roda</li>
-        <li>Remoção ferrosa de aros e pinças de freio</li>
-        <li>Pretinho nobre de acabamento acetinado</li>
-      </ul>
-    </div>
-
-    <!-- Zona 3: Vidros & Visibilidade -->
-    <div class="dash-zone-card included" id="dz-glass">
-      <div class="dz-header">
-        <div class="dz-icon-wrap" title="Vidros & Para-brisa">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l2.5-10h13L21 17H3z"/><line x1="12" y1="7" x2="12" y2="17"/><path d="M7.5 12.5a1.5 1.5 0 0 1 1.5-1.5"/><path d="M15 12.5a1.5 1.5 0 0 1 1.5-1.5"/></svg>
-        </div>
-        <span class="dz-badge" id="dz-glass-status">INCLUÍDO</span>
-      </div>
-      <div class="dz-title">03. Vidros & Para-brisa</div>
-      <p class="dz-desc">Desengorduramento químico, remoção de marcas d'água e máxima nitidez de condução sob chuva.</p>
-      <ul class="dz-list" id="dz-glass-list">
-        <li>Desengorduramento dos vidros internos e externos</li>
-        <li>Borrachas e palhetas limpas</li>
-        <li>Preservação do efeito hidrofóbico e de películas</li>
-      </ul>
-    </div>
-
-    <!-- Zona 4: Cockpit & Couro -->
-    <div class="dash-zone-card excluded" id="dz-cabin">
-      <div class="dz-header">
-        <div class="dz-icon-wrap" title="Cockpit, Couro & Tecidos">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3h8a2 2 0 0 1 2 2v8a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3V5a2 2 0 0 1 2-2z"/><path d="M5 16h14a2 2 0 0 1 2 2v2a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-2a2 2 0 0 1 2-2z"/><line x1="9" y1="7" x2="15" y2="7"/><line x1="9" y1="11" x2="15" y2="11"/></svg>
-        </div>
-        <span class="dz-badge" id="dz-cabin-status">NÃO INCLUÍDO</span>
-      </div>
-      <div class="dz-title">04. Cockpit, Couro & Tecidos</div>
-      <p class="dz-desc">Higienização profunda com extratora a vapor, sanitização bactericida e hidratação de couro nobre.</p>
-      <ul class="dz-list" id="dz-cabin-list">
-        <li>Aspiração rápida de tapetes cortesia</li>
-        <li>Não inclui lavagem e extração profunda de bancos</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- ── CATÁLOGO DE SERVIÇOS EM ABAS ── -->
-<section id="servicos">
-  <div class="svc-header">
-    <div>
-      <div class="sec-label">Catálogo Completo</div>
-      <h2 class="sec-title">NOSSOS <span class="highlight">SERVIÇOS</span></h2>
-    </div>
-    <p class="sec-sub">Filtre pela modalidade que você procura ou veja todos os tratamentos especializados disponíveis.</p>
-  </div>
-
-  <div class="svc-filters">
-    <button class="svc-filter-btn active" data-filter="all">Todos os Serviços (11)</button>
-    <button class="svc-filter-btn" data-filter="ppf-vitrificado">Vitrificados & PPF</button>
-    <button class="svc-filter-btn" data-filter="lavagem">Lavagem & Detalhe</button>
-    <button class="svc-filter-btn" data-filter="interior">Interior & Couro</button>
-    <button class="svc-filter-btn" data-filter="protecao">Proteção & Polimento</button>
-    <button class="svc-filter-btn" data-filter="vip">Pacote VIP</button>
-  </div>
-
-  <div class="svc-grid">
-    <!-- NOVO SERVIÇO: Manutenção para Veículos Vitrificados ou com PPF (DO FLYER OFICIAL) -->
-    <div class="svc-card featured-deal" data-cat="ppf-vitrificado">
-      <div class="svc-num">01</div>
-      <div class="svc-badge">Destaque Especial</div>
-      <div class="svc-cat">Proteção • Brilho • Valorização</div>
-      <h3 class="svc-name">MANUTENÇÃO P/ VITRIFICADOS OU PPF</h3>
-      <p class="svc-desc">O cuidado certo para manter a proteção e o brilho do seu veículo por muito mais tempo, sem comprometer a película ou o revestimento cerâmico.</p>
-      <ul class="svc-items">
-        <li>Lavagem técnica que remove sujeiras sem agredir a proteção</li>
-        <li>Descontaminação química leve eliminando resíduos opacos</li>
-        <li>Reaplicação de reforço de hidrorrepelência (quando necessário)</li>
-        <li>Finalização especial preservando o brilho original</li>
-      </ul>
-      <div class="price-wrap">
-        <div class="price-lbl">A partir de</div>
-        <div class="price-val">R$ 150</div>
-        <div class="price-note">*Preserva o brilho, evita manchas e aumenta a vida útil</div>
-      </div>
-      <a href="[https://wa.me/5512992228205?text=Ol%C3%A1%2C%20tenho%20interesse%20na%20Manuten%C3%A7%C3%A3o%20para%20Ve%C3%ADculos%20Vitrificados%20ou%20com%20PPF](https://wa.me/5512992228205?text=Ol%C3%A1%2C%20tenho%20interesse%20na%20Manuten%C3%A7%C3%A3o%20para%20Ve%C3%ADculos%20Vitrificados%20ou%20com%20PPF)." target="_blank" class="card-cta">Agendar no WhatsApp</a>
-    </div>
-
-    <!-- Limpeza de Manutenção Regular (COM TABELA DE VALORES POR PORTE) -->
-    <div class="svc-card" data-cat="lavagem">
-      <div class="svc-num">02</div>
-      <div class="svc-badge">Mais Pedido</div>
-      <div class="svc-cat">Lavagem Técnica</div>
-      <h3 class="svc-name">LIMPEZA DE MANUTENÇÃO</h3>
-      <p class="svc-desc">Para manter o carro protegido e impecável entre tratamentos profundos. Lavagem suave com pH neutro sem riscar o verniz.</p>
-      <ul class="svc-items">
-        <li>Lavagem externa com shampoo de pH neutro</li>
-        <li>Aspiração interna detalhada da cabine</li>
-        <li>Limpeza de rodas e caixas de rodas</li>
-        <li>Borrachas e vidros desengordurados</li>
-      </ul>
-      <div class="price-grid-4">
-        <div class="price-cell">
-          <div class="price-cell-l">Hatch</div>
-          <div class="price-cell-v">R$ 85</div>
-        </div>
-        <div class="price-cell">
-          <div class="price-cell-l">Sedan</div>
-          <div class="price-cell-v">R$ 100</div>
-        </div>
-        <div class="price-cell">
-          <div class="price-cell-l">SUV</div>
-          <div class="price-cell-v">R$ 110</div>
-        </div>
-        <div class="price-cell">
-          <div class="price-cell-l">Picape</div>
-          <div class="price-cell-v">R$ 140</div>
-        </div>
-      </div>
-      <a href="[https://wa.me/5512992228205?text=Ol%C3%A1%2C%20tenho%20interesse%20na%20Limpeza%20de%20Manuten%C3%A7%C3%A3o](https://wa.me/5512992228205?text=Ol%C3%A1%2C%20tenho%20interesse%20na%20Limpeza%20de%20Manuten%C3%A7%C3%A3o)." target="_blank" class="card-cta">Agendar no WhatsApp</a>
-    </div>
-
-    <!-- Detalhada Externa -->
-    <div class="svc-card" data-cat="lavagem">
-      <div class="svc-num">03</div>
-      <div class="svc-cat">Estética Externa</div>
-      <h3 class="svc-name">DETALHADA EXTERNA</h3>
-      <p class="svc-desc">Descontaminação minuciosa da pintura com pincéis em grades, emblemas e aplicação de cera protetora de alta fixação.</p>
-      <ul class="svc-items">
-        <li>Lavagem externa detalhada + Enceramento</li>
-        <li>Descontaminação de pintura com claybar</li>
-        <li>Pincelamento em grades e cantos</li>
-        <li>Proteção e revitalização de plásticos</li>
-      </ul>
-      <div class="price-wrap">
-        <div class="price-lbl">A partir de</div>
-        <div class="price-val">R$ 330</div>
-      </div>
-      <a href="[https://wa.me/5512992228205?text=Ol%C3%A1%2C%20tenho%20interesse%20na%20Detalhada%20Externa](https://wa.me/5512992228205?text=Ol%C3%A1%2C%20tenho%20interesse%20na%20Detalhada%20Externa)." target="_blank" class="card-cta">Agendar no WhatsApp</a>
-    </div>
-
-    <!-- Detalhada Interna -->
-    <div class="svc-card" data-cat="interior">
-      <div class="svc-num">04</div>
-      <div class="svc-cat">Interior</div>
-      <h3 class="svc-name">DETALHADA INTERNA</h3>
-      <p class="svc-desc">Interior revitalizado do teto ao carpete com proteção UV e aroma agradável de carro novo.</p>
-      <ul class="svc-items">
-        <li>Higienização técnica de forro de teto</li>
-        <li>Limpeza minuciosa de plásticos e painel</li>
-        <li>Proteção de plásticos com filtro UV (3 meses)</li>
-        <li>Detalhada de carpete + restauração de tapetes</li>
-      </ul>
-      <div class="price-wrap">
-        <div class="price-lbl">A partir de</div>
-        <div class="price-val">R$ 320</div>
-      </div>
-      <a href="[https://wa.me/5512992228205?text=Ol%C3%A1%2C%20tenho%20interesse%20na%20Detalhada%20Interna](https://wa.me/5512992228205?text=Ol%C3%A1%2C%20tenho%20interesse%20na%20Detalhada%20Interna)." target="_blank" class="card-cta">Agendar no WhatsApp</a>
-    </div>
-
-    <!-- Higienização Interna Profunda -->
-    <div class="svc-card" data-cat="interior">
-      <div class="svc-num">05</div>
-      <div class="svc-badge">Saúde & Conforto</div>
-      <div class="svc-cat">Higienização</div>
-      <h3 class="svc-name">HIGIENIZAÇÃO INTERNA</h3>
-      <p class="svc-desc">Remoção de ácaros, fungos e odores. Sanitização com extratora profissional para bancos e forros.</p>
-      <ul class="svc-items">
-        <li>Extração e lavagem profunda dos bancos</li>
-        <li>Higienização do carpete e porta-malas</li>
-        <li>Limpeza de cofre e estepe</li>
-        <li>Proteção de painéis e portas</li>
-      </ul>
-      <div class="price-wrap">
-        <div class="price-lbl">A partir de</div>
-        <div class="price-val">R$ 390</div>
-      </div>
-      <a href="[https://wa.me/5512992228205?text=Ol%C3%A1%2C%20tenho%20interesse%20na%20Higieniza%C3%A7%C3%A3o%20Interna](https://wa.me/5512992228205?text=Ol%C3%A1%2C%20tenho%20interesse%20na%20Higieniza%C3%A7%C3%A3o%20Interna)." target="_blank" class="card-cta">Agendar no WhatsApp</a>
-    </div>
-
-    <!-- Higienização de Couro -->
-    <div class="svc-card" data-cat="interior">
-      <div class="svc-num">06</div>
-      <div class="svc-cat">Couro Nobre</div>
-      <h3 class="svc-name">HIGIENIZAÇÃO DE COURO</h3>
-      <p class="svc-desc">Restaura a textura fosca original do couro nobre, prevenindo rachaduras causadas pelo ressecamento e calor.</p>
-      <ul class="svc-items">
-        <li>Limpeza profunda sem agredir as fibras</li>
-        <li>Hidratação intensiva com produto específico</li>
-        <li>Toque aveludado e acabamento fosco original</li>
-        <li>Proteção duradoura contra ressecamento</li>
-      </ul>
-      <div class="price-wrap">
-        <div class="price-lbl">Valor por banco</div>
-        <div class="price-val">R$ 150</div>
-      </div>
-      <a href="[https://wa.me/5512992228205?text=Ol%C3%A1%2C%20tenho%20interesse%20na%20Higieniza%C3%A7%C3%A3o%20de%20Couro](https://wa.me/5512992228205?text=Ol%C3%A1%2C%20tenho%20interesse%20na%20Higieniza%C3%A7%C3%A3o%20de%20Couro)." target="_blank" class="card-cta">Agendar no WhatsApp</a>
-    </div>
-
-    <!-- Polimento Técnico -->
-    <div class="svc-card" data-cat="protecao">
-      <div class="svc-num">07</div>
-      <div class="svc-cat">Correção de Verniz</div>
-      <h3 class="svc-name">POLIMENTO TÉCNICO</h3>
-      <p class="svc-desc">Elimina microrriscos circulares (swirls) e hologramas, devolvendo a profundidade e reflexo de espelho na pintura.</p>
-      <ul class="svc-items">
-        <li>Descontaminação completa da pintura</li>
-        <li>Isolamento técnico de borrachas e plásticos</li>
-        <li>Correção de riscos e marcas de lavagem incorreta</li>
-        <li>Restauração total do brilho espelhado</li>
-      </ul>
-      <div class="price-wrap">
-        <div class="price-lbl">A partir de</div>
-        <div class="price-val">R$ 780</div>
-        <div class="price-note">*Varia conforme tamanho e estado da pintura</div>
-      </div>
-      <a href="[https://wa.me/5512992228205?text=Ol%C3%A1%2C%20tenho%20interesse%20no%20Polimento%20T%C3%A9cnico](https://wa.me/5512992228205?text=Ol%C3%A1%2C%20tenho%20interesse%20no%20Polimento%20T%C3%A9cnico)." target="_blank" class="card-cta">Agendar no WhatsApp</a>
-    </div>
-
-    <!-- Vitrificação de Plásticos -->
-    <div class="svc-card" data-cat="protecao">
-      <div class="svc-num">08</div>
-      <div class="svc-cat">Proteção Cerâmica</div>
-      <h3 class="svc-name">VITRIFICAÇÃO DE PLÁSTICOS</h3>
-      <p class="svc-desc">Cria uma barreira cerâmica inteligente nos plásticos externos. Evita esbranquiçado por até 12 meses!</p>
-      <ul class="svc-items">
-        <li>Proteção solar UV de alta durabilidade</li>
-        <li>Repelência extrema à água e lama</li>
-        <li>Para-choques, molduras, retrovisores e caixas</li>
-        <li>Garantia e durabilidade de até 1 ano</li>
-      </ul>
-      <div class="price-wrap">
-        <div class="price-lbl">A partir de</div>
-        <div class="price-val">R$ 450</div>
-      </div>
-      <a href="[https://wa.me/5512992228205?text=Ol%C3%A1%2C%20tenho%20interesse%20na%20Vitrifica%C3%A7%C3%A3o%20de%20Pl%C3%A1sticos](https://wa.me/5512992228205?text=Ol%C3%A1%2C%20tenho%20interesse%20na%20Vitrifica%C3%A7%C3%A3o%20de%20Pl%C3%A1sticos)." target="_blank" class="card-cta">Agendar no WhatsApp</a>
-    </div>
-
-    <!-- Revitalização de Plásticos -->
-    <div class="svc-card" data-cat="protecao">
-      <div class="svc-num">09</div>
-      <div class="svc-cat">Acabamento</div>
-      <h3 class="svc-name">REVITALIZAÇÃO DE PLÁSTICOS</h3>
-      <p class="svc-desc">Tratamento de renovação rápida para peças plásticas ressecadas, devolvendo o aspecto escuro original.</p>
-      <ul class="svc-items">
-        <li>Limpeza preparatória dos plásticos</li>
-        <li>Remoção de resíduos e manchas brancas</li>
-        <li>Aplicação de condicionador protetor</li>
-        <li>Acabamento seco sem grudar poeira</li>
-      </ul>
-      <div class="price-wrap">
-        <div class="price-lbl">A partir de</div>
-        <div class="price-val">R$ 120</div>
-      </div>
-      <a href="[https://wa.me/5512992228205?text=Ol%C3%A1%2C%20tenho%20interesse%20na%20Revitaliza%C3%A7%C3%A3o%20de%20Pl%C3%A1sticos](https://wa.me/5512992228205?text=Ol%C3%A1%2C%20tenho%20interesse%20na%20Revitaliza%C3%A7%C3%A3o%20de%20Pl%C3%A1sticos)." target="_blank" class="card-cta">Agendar no WhatsApp</a>
-    </div>
-
-    <!-- Impermeabilização de Vidros -->
-    <div class="svc-card" data-cat="protecao">
-      <div class="svc-num">10</div>
-      <div class="svc-cat">Segurança na Chuva</div>
-      <h3 class="svc-name">IMPERMEABILIZAÇÃO DE VIDROS</h3>
-      <p class="svc-desc">Efeito gota d'água deslizante na chuva. Aumenta drasticamente a visibilidade e reduz manchas d'água nos vidros.</p>
-      <ul class="svc-items">
-        <li>Descontaminação do vidro</li>
-        <li>Película repelente de alta eficiência</li>
-        <li>Segurança extrema em dias de chuva forte</li>
-      </ul>
-      <div class="price-2col">
-        <div class="price-cell">
-          <div class="price-cell-l">Para-brisa</div>
-          <div class="price-cell-v">R$ 160</div>
-        </div>
-        <div class="price-cell">
-          <div class="price-cell-l">Completo</div>
-          <div class="price-cell-v">R$ 200</div>
-        </div>
-      </div>
-      <a href="[https://wa.me/5512992228205?text=Ol%C3%A1%2C%20tenho%20interesse%20na%20Impermeabiliza%C3%A7%C3%A3o%20de%20Vidros](https://wa.me/5512992228205?text=Ol%C3%A1%2C%20tenho%20interesse%20na%20Impermeabiliza%C3%A7%C3%A3o%20de%20Vidros)." target="_blank" class="card-cta">Agendar no WhatsApp</a>
-    </div>
-
-    <!-- Pacote JR Elite VIP -->
-    <div class="svc-card featured-deal" data-cat="vip">
-      <div class="svc-num">11</div>
-      <div class="svc-badge">★ PACOTE SIGNATURE VIP</div>
-      <div class="svc-cat">Experiência 360°</div>
-      <h3 class="svc-name">PACOTE JR ELITE</h3>
-      <p class="svc-desc">Para quem exige padrão de colecionador. Une o melhor do tratamento externo, interno e vitrificação cerâmica com benefício exclusivo.</p>
-      <ul class="svc-items">
-        <li>Detalhada Externa completa + Enceramento</li>
-        <li>Detalhada Interna e Higienização profunda de bancos</li>
-        <li>Polimento técnico para brilho espelhado sem riscos</li>
-        <li>Vitrificação cerâmica de pintura e plásticos</li>
-        <li><strong>Bônus especial: 2 duchas de manutenção cortesia</strong></li>
-      </ul>
-      <div class="price-wrap">
-        <div class="price-lbl">A partir de</div>
-        <div class="price-val">R$ 2.500</div>
-      </div>
-      <a href="[https://wa.me/5512992228205?text=Ol%C3%A1%2C%20tenho%20interesse%20no%20Pacote%20JR%20Elite](https://wa.me/5512992228205?text=Ol%C3%A1%2C%20tenho%20interesse%20no%20Pacote%20JR%20Elite)." target="_blank" class="card-cta">Garantir Pacote VIP</a>
-    </div>
-  </div>
-</section>
-
-<!-- ── SIMULADOR DE ORÇAMENTO PARA WHATSAPP ── -->
-<section id="simulador">
-  <div class="sec-label" style="text-align:center">Monte seu Pacote Personalizado</div>
-  <h2 class="sec-title" style="text-align:center">SIMULADOR DE <span class="highlight">ORÇAMENTO RÁPIDO</span></h2>
-  <p class="sec-sub" style="margin: 12px auto 0; text-align:center">Escolha o porte do seu carro e selecione os serviços desejados. Em seguida, envie para o WhatsApp com 1 clique.</p>
-
-  <div class="calc-container">
-    <div class="calc-step-title"><span>1</span> Selecione o porte do veículo:</div>
-    <div class="vehicle-types">
-      <div class="v-type-card selected" data-type="Hatch / Compacto" data-mult="1.0">
-        <div class="v-type-icon-wrap">
-          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14l2-6h9l4 6"/><rect x="2" y="14" width="20" height="5" rx="2"/><circle cx="7" cy="19" r="2"/><circle cx="17" cy="19" r="2"/></svg>
-        </div>
-        <div class="v-type-name">Hatch / Compacto</div>
-        <div class="v-type-sub">Ex: Onix, Gol, HB20, Polo</div>
-      </div>
-      <div class="v-type-card" data-type="Sedan Médio" data-mult="1.1">
-        <div class="v-type-icon-wrap">
-          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13l3-5h10l4 5"/><rect x="1" y="13" width="22" height="5" rx="2"/><circle cx="6.5" cy="18.5" r="2"/><circle cx="17.5" cy="18.5" r="2"/><line x1="11" y1="8" x2="11" y2="13"/></svg>
-        </div>
-        <div class="v-type-name">Sedan</div>
-        <div class="v-type-sub">Ex: Corolla, Civic, Virtus, Cruze</div>
-      </div>
-      <div class="v-type-card" data-type="SUV / Crossover" data-mult="1.25">
-        <div class="v-type-icon-wrap">
-          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l2-7h12l3 7"/><rect x="1.5" y="12" width="21" height="6" rx="2"/><circle cx="6.5" cy="18.5" r="2.5"/><circle cx="17.5" cy="18.5" r="2.5"/></svg>
-        </div>
-        <div class="v-type-name">SUV / Crossover</div>
-        <div class="v-type-sub">Ex: Compass, Renegade, Creta, T-Cross</div>
-      </div>
-      <div class="v-type-card" data-type="Picape / Grande" data-mult="1.4">
-        <div class="v-type-icon-wrap">
-          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 13l2-6h9v6"/><path d="M13 13h9v4H2v-4z"/><line x1="13" y1="7" x2="13" y2="13"/><circle cx="6.5" cy="18.5" r="2.5"/><circle cx="17.5" cy="18.5" r="2.5"/></svg>
-        </div>
-        <div class="v-type-name">Picape / Grande</div>
-        <div class="v-type-sub">Ex: Hilux, Ranger, Toro, S10, SW4</div>
-      </div>
-    </div>
-
-    <div class="calc-step-title"><span>2</span> Escolha os serviços:</div>
-    <div class="calc-services-grid">
-      <div class="calc-svc-item checked" id="calc-manutencao-item" data-fixed-porte="true" data-hatch="85" data-sedan="100" data-suv="110" data-picape="140" data-name="Limpeza de Manutenção">
-        <div class="calc-checkbox">✓</div>
-        <div class="calc-svc-info">
-          <div class="calc-svc-title">Limpeza de Manutenção</div>
-          <div class="calc-svc-cost" id="calc-manutencao-cost">R$ 85 (Hatch)</div>
-        </div>
-      </div>
-      <div class="calc-svc-item" data-price="150" data-name="Manutenção p/ Vitrificados ou PPF">
-        <div class="calc-checkbox"></div>
-        <div class="calc-svc-info">
-          <div class="calc-svc-title">Manutenção p/ Vitrificados ou PPF</div>
-          <div class="calc-svc-cost">Base: R$ 150</div>
-        </div>
-      </div>
-      <div class="calc-svc-item" data-price="330" data-name="Detalhada Externa">
-        <div class="calc-checkbox"></div>
-        <div class="calc-svc-info">
-          <div class="calc-svc-title">Detalhada Externa</div>
-          <div class="calc-svc-cost">Base: R$ 330</div>
-        </div>
-      </div>
-      <div class="calc-svc-item" data-price="320" data-name="Detalhada Interna">
-        <div class="calc-checkbox"></div>
-        <div class="calc-svc-info">
-          <div class="calc-svc-title">Detalhada Interna</div>
-          <div class="calc-svc-cost">Base: R$ 320</div>
-        </div>
-      </div>
-      <div class="calc-svc-item" data-price="390" data-name="Higienização Interna">
-        <div class="calc-checkbox"></div>
-        <div class="calc-svc-info">
-          <div class="calc-svc-title">Higienização Interna</div>
-          <div class="calc-svc-cost">Base: R$ 390</div>
-        </div>
-      </div>
-      <div class="calc-svc-item" data-price="450" data-name="Vitrificação de Plásticos">
-        <div class="calc-checkbox"></div>
-        <div class="calc-svc-info">
-          <div class="calc-svc-title">Vitrificação de Plásticos</div>
-          <div class="calc-svc-cost">Base: R$ 450</div>
-        </div>
-      </div>
-      <div class="calc-svc-item" data-price="160" data-name="Impermeabilização de Vidros">
-        <div class="calc-checkbox"></div>
-        <div class="calc-svc-info">
-          <div class="calc-svc-title">Impermeabilização de Vidros</div>
-          <div class="calc-svc-cost">Base: R$ 160</div>
-        </div>
-      </div>
-      <div class="calc-svc-item" data-price="780" data-name="Polimento Técnico">
-        <div class="calc-checkbox"></div>
-        <div class="calc-svc-info">
-          <div class="calc-svc-title">Polimento Técnico</div>
-          <div class="calc-svc-cost">Base: R$ 780</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="calc-summary-bar">
-      <div class="calc-total-box">
-        <div class="calc-total-lbl">Estimativa para seu veículo</div>
-        <div class="calc-total-val" id="calcTotalDisplay">R$ 85</div>
-      </div>
-      <a href="#" id="calcWhatsBtn" target="_blank" class="calc-send-btn">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.555 4.126 1.528 5.858L.057 23.855c-.083.329.243.613.564.491l5.912-2.186A11.947 11.947 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.929 0-3.73-.52-5.27-1.425l-.376-.225-3.897 1.44 1.317-3.96-.244-.388A9.958 9.958 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-        Enviar Orçamento no WhatsApp
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ── SLIDER INTERATIVO ANTES E DEPOIS (3 CASOS REAIS: RODA, FRONTAL E TRASEIRA) ── -->
-<section id="comparador">
-  <div class="sec-label" style="text-align:center">Transformação Visual em Detalhes</div>
-  <h2 class="sec-title" style="text-align:center">RESULTADOS REAIS: <span class="highlight">ANTES & DEPOIS</span></h2>
-  <p class="sec-sub" style="margin: 12px auto 0; text-align:center">Selecione o procedimento abaixo e arraste a barra central para conferir a transformação técnica nos mínimos detalhes.</p>
-
-  <!-- Abas de Seleção dos 3 Pares (Roda, Frontal e Traseira) com Ícones SVG -->
-  <div class="ba-nav-tabs">
-    <button class="ba-tab-btn active" data-pair="roda">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/><line x1="12" y1="2" x2="12" y2="9"/><line x1="12" y1="15" x2="12" y2="22"/><line x1="2" y1="12" x2="9" y2="12"/><line x1="15" y1="12" x2="22" y2="12"/></svg>
-      <span>Rodas & Pinças</span>
-      <span class="ba-tab-tag">Descontaminação</span>
-    </button>
-    <button class="ba-tab-btn" data-pair="frontal">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3h8a2 2 0 0 1 2 2v8a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3V5a2 2 0 0 1 2-2z"/><path d="M5 16h14a2 2 0 0 1 2 2v2a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-2a2 2 0 0 1 2-2z"/></svg>
-      <span>Interior Frontal</span>
-      <span class="ba-tab-tag">Higienização</span>
-    </button>
-    <button class="ba-tab-btn" data-pair="traseira">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="10" rx="2"/><path d="M2 15h20a2 2 0 0 1 2 2v2a1 1 0 0 1-1 1H0a1 1 0 0 1-1-1v-2a2 2 0 0 1 2-2z"/><line x1="12" y1="5" x2="12" y2="15"/></svg>
-      <span>Interior Traseiro</span>
-      <span class="ba-tab-tag">Higienização</span>
-    </button>
-  </div>
-
-  <!-- Banner com Descrição do Procedimento Ativo -->
-  <div class="ba-info-banner">
-    <div class="ba-info-title" id="baInfoTitle">LIMPEZA TÉCNICA E DESCONTAMINAÇÃO DE RODAS</div>
-    <p class="ba-info-desc" id="baInfoDesc">Remoção de fuligem pesada de pastilhas de freio, terra acumulada e descontaminação ferrosa de pinças e aros de liga leve.</p>
-  </div>
-
-  <!-- Slider Principal 4:3 -->
-  <div class="ba-slider-container" id="baSlider">
-    <!-- DEPOIS (Fundo Completo) -->
-    <div class="ba-pane ba-after">
-      <img id="baImgAfter" src="depois-rodas.jpg" alt="Depois do detalhamento" class="ba-img"/>
-      <div class="ba-visual-content" id="baFallbackAfter">
-        <span class="ba-pill">Depois do Detalhamento</span>
-        <h3 class="ba-title" id="baTitleAfter">RODA DESCONTAMINADA & BRILHO</h3>
-        <p class="ba-desc" id="baDescAfter">Liga leve 100% restaurada, pinças limpas e pneu acetinado seco.</p>
-      </div>
-      <span class="ba-badge-tag right">DEPOIS ✓</span>
-    </div>
-
-    <!-- ANTES (Sobreposição com recorte) -->
-    <div class="ba-pane ba-before" id="baBefore">
-      <img id="baImgBefore" src="antes-roda.jpg" alt="Antes do tratamento" class="ba-img"/>
-      <div class="ba-visual-content" id="baFallbackBefore">
-        <span class="ba-pill">Antes do Tratamento</span>
-        <h3 class="ba-title" id="baTitleBefore">FULIGEM PESADA & ÓXIDO</h3>
-        <p class="ba-desc" id="baDescBefore">Poeira de freio incrustada, caixas sujas e aspecto sem brilho.</p>
+      <!-- Placeholder exibido apenas se a foto ainda não estiver no GitHub -->
+      <div class="ba-placeholder-box" id="baPlaceholderBefore" style="display:none;">
+        <span class="ba-pill">Foto do Antes</span>
+        <div class="ba-ph-title" id="baTitleBefore">ANTES DO TRATAMENTO</div>
+        <p class="ba-ph-desc" id="baDescBefore">Sujeira e marcas de uso antes do procedimento.</p>
       </div>
       <span class="ba-badge-tag left">ANTES</span>
     </div>
@@ -5494,7 +2620,7 @@
         <p class="why-banner-p">
           Quer entender qual o tratamento ideal para a pintura ou interior do seu veículo? Fale diretamente com a nossa equipe no WhatsApp e tire todas as suas dúvidas.
         </p>
-        <a href="[https://wa.me/5512992228205?text=Ol%C3%A1%2C%20gostaria%20de%20uma%20avalia%C3%A7%C3%A3o%20para%20o%20meu%20carro%20na%20JR%20Detail](https://wa.me/5512992228205?text=Ol%C3%A1%2C%20gostaria%20de%20uma%20avalia%C3%A7%C3%A3o%20para%20o%20meu%20carro%20na%20JR%20Detail)." target="_blank" class="btn-primary" style="justify-content:center">
+        <a href="https://wa.me/5512992228205?text=Ol%C3%A1%2C%20gostaria%20de%20uma%20avalia%C3%A7%C3%A3o%20para%20o%20meu%20carro%20na%20JR%20Detail." target="_blank" class="btn-primary" style="justify-content:center">
           Pedir Avaliação Gratuita
         </a>
       </div>
@@ -5511,14 +2637,14 @@
       <p class="sec-sub">Atendimento rápido no WhatsApp para tirar dúvidas e reservar seu horário.</p>
 
       <div style="margin-top:28px">
-        <a href="[https://wa.me/5512992228205?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20servi%C3%A7o%20com%20a%20JR%20New%20Concept%20Detail](https://wa.me/5512992228205?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20servi%C3%A7o%20com%20a%20JR%20New%20Concept%20Detail)." target="_blank" class="contact-card wa">
+        <a href="https://wa.me/5512992228205?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20servi%C3%A7o%20com%20a%20JR%20New%20Concept%20Detail." target="_blank" class="contact-card wa">
           <div class="cc-icon wa"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.555 4.126 1.528 5.858L.057 23.855c-.083.329.243.613.564.491l5.912-2.186A11.947 11.947 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.929 0-3.73-.52-5.27-1.425l-.376-.225-3.897 1.44 1.317-3.96-.244-.388A9.958 9.958 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg></div>
           <div>
             <div class="cc-label wa">WhatsApp Oficial</div>
             <div class="cc-value">(12) 99222-8205</div>
           </div>
         </a>
-        <a href="[https://www.instagram.com/jrconcept_detail](https://www.instagram.com/jrconcept_detail)" target="_blank" class="contact-card ig">
+        <a href="https://www.instagram.com/jrconcept_detail" target="_blank" class="contact-card ig">
           <div class="cc-icon ig"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></div>
           <div>
             <div class="cc-label ig">Instagram</div>
@@ -5528,12 +2654,12 @@
       </div>
     </div>
 
-    <div style="background:var(--dk2); border: 1px solid rgba(255,107,0,.15); padding: 38px; border-radius: 8px;">
+    <div class="contact-schedule-card">
       <h3 style="font-family:var(--fd); font-size: 2.4rem; line-height: 1; margin-bottom: 12px;">AGENDE O SEU <span style="color:var(--or)">HORÁRIO</span></h3>
       <p style="color:#aaa; font-size: 0.92rem; line-height: 1.7; margin-bottom: 24px;">
         Clique no botão abaixo para iniciar a conversa no WhatsApp com horário e data de sua preferência.
       </p>
-      <a href="[https://wa.me/5512992228205?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20servi%C3%A7o%20com%20a%20JR%20New%20Concept%20Detail](https://wa.me/5512992228205?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20servi%C3%A7o%20com%20a%20JR%20New%20Concept%20Detail)." target="_blank" class="btn-primary" style="width:100%; justify-content:center">
+      <a href="https://wa.me/5512992228205?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20servi%C3%A7o%20com%20a%20JR%20New%20Concept%20Detail." target="_blank" class="btn-primary" style="width:100%; justify-content:center">
         Chamar no WhatsApp
       </a>
     </div>
@@ -5553,13 +2679,13 @@
     <li><a href="#servicos">Serviços</a></li>
     <li><a href="#simulador">Orçamento</a></li>
     <li><a href="#faq">Dúvidas</a></li>
-    <li><a href="[https://www.instagram.com/jrconcept_detail](https://www.instagram.com/jrconcept_detail)" target="_blank">Instagram</a></li>
+    <li><a href="https://www.instagram.com/jrconcept_detail" target="_blank">Instagram</a></li>
   </ul>
   <div class="footer-copy">© 2026 JR New Concept Detail. Todos os direitos reservados.</div>
 </footer>
 
 <!-- Botão Flutuante WhatsApp -->
-<a href="[https://wa.me/5512992228205?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20servi%C3%A7o%20com%20a%20JR%20New%20Concept%20Detail](https://wa.me/5512992228205?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20servi%C3%A7o%20com%20a%20JR%20New%20Concept%20Detail)." target="_blank" class="fab-wa" aria-label="WhatsApp">
+<a href="https://wa.me/5512992228205?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20servi%C3%A7o%20com%20a%20JR%20New%20Concept%20Detail." target="_blank" class="fab-wa" aria-label="WhatsApp">
   <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.555 4.126 1.528 5.858L.057 23.855c-.083.329.243.613.564.491l5.912-2.186A11.947 11.947 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.929 0-3.73-.52-5.27-1.425l-.376-.225-3.897 1.44 1.317-3.96-.244-.388A9.958 9.958 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
 </a>
 
@@ -5828,7 +2954,7 @@
     dashSvcTitle.textContent = data.title;
     dashSvcDesc.textContent = data.desc;
     dashSvcPrice.textContent = data.price;
-    dashWhatsBtn.href = `[https://wa.me/5512992228205?text=$](https://wa.me/5512992228205?text=$){encodeURIComponent(data.whatsMsg)}`;
+    dashWhatsBtn.href = `https://wa.me/5512992228205?text=${encodeURIComponent(data.whatsMsg)}`;
 
     const zoneKeys = ['paint', 'wheels', 'glass', 'cabin'];
     zoneKeys.forEach(k => {
@@ -5938,7 +3064,7 @@
       `💰 *Estimativa:* R$ ${finalEstimate}%0A%0A` +
       `Gostaria de verificar a disponibilidade para agendamento!`;
 
-    calcWhatsBtn.href = `[https://wa.me/5512992228205?text=$](https://wa.me/5512992228205?text=$){msg}`;
+    calcWhatsBtn.href = `https://wa.me/5512992228205?text=${msg}`;
   }
   updateTotal();
 
@@ -5979,8 +3105,8 @@
   const baContainer = document.getElementById('baSlider');
   const baImgBefore = document.getElementById('baImgBefore');
   const baImgAfter = document.getElementById('baImgAfter');
-  const baFallbackBefore = document.getElementById('baFallbackBefore');
-  const baFallbackAfter = document.getElementById('baFallbackAfter');
+  const baPlaceholderBefore = document.getElementById('baPlaceholderBefore');
+  const baPlaceholderAfter = document.getElementById('baPlaceholderAfter');
   const baInfoTitle = document.getElementById('baInfoTitle');
   const baInfoDesc = document.getElementById('baInfoDesc');
   const baTitleBefore = document.getElementById('baTitleBefore');
@@ -5990,7 +3116,7 @@
   const baTabBtns = document.querySelectorAll('.ba-tab-btn');
 
   // Carrega imagem testando os nomes e extensões (.jpg, .png, .jpeg, etc.)
-  function setImgWithFallbackList(imgEl, fallbackEl, nameList) {
+  function setImgWithFallbackList(imgEl, placeholderEl, nameList) {
     imgEl.style.opacity = '0';
     imgEl.style.display = 'block';
 
@@ -6007,9 +3133,9 @@
 
     function tryNext() {
       if (attemptIndex >= candidateUrls.length) {
-        // Se a foto não for encontrada, exibe o cartão de estúdio perfeitamente
+        // Se a foto não for encontrada, exibe placeholder limpo sem quebrar
         imgEl.style.display = 'none';
-        if (fallbackEl) fallbackEl.style.display = 'flex';
+        if (placeholderEl) placeholderEl.style.display = 'flex';
         return;
       }
       const url = candidateUrls[attemptIndex++];
@@ -6019,7 +3145,7 @@
     imgEl.onload = function() {
       imgEl.style.display = 'block';
       imgEl.style.opacity = '1';
-      if (fallbackEl) fallbackEl.style.display = 'none';
+      if (placeholderEl) placeholderEl.style.display = 'none';
     };
 
     imgEl.onerror = function() {
@@ -6037,13 +3163,13 @@
 
     baInfoTitle.textContent = data.title;
     baInfoDesc.textContent = data.desc;
-    baTitleBefore.textContent = data.beforeTitle;
-    baDescBefore.textContent = data.beforeDesc;
-    baTitleAfter.textContent = data.afterTitle;
-    baDescAfter.textContent = data.afterDesc;
+    if (baTitleBefore) baTitleBefore.textContent = data.beforeTitle;
+    if (baDescBefore) baDescBefore.textContent = data.beforeDesc;
+    if (baTitleAfter) baTitleAfter.textContent = data.afterTitle;
+    if (baDescAfter) baDescAfter.textContent = data.afterDesc;
 
-    setImgWithFallbackList(baImgBefore, baFallbackBefore, data.beforeNames);
-    setImgWithFallbackList(baImgAfter, baFallbackAfter, data.afterNames);
+    setImgWithFallbackList(baImgBefore, baPlaceholderBefore, data.beforeNames);
+    setImgWithFallbackList(baImgAfter, baPlaceholderAfter, data.afterNames);
   }
 
   baTabBtns.forEach(btn => {
@@ -6068,9 +3194,9 @@
   window.addEventListener('mouseup', () => { isDragging = false; });
   window.addEventListener('mousemove', (e) => { if (isDragging) updateSlider(e.clientX); });
 
-  baContainer.addEventListener('touchstart', (e) => { isDragging = true; updateSlider(e.touches[0].clientX); });
+  baContainer.addEventListener('touchstart', (e) => { isDragging = true; updateSlider(e.touches[0].clientX); }, { passive: true });
   window.addEventListener('touchend', () => { isDragging = false; });
-  window.addEventListener('touchmove', (e) => { if (isDragging) updateSlider(e.touches[0].clientX); });
+  window.addEventListener('touchmove', (e) => { if (isDragging) updateSlider(e.touches[0].clientX); }, { passive: true });
 
   // ── FAQ ACCORDION ──
   document.querySelectorAll('.faq-question').forEach(q => {
